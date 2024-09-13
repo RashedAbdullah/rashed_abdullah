@@ -8,8 +8,10 @@ import mongodb from "@/public/mongodb.svg";
 import javascript from "@/public/js.svg";
 import Image from "next/image";
 import { BackgroundLines } from "@/components/ui/background-lines";
+import { getManageLangs } from "@/manage-langs/manage-langs";
 
-const Skills = () => {
+const Skills = async ({ lang = "en" }) => {
+  const langs = await getManageLangs(lang);
   return (
     <div
       className={`min-h-screen bg-cover bg-no-repeat bg-center flex justify-center items-end rounded-lg `}
@@ -25,7 +27,7 @@ const Skills = () => {
                 <ScrollMouse />
               </div>
               <div>
-                <PageTitle>Skills</PageTitle>
+                <PageTitle>{langs.skills}</PageTitle>
                 <p className="text-center text-sm">
                   I&apos;m never striving to never stop learning and improving
                 </p>

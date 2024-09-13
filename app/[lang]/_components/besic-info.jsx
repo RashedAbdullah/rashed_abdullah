@@ -5,8 +5,11 @@ import { GiRotaryPhone } from "react-icons/gi";
 import { FaLink } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { BiDownload } from "react-icons/bi";
+import { getManageLangs } from "@/manage-langs/manage-langs";
 
-const BesicInfo = () => {
+const BesicInfo = async ({ lang }) => {
+  const langs = await getManageLangs(lang);
+  
   return (
     <div className="col-span-3 flex justify-center items-center">
       <div>
@@ -14,16 +17,16 @@ const BesicInfo = () => {
           <div className="flex flex-col justify-center items-center">
             <Image
               src={`https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg`}
-              alt="Rashed Abdullah"
+              alt={langs.name}
               height={300}
               width={300}
               className={`h-[120px] w-[120px] object-cover bg-cover bg-no-repeat bg-center rounded-full`}
             ></Image>
             <div className="text-2xl font-semibold">
-              <h2>Rashed Abdullah</h2>
+              <h2>{langs.name}</h2>
             </div>
             <div>
-              <p>Front-End Developer</p>
+              <p>{langs.profession}</p>
             </div>
           </div>
 
@@ -37,7 +40,7 @@ const BesicInfo = () => {
             <div className="col-span-1 text-aqua">
               <IoLocationOutline />
             </div>
-            <div className="col-span-7">Bangladesh</div>
+            <div className="col-span-7">{langs.address}</div>
 
             <div className="col-span-1 text-aqua">
               <GiRotaryPhone />
@@ -65,7 +68,7 @@ const BesicInfo = () => {
 
           <div className="flex justify-center">
             <Button className="bg-white text-deepBlack hover:text-white px-10 flex items-center gap-2 text-lg">
-              Resume <BiDownload />
+              {langs.resume} <BiDownload />
             </Button>
           </div>
         </div>

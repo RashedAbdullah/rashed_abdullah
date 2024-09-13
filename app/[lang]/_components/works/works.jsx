@@ -2,8 +2,11 @@ import React from "react";
 import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";
 import Projects from "../projects/projects";
+import { getManageLangs } from "@/manage-langs/manage-langs";
 
-export default function Works() {
+export default async function Works({ lang = "en" }) {
+  const langs = await getManageLangs(lang);
+
   return (
     <div className="min-h-screen w-full bg-deepBlack bg-grid-small-white/[0.2] relative">
       {/* Radial gradient for the container to give a faded look */}
@@ -13,7 +16,7 @@ export default function Works() {
           <ScrollMouse />
         </div>
         <div>
-          <PageTitle>Works</PageTitle>
+          <PageTitle>{langs.projects}</PageTitle>
           <p className="text-center text-sm">
             I had the pleasure of working with these awesome projects
           </p>
@@ -21,7 +24,6 @@ export default function Works() {
         <div className="flex justify-center items-center my-10">
           <Projects />
         </div>
-
       </div>
     </div>
   );

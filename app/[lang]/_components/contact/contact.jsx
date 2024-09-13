@@ -2,8 +2,10 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";
 import { FiSend } from "react-icons/fi";
+import { getManageLangs } from "@/manage-langs/manage-langs";
 
-const Contact = () => {
+const Contact = async ({ lang = "en" }) => {
+  const langs = await getManageLangs(lang);
   return (
     <div className="min-h-screen w-full relative antialiased">
       <BackgroundBeams />
@@ -13,7 +15,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col gap-14">
           <div>
-            <PageTitle>Contact</PageTitle>
+            <PageTitle>{langs.contact}</PageTitle>
             <p className="text-center text-sm">
               Let&apos;s collaborate to bring your ideas
             </p>

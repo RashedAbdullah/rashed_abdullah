@@ -1,0 +1,40 @@
+{
+  "name": "Rashed Abdullah",
+  "profession": "Front-end Developer",
+  "age": "24",
+  "citizenship": "Bangladesh",
+  "address": "Feni, Bangladesh",
+  "phone": "+8801603443214",
+  "email": "maarashed40@gamil.com",
+  "resume": "Resume",
+
+  "skills": "Skills",
+  "professional": "Professional",
+  "personal": "Personal",
+  "communication": "Communication",
+  "teamwork": "Team Work",
+  "language": "Language",
+  "creativity": "Creativity",
+
+  "projects": "Works",
+
+  "blogs": "Blogs",
+  "readmore": "Read More",
+
+  "yourname": "Your Name",
+  "youremail": "Your Email",
+  "subject": "Subject",
+  "message": "Message",
+  "sendMessage": "Send Message",
+  "allright": "All Right Reserved",
+
+  "home": "Home",
+  "about": "About Me",
+  "contact": "Contact",
+
+  "github": "Github",
+  "facebook": "Facebook",
+  "instagram": "Instagram",
+
+  "search": "Search"
+}

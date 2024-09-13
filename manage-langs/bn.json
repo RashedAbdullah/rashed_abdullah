@@ -1,0 +1,43 @@
+{
+  "name": "রাশেদ আব্দুল্লাহ",
+  "profession": "ফ্রন্ট-এন্ড ডেভেলপার",
+  "age": "২৪",
+  "citizenship": "বাংলাদেশ",
+  "address": "ফেনী, বাংলাদেশ",
+  "phone": "+৮৮০১৬০৩৪৪৩২১৪",
+  "email": "maarashed40@gamil.com",
+
+  "resume": "রিজিউমি",
+  "contactme": "যোগাযোগ করুন",
+
+  "skills": "স্কিলস",
+  "professional": "প্রফেশনাল",
+  "personal": "পার্সোনাল",
+  "communication": "কমিউনেকশন",
+  "teamwork": "টিম ওয়ার্ক",
+  "language": "ভাষা",
+  "creativity": "ক্রিয়েটিভিটি",
+
+  "projects": "প্রজেকটস",
+  "all": "সব",
+
+  "blogs": "ব্লগস",
+  "readmore": "আরও পড়ুন",
+
+  "yourname": "আপনার নাম",
+  "youremail": "আপনার ইমেইল",
+  "subject": "বিষয়",
+  "message": "মেসেজ",
+  "sendMessage": "মেসেজ পাঠান",
+  "allright": "সত্ব সংরক্ষিত",
+
+  "home": "হোম",
+  "about": "সম্পর্কে",
+  "contact": "যোগাযোগ",
+
+  "github": "গিটহাব",
+  "facebook": "ফেইসবুক",
+  "instagram": "ইনস্টাগ্রাম",
+
+  "search": "অনুসন্ধান করুন"
+}
