@@ -3,7 +3,7 @@ import SocialLinks from "./social-links";
 import Navigations from "./navigations";
 import Logo from "./logo";
 
-const Navbar = ({ lang = "en" }) => {
+const Navbar = ({ lang }) => {
   return (
     <header className="container border-b py-6 flex justify-between items-center align-middle sticky top-0 z-50 backdrop-blur-lg">
       <Logo lang={lang} />
