@@ -11,7 +11,7 @@ import { Search } from "lucide-react";
 
 const NavSearch = () => {
   return (
-    <div className="lg:block flex justify-center text-lightBlack">
+    <div className="hidden md:flex justify-center text-lightBlack">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="outline" className="px-2 flex gap-2 pr-14">

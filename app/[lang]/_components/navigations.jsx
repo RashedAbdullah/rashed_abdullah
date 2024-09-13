@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navigations = () => {
   return (
-    <nav className="flex justify-center gap-10">
+    <nav className="flex justify-center md:gap-10 gap-2">
       <div>
         <Link href="/">Home</Link>
       </div>

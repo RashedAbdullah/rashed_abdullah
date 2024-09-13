@@ -8,14 +8,14 @@ const NameTItle = () => {
           <div className="flex flex-col justify-center gap-4">
             <div>
               <p className="text-[13px] text-aqua2">{"<h1>"}</p>
-              <h2 className="text-5xl font-semibold ml-6">Hey</h2>
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold ml-6">Hey</h2>
             </div>
-            <h2 className="text-5xl font-semibold ml-6 text-nowrap">
+            <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold ml-6 text-nowrap">
               <span>I&apos;m</span>{" "}
               <strong className="text-aqua">Rashed Abdullah</strong>
             </h2>
             <div className="flex items-end gap-3 ml-6">
-              <h2 className="text-5xl font-semibold text-nowrap">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold text-nowrap">
                 Front-End Developer
               </h2>
               <p className="text-[13px] text-aqua2">{"</h1>"}</p>

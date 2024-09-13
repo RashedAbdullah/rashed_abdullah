@@ -20,7 +20,7 @@ const Contact = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <div className="py-3 px-5 border-2 border-aqua text-aqua font-semibold text-3xl rounded-tl-xl rounded-br-xl">
+            <div className="py-3 px-5 border-2 border-aqua text-aqua font-semibold text-2xl md:text-3xl rounded-tl-xl rounded-br-xl">
               <h3>Send Me A Message</h3>
             </div>
           </div>
@@ -28,7 +28,7 @@ const Contact = () => {
           <div className="grid grid-cols-12 mb-10">
             <div className="col-span-2"></div>
             <form action="" className="flex flex-col gap-14 col-span-8">
-              <div className="grid grid-cols-8 justify-center gap-14">
+              <div className="flex flex-col md:grid grid-cols-8 justify-center gap-14">
                 <div className="col-span-4">
                   <p className="text-aqua">Your name*</p>
                   <div>

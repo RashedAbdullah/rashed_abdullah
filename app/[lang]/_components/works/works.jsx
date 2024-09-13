@@ -21,6 +21,7 @@ export default function Works() {
         <div className="flex justify-center items-center my-10">
           <Projects />
         </div>
+
       </div>
     </div>
   );

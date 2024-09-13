@@ -4,9 +4,9 @@ import NameTItle from "./name-title";
 
 const HeaderInfo = () => {
   return (
-    <div className="container min-h-[90vh]">
+    <div className="container min-h-[90vh] py-10 md:py-0">
       <BackgroundBeamsWithCollision>
-        <div className="grid grid-cols-10 gap-5">
+        <div className="flex flex-col md:grid grid-cols-10 md:gap-5 gap-10">
           <BesicInfo />
           <NameTItle />
           <div className="col-span-3 flex justify-center items-center">

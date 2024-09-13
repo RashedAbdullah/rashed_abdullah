@@ -8,7 +8,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const HeaderNavigations = () => {
   return (
-    <div className="col-span-2 flex fixed top-1/2 left-28 transform -translate-x-1/2 -translate-y-1/2 z-50">
+    <div className="col-span-2 hidden md:flex fixed top-1/2 left-28 transform -translate-x-1/2 -translate-y-1/2 z-50">
       <div className="border bg-deepBlack px-1 py-2 rounded-full flex flex-col gap-2 text-lg">
         <div>
           <Link

@@ -15,7 +15,7 @@ export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <body
-        className={`${ubuntu.className} bg-deepBlack text-white min-h-screen selection:bg-lightBlack selection:text-aqua flex flex-col justify-between`}
+        className={`${ubuntu.className} bg-deepBlack text-white min-h-screen selection:bg-lightBlack selection:text-aqua px-5 md:px-0`}
       >
         <Navbar />
         <HeaderNavigations />

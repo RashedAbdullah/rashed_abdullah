@@ -35,8 +35,8 @@ export default function Projects() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="" />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:block" />
+      <CarouselNext className="hidden md:block" />
     </Carousel>
   );
 }

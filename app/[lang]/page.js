@@ -1,4 +1,4 @@
-import { FloatingDockDemo } from "@/components/test";
+import { BackgroundLinesDemo } from "@/components/test";
 import HeaderInfo from "./_components/header-info";
 import AboutMe from "./_components/aboutme/aboutme";
 import Skills from "./_components/skills/skills";

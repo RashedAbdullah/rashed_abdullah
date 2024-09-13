@@ -1,32 +1,16 @@
 import React from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
-import { IconBrandGithub } from "@tabler/icons-react";
-import { FaFacebook, FaInstagram } from "react-icons/fa6";
+import { BackgroundLines } from "@/components/ui/background-lines";
 
-export function FloatingDockDemo() {
-  const links = [
-    {
-      title: "Facebook",
-      icon: <FaFacebook className="h-full w-full text-neutral-500" />,
-      href: "https://www.facebook.com/Rashed4Abdullah",
-    },
-
-    {
-      title: "Instagram",
-      icon: <FaInstagram className="h-full w-full text-neutral-500" />,
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: <IconBrandGithub className="h-full w-full text-neutral-500" />,
-      href: "https://github.com/RashedAbdullah",
-    },
-  ];
+export function BackgroundLinesDemo() {
   return (
-    <FloatingDock
-      // only for demo, remove for production
-      mobileClassName="translate-y-20"
-      items={links}
-    />
+    <BackgroundLines>
+      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        Sanjana Airlines, <br /> Sajana Textiles.
+      </h2>
+      <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+        Get the best advices from our experts, including expert artists,
+        painters, marathon enthusiasts and RDX, totally free.
+      </p>
+    </BackgroundLines>
   );
 }
