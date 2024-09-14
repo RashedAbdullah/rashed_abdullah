@@ -17,9 +17,7 @@ export default async function Works({ lang = "en" }) {
         </div>
         <div>
           <PageTitle>{langs.projects}</PageTitle>
-          <p className="text-center text-sm">
-            I had the pleasure of working with these awesome projects
-          </p>
+          <p className="text-center text-sm">{langs.workDesc}</p>
         </div>
         <div className="flex justify-center items-center my-10">
           <Projects />

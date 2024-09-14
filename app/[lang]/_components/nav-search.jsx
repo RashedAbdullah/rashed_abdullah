@@ -16,7 +16,10 @@ const NavSearch = async ({ lang = "en" }) => {
     <div className="hidden md:flex justify-center text-lightBlack">
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline" className="px-2 flex gap-2 pr-14">
+          <Button
+            variant="outline"
+            className={`px-2 flex gap-2 ${lang === "ar" ? "pl-14" : "pr-14"}`}
+          >
             <Search size={15} />
             <span className="text-gray-500">{langs.search} ...</span>
           </Button>

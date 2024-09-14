@@ -28,31 +28,31 @@ const Skills = async ({ lang = "en" }) => {
               </div>
               <div>
                 <PageTitle>{langs.skills}</PageTitle>
-                <p className="text-center text-sm">
-                  I&apos;m never striving to never stop learning and improving
-                </p>
+                <p className="text-center text-sm">{langs.skillDesc}</p>
               </div>
               <div className="flex flex-col md:flex-row justify-center items-center gap-10 my-10">
-                <div className="bg-white text-deepBlack py-2 px-7 flex flex-col justify-center gap-2 border-l-8 border-aqua rounded-lg">
+                <div className="bg-white text-deepBlack py-2 px-7 flex flex-col justify-center gap-2 border-l-8 border-aqua rounded-lg min-w-64">
                   <div className="flex justify-center">
                     <FaRegUser />
                   </div>
                   <div className="text-center text-lg">
-                    <h2>Self Development</h2>
+                    <h2>{langs.self}</h2>
                   </div>
-                  <div className="text-sm">
-                    <p>Creativity - Communication</p>
+                  <div className="text-sm text-center">
+                    <p>
+                      {langs.creativity} - {langs.communication}
+                    </p>
                   </div>
                 </div>
 
-                <div className="bg-white text-deepBlack py-2 px-7 flex flex-col justify-center gap-2 border-l-8 border-aqua rounded-lg">
+                <div className="bg-white text-deepBlack py-2 px-7 flex flex-col justify-center gap-2 border-l-8 border-aqua rounded-lg min-w-64">
                   <div className="flex justify-center">
                     <MdOutlineTv />
                   </div>
                   <div className="text-center text-lg">
-                    <h2>Web Development</h2>
+                    <h2>{langs.web}</h2>
                   </div>
-                  <div className="text-sm">
+                  <div className="text-sm text-center">
                     <p>Next.js - Node.js - MongoDB</p>
                   </div>
                 </div>

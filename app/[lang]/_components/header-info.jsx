@@ -6,7 +6,10 @@ const HeaderInfo = ({ lang }) => {
   return (
     <div className="container min-h-[90vh] py-10 md:py-0">
       <BackgroundBeamsWithCollision>
-        <div className="flex flex-col md:grid grid-cols-10 md:gap-5 gap-10">
+        <div
+          dir={lang === "ar" ? "rtl" : "ltr"}
+          className="flex flex-col md:grid grid-cols-10 md:gap-5 gap-10"
+        >
           <BesicInfo lang={lang} />
           <NameTItle lang={lang} />
           <div className="col-span-3 flex justify-center items-center">

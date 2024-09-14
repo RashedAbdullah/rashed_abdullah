@@ -13,7 +13,10 @@ export default async function AboutMe({ lang = "en" }) {
 
       <div className="container flex flex-col md:grid grid-cols-10 gap-10">
         <div className="col-span-6 flex flex-col gap-14 justify-center">
-          <div className="flex md:justify-start justify-center">
+          <div
+            dir={lang === "ar" ? "rtl" : "ltr"}
+            className="flex md:justify-start justify-center"
+          >
             <div className="py-4 px-6 rounded-tl-xl rounded-br-xl border-4 border-aqua z-40 relative">
               <h2 className="text-4xl font-semibold">{langs.about}</h2>
             </div>
@@ -22,16 +25,11 @@ export default async function AboutMe({ lang = "en" }) {
             <div className="bg-lightBlack relative z-40 p-5 rounded-3xl text-sm">
               <p className="text-aqua">{`<p>`}</p>
               <br />
-              <h3 className="text-aqua text-xl">Hello!</h3>
+              <h3 className="text-aqua text-xl">{langs.hey}!</h3>
               <p>
-                I&apos;m Abdul Ahad Rashed, a passionate front-end developer. I
-                specialize in crafting stunning web experiences using{" "}
-                <span className="text-aqua">React.js</span> and{" "}
-                <span className="text-aqua">Next.js</span>. With a focus on
-                innovation and user engagement, I create immersive interfaces
-                and high-performance applications. Let&apos;s collaborate to
-                bring your ideas to life and enchant users with interactive
-                wonders on the web. ✨
+                {langs.desc1} <span className="text-aqua">React.js</span>{" "}
+                {langs.and} <span className="text-aqua">Next.js</span>{" "}
+                {langs.desc2} ✨
               </p>
               <br />
               <p className="text-aqua">{`</p>`}</p>

@@ -16,14 +16,12 @@ const Contact = async ({ lang = "en" }) => {
         <div className="flex flex-col gap-14">
           <div>
             <PageTitle>{langs.contact}</PageTitle>
-            <p className="text-center text-sm">
-              Let&apos;s collaborate to bring your ideas
-            </p>
+            <p className="text-center text-sm">{langs.contactDesc}</p>
           </div>
 
           <div className="flex justify-center items-center">
             <div className="py-3 px-5 border-2 border-aqua text-aqua font-semibold text-2xl md:text-3xl rounded-tl-xl rounded-br-xl">
-              <h3>Send Me A Message</h3>
+              <h3>{langs.sendAMessage}</h3>
             </div>
           </div>
 
@@ -31,23 +29,23 @@ const Contact = async ({ lang = "en" }) => {
             <div className="col-span-2"></div>
             <form action="" className="flex flex-col gap-14 col-span-8">
               <div className="flex flex-col md:grid grid-cols-8 justify-center gap-14">
-                <div className="col-span-4">
-                  <p className="text-aqua">Your name*</p>
+                <div className="col-span-4" dir={lang === "ar" ? "rtl" : "ltr"}>
+                  <p className="text-aqua">{langs.yourname}*</p>
                   <div>
                     <input
                       type="text"
-                      placeholder="Enter your name"
+                      placeholder={langs.enterName}
                       className="bg-transparent w-full outline-none border-b border-aqua py-1"
                     />
                   </div>
                 </div>
 
-                <div className="col-span-4">
-                  <p className="text-aqua">Your Email*</p>
+                <div className="col-span-4" dir={lang === "ar" ? "rtl" : "ltr"}>
+                  <p className="text-aqua">{langs.youremail}*</p>
                   <div>
                     <input
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder={langs.enterMail}
                       className="bg-transparent w-full outline-none border-b border-aqua py-1"
                     />
                   </div>
@@ -55,20 +53,23 @@ const Contact = async ({ lang = "en" }) => {
               </div>
 
               <div>
-                <div>
-                  <p className="text-aqua">Your Message*</p>
+                <div dir={lang === "ar" ? "rtl" : "ltr"}>
+                  <p className="text-aqua">{langs.yourmessage}*</p>
                   <div>
                     <input
                       type="text"
-                      placeholder="Enter your needs"
+                      placeholder={langs.enterNeed}
                       className="bg-transparent w-full outline-none border-b border-aqua py-1"
                     />
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
+              <div
+                dir={lang === "ar" ? "rtl" : "ltr"}
+                className="flex justify-center items-center"
+              >
                 <button className="bg-aqua text-deepBlack py-3 px-8 rounded-full flex justify-center items-center gap-3">
-                  Send Message <FiSend />
+                  {langs.sendMessage} <FiSend />
                 </button>
               </div>
             </form>

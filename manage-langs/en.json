@@ -24,7 +24,7 @@
   "yourname": "Your Name",
   "youremail": "Your Email",
   "subject": "Subject",
-  "message": "Message",
+  "message": "Your message",
   "sendMessage": "Send Message",
   "allright": "All Right Reserved",
 
@@ -40,6 +40,23 @@
 
   "hey": "Hey",
   "im": "I'm",
-  "description": "I'm a Front-End Developer from Bangladesh, My name is Abdul Ahad Rashed, i help you for growing your business and your vertual velue between peoples",
-  "talk": "Let's Talk"
+  "description": "I'm Rashed Abdullah, a passionate front-end developer. I specialize in crafting stunning web experiences using React.js and Next.js",
+  "talk": "Let's Talk",
+
+  "desc1": "I'm Rashed Abdullah, a passionate front-end developer. I specialize in crafting stunning web experiences using",
+  "desc2": "With a focus on innovation and user engagement, I create immersive interfaces and high-performance applications. Let's collaborate to bring your ideas to life and enchant users with interactive wonders on the web.",
+  "and": "and",
+
+  "skillDesc": "I'm never striving to never stop learning and improving",
+  "web": "Web Development",
+  "self": "Self Development",
+
+  "workDesc": "I had the pleasure of working with these awesome projects",
+
+  "contactDesc": "Let's collaborate to bring your ideas",
+  "sendAMessage": "Send Me A Message",
+  "yourmessage": "Your message",
+  "enterName": "Enter your name",
+  "enterMail": "Enter your email",
+  "enterNeed": "Enter your needs"
 }

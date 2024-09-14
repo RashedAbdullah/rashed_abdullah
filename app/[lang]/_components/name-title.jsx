@@ -6,7 +6,10 @@ import { IoMail } from "react-icons/io5";
 const NameTItle = async ({ lang }) => {
   const langs = await getManageLangs(lang);
   return (
-    <div className="col-span-4 flex flex-col justify-center gap-5">
+    <div
+      className="col-span-4 flex flex-col justify-center gap-5"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="flex flex-col justify-center gap-4">
         <div>
           <p className="text-[13px] text-aqua2">{"<h1>"}</p>
