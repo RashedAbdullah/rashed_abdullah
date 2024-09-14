@@ -8,7 +8,7 @@ const HeaderInfo = ({ lang }) => {
       <BackgroundBeamsWithCollision>
         <div className="flex flex-col md:grid grid-cols-10 md:gap-5 gap-10">
           <BesicInfo lang={lang} />
-          <NameTItle />
+          <NameTItle lang={lang} />
           <div className="col-span-3 flex justify-center items-center">
             <div className="text-[100px] text-aqua">{"</>"}</div>
           </div>
