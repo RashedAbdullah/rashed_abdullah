@@ -13,7 +13,7 @@ import { Search } from "lucide-react";
 const NavSearch = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
   return (
-    <div className="hidden md:flex justify-center text-lightBlack">
+    <div className="flex justify-center text-lightBlack">
       <Dialog>
         <DialogTrigger asChild>
           <Button

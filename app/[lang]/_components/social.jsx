@@ -4,8 +4,8 @@ import { IconBrandGithub } from "@tabler/icons-react";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { getManageLangs } from "@/manage-langs/manage-langs";
 
-export default async function FooterSocial({ lang }) {
-  const langs = await getManageLangs(lang)
+export default async function FooterSocial({ lang = "en" }) {
+  const langs = await getManageLangs(lang);
   const links = [
     {
       title: langs.facebook,

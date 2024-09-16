@@ -4,7 +4,7 @@ import { GrGithub } from "react-icons/gr";
 const SocialLinks = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
   return (
-    <div className="hidden md:flex gap-10">
+    <div className="flex gap-10">
       <a
         target="_blank"
         href="https://github.com/RashedAbdullah"

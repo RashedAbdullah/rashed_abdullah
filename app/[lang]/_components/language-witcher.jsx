@@ -46,10 +46,10 @@ const LanguageSwitcher = ({ lang = "en" }) => {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant="secondary"
+          variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[130px] justify-between"
+          className="lg:w-[130px] w-[200px] justify-between"
         >
           {value
             ? languages.find((framework) => framework.value === value)?.label
@@ -61,7 +61,7 @@ const LanguageSwitcher = ({ lang = "en" }) => {
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[130px] p-0">
+      <PopoverContent className="lg:w-[130px] w-[200px] p-0">
         <Command>
           <CommandList>
             <CommandGroup>
@@ -71,7 +71,7 @@ const LanguageSwitcher = ({ lang = "en" }) => {
                   value={language.value}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
-                    handleLangs(language.value)
+                    handleLangs(language.value);
                     setOpen(false);
                   }}
                 >

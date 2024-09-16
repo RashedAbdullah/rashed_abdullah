@@ -4,10 +4,13 @@ import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
 import HeaderNavigations from "./_components/header-navigtaions";
 
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: "400" });
-const hindSiliguri = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
-const reemKufi = Reem_Kufi({ subsets: ["arabic"], weight: "400" });
-const arefRuqaa = Aref_Ruqaa({ subsets: ["arabic"], weight: "400" });
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500"] });
+const hindSiliguri = Hind_Siliguri({
+  subsets: ["bengali"],
+  weight: ["400", "500"],
+});
+const reemKufi = Reem_Kufi({ subsets: ["arabic"], weight: ["400", "500"] });
+const arefRuqaa = Aref_Ruqaa({ subsets: ["arabic"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Rashed Abdullah",

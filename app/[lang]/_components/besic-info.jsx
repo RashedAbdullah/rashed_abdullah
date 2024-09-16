@@ -9,7 +9,7 @@ import { getManageLangs } from "@/manage-langs/manage-langs";
 
 const BesicInfo = async ({ lang }) => {
   const langs = await getManageLangs(lang);
-  
+
   return (
     <div className="col-span-3 flex justify-center items-center">
       <div>
@@ -67,9 +67,13 @@ const BesicInfo = async ({ lang }) => {
           </div>
 
           <div className="flex justify-center">
-            <Button className="bg-white text-deepBlack hover:text-white px-10 flex items-center gap-2 text-lg">
+            <a
+              href="/RashedAbdullahResume.pdf"
+              download="RashedResume.pdf"
+              className="bg-white text-deepBlack hover:text-white px-10 py-2 flex items-center gap-2 text-lg"
+            >
               {langs.resume} <BiDownload />
-            </Button>
+            </a>
           </div>
         </div>
       </div>

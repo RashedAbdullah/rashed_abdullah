@@ -8,12 +8,12 @@ const HeaderInfo = ({ lang }) => {
       <BackgroundBeamsWithCollision>
         <div
           dir={lang === "ar" ? "rtl" : "ltr"}
-          className="flex flex-col md:grid grid-cols-10 md:gap-5 gap-10"
+          className="flex flex-col md:grid grid-cols-10 md:gap-20 gap-10"
         >
           <BesicInfo lang={lang} />
           <NameTItle lang={lang} />
           <div className="col-span-3 flex justify-center items-center">
-            <div className="text-[100px] text-aqua">{"</>"}</div>
+            <div className="text-[200px] text-aqua font-semibold">{"</>"}</div>
           </div>
         </div>
       </BackgroundBeamsWithCollision>

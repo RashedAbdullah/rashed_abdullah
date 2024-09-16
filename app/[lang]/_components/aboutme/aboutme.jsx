@@ -21,7 +21,7 @@ export default async function AboutMe({ lang = "en" }) {
               <h2 className="text-4xl font-semibold">{langs.about}</h2>
             </div>
           </div>
-          <div>
+          <div  dir={lang === "ar" ? "rtl" : "ltr"}>
             <div className="bg-lightBlack relative z-40 p-5 rounded-3xl text-sm">
               <p className="text-aqua">{`<p>`}</p>
               <br />
