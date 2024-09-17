@@ -32,7 +32,9 @@ const MobileNav = async ({ lang = "en" }) => {
         </SheetHeader>
 
         <div className="text-center py-4">
-          <Navigations lang={lang} />
+          <div className="py-5">
+            <Navigations lang={lang} />
+          </div>
           <LanguageSwitcher lang={lang} />
           <div className="flex justify-center">
             <FooterSocial lang={lang} />
