@@ -21,6 +21,14 @@ const Navigations = async ({ lang = "en" }) => {
           {langs.blogs}
         </Link>
       </div>
+      <div>
+        <Link
+          href="/projects"
+          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+        >
+          {langs.projects}
+        </Link>
+      </div>
     </nav>
   );
 };
