@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navigations = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
   return (
-    <nav className="lg:flex justify-center md:gap-10 gap-2">
+    <div className="lg:flex justify-center md:gap-10 gap-2">
       <div>
         <Link
           href="/"
@@ -29,7 +29,7 @@ const Navigations = async ({ lang = "en" }) => {
           {langs.projects}
         </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 

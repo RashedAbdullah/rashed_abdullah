@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 import {
   Sheet,
   SheetContent,
@@ -16,25 +15,32 @@ import FooterSocial from "./social";
 
 const MobileNav = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
+
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="text-deepBlack" variant="outline">
+        <Button className="text-deepBlack" variant="outline" aria-label="Open mobile navigation">
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side="top" className="bg-lightBlack text-white">
+      <SheetContent
+        side="top"
+        className="bg-lightBlack text-white"
+        role="dialog"
+        aria-labelledby="sheet-title"
+        aria-describedby="sheet-description"
+      >
         <SheetHeader>
-          <SheetTitle className="text-white">{langs.name}</SheetTitle>
-          <SheetDescription className="text-slate-300">
+          <SheetTitle id="sheet-title" className="text-white">{langs.name}</SheetTitle>
+          <SheetDescription id="sheet-description" className="text-slate-300">
             {langs.profession}
           </SheetDescription>
         </SheetHeader>
 
         <div className="text-center py-4">
-          <div className="py-5">
+          <nav className="py-5">
             <Navigations lang={lang} />
-          </div>
+          </nav>
           <LanguageSwitcher lang={lang} />
           <div className="flex justify-center">
             <FooterSocial lang={lang} />

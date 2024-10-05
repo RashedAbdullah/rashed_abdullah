@@ -12,6 +12,7 @@ import { Search } from "lucide-react";
 
 const NavSearch = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
+
   return (
     <div className="flex justify-center text-lightBlack">
       <Dialog>
