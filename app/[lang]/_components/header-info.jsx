@@ -4,7 +4,7 @@ import NameTItle from "./name-title";
 
 const HeaderInfo = ({ lang }) => {
   return (
-    <div className="container min-h-[90vh] py-10 md:py-0">
+    <div id="hero" className="container min-h-[90vh] py-10 md:py-0">
       <BackgroundBeamsWithCollision>
         <div
           dir={lang === "ar" ? "rtl" : "ltr"}

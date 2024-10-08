@@ -8,55 +8,58 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const HeaderNavigations = () => {
   return (
-    <div className="col-span-2 hidden md:flex fixed top-1/2 left-28 transform -translate-x-1/2 -translate-y-1/2 z-50">
+    <div
+
+      className="col-span-2 hidden md:flex fixed top-1/2 left-28 transform -translate-x-1/2 -translate-y-1/2 z-50"
+    >
       <div className="border bg-deepBlack px-1 py-2 rounded-full flex flex-col gap-2 text-lg">
         <div>
-          <Link
-            href=""
+          <a
+            href="#hero"
             className="flex justify-center items-center align-middle h-10 w-10 bg-white rounded-full text-lightBlack"
           >
             <MdOutlineDashboard />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link
-            href=""
+          <a
+            href="#about"
             className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
           >
             <LuUser2 />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link
-            href=""
+          <a
+            href="#skills"
             className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
           >
             <BsCodeSlash size={20} />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link
-            href=""
+          <a
+            href="#works"
             className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
           >
             <MdTv />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link
-            href=""
+          <a
+            href="#blogs"
             className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
           >
             <FaRegPenToSquare />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link
-            href=""
+          <a
+            href="#contact"
             className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
           >
             <MdOutlineEmail />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

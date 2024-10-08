@@ -6,7 +6,10 @@ import { getManageLangs } from "@/manage-langs/manage-langs";
 export default async function AboutMe({ lang = "en" }) {
   const langs = await getManageLangs(lang);
   return (
-    <div className="min-h-screen relative w-full md:py-0 py-10 overflow-hidden bg-deepBlack flex flex-col items-center justify-center">
+    <div
+      id="about"
+      className="min-h-screen relative w-full md:py-0 py-10 overflow-hidden bg-deepBlack flex flex-col items-center justify-center"
+    >
       <ScrollMouse />
       <div className="absolute inset-0 w-full h-full bg-deepBlack z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       <Boxes />
@@ -21,7 +24,7 @@ export default async function AboutMe({ lang = "en" }) {
               <h2 className="text-4xl font-semibold">{langs.about}</h2>
             </div>
           </div>
-          <div  dir={lang === "ar" ? "rtl" : "ltr"}>
+          <div dir={lang === "ar" ? "rtl" : "ltr"}>
             <div className="bg-lightBlack relative z-40 p-5 rounded-3xl text-sm">
               <p className="text-aqua">{`<p>`}</p>
               <br />

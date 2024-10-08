@@ -8,7 +8,7 @@ import ContactForm from "./contact-form";
 const Contact = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
   return (
-    <div className="min-h-screen w-full relative antialiased">
+    <div id="contact" className="min-h-screen w-full relative antialiased">
       <BackgroundBeams />
       <div className="container z-20 relative">
         <div className="flex justify-center items-center mt-20">

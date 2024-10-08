@@ -14,6 +14,7 @@ const Skills = async ({ lang = "en" }) => {
   const langs = await getManageLangs(lang);
   return (
     <div
+      id="skills"
       className={`min-h-screen bg-cover bg-no-repeat bg-center flex justify-center items-end rounded-lg `}
       style={{
         backgroundImage: `url(${"https://i.ibb.co.com/kHSHKLx/code-image.webp"})`,
