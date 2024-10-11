@@ -7,33 +7,28 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { getManageLangs } from "@/manage-langs/manage-langs";
+
 import { Search } from "lucide-react";
 
-const NavSearch = async ({ lang = "en" }) => {
-  const langs = await getManageLangs(lang);
-
+const NavSearch = async () => {
   return (
     <div className="flex justify-center text-lightBlack">
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            className={`px-2 flex gap-2 ${lang === "ar" ? "pl-14" : "pr-14"}`}
-          >
+          <Button variant="outline" className={`px-2 flex gap-2 pr-14`}>
             <Search size={15} />
-            <span className="text-gray-500">{langs.search} ...</span>
+            <span className="text-gray-500">Search ...</span>
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle className="text-center text-deepBlack">
-              {langs.search}
+              Search
             </DialogTitle>
           </DialogHeader>
           <div className="py-4">
             <div>
-              <Input placeholder={langs.search} />
+              <Input placeholder="Search..." />
             </div>
           </div>
         </DialogContent>

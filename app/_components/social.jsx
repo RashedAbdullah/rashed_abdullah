@@ -2,28 +2,28 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
-import { getManageLangs } from "@/manage-langs/manage-langs";
 
-export default async function FooterSocial({ lang = "en" }) {
-  const langs = await getManageLangs(lang);
+
+export default async function FooterSocial() {
+  
   const links = [
     {
-      title: langs.facebook,
+      title: "Facebook",
       icon: <FaFacebook className="h-full w-full text-neutral-500" />,
       href: "https://www.facebook.com/Rashed4Abdullah",
-      ariaLabel: `Visit ${langs.facebook} profile`, // Added aria-label for accessibility
+      ariaLabel: `Visit Facabook profile`, // Added aria-label for accessibility
     },
     {
-      title: langs.instagram,
+      title: "Instagram",
       icon: <FaInstagram className="h-full w-full text-neutral-500" />,
       href: "#", // Update with a valid Instagram link
-      ariaLabel: `Visit ${langs.instagram} profile`, // Added aria-label for accessibility
+      ariaLabel: `Visit Instagram profile`, // Added aria-label for accessibility
     },
     {
-      title: langs.github,
+      title: "Github",
       icon: <IconBrandGithub className="h-full w-full text-neutral-500" />,
       href: "https://github.com/RashedAbdullah",
-      ariaLabel: `Visit ${langs.github} profile`, // Added aria-label for accessibility
+      ariaLabel: `Visit Github profile`, // Added aria-label for accessibility
     },
   ];
 

@@ -20,9 +20,9 @@ export const metadata = {
   author: "Rashed Abdullah",
 };
 
-export default function RootLayout({ children, params: { lang } }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang={lang}>
+    <html lang="en">
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -45,18 +45,12 @@ export default function RootLayout({ children, params: { lang } }) {
         {/* Replace with your actual URL */}
       </head>
       <body
-        className={`${
-          lang === "en"
-            ? ubuntu.className
-            : lang === "bn"
-            ? hindSiliguri.className
-            : arefRuqaa.className
-        } bg-deepBlack text-white min-h-screen selection:bg-lightBlack selection:text-aqua px-5 md:px-0`}
+        className={`${ubuntu.className} bg-deepBlack text-white min-h-screen selection:bg-lightBlack selection:text-aqua px-5 md:px-0`}
       >
-        <Navbar lang={lang} />
-        <HeaderNavigations lang={lang} />
+        <Navbar />
+        <HeaderNavigations />
         {children}
-        <Footer lang={lang} />
+        <Footer />
       </body>
     </html>
   );

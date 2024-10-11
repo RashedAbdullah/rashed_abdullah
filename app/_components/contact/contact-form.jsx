@@ -1,10 +1,7 @@
-import { getManageLangs } from "@/manage-langs/manage-langs";
 import nodemailer from "nodemailer";
 import { FiSend } from "react-icons/fi";
 
-const ContactForm = async ({ lang = "en" }) => {
-  const langs = await getManageLangs(lang);
-
+const ContactForm = async () => {
   const handleContactor = async (evet) => {
     "use server";
 
@@ -41,25 +38,25 @@ const ContactForm = async ({ lang = "en" }) => {
       className="flex flex-col gap-14 col-span-8"
     >
       <div className="flex flex-col md:grid grid-cols-8 justify-center gap-14">
-        <div className="col-span-4" dir={lang === "ar" ? "rtl" : "ltr"}>
-          <p className="text-aqua">{langs.yourname}*</p>
+        <div className="col-span-4" >
+          <p className="text-aqua">Your Name*</p>
           <div>
             <input
               type="text"
               name="name"
-              placeholder={langs.enterName}
+              placeholder="Enter your name"
               className="bg-transparent w-full outline-none border-b border-aqua py-1"
             />
           </div>
         </div>
 
-        <div className="col-span-4" dir={lang === "ar" ? "rtl" : "ltr"}>
-          <p className="text-aqua">{langs.youremail}*</p>
+        <div className="col-span-4" >
+          <p className="text-aqua">Your Email*</p>
           <div>
             <input
               type="email"
               name="email"
-              placeholder={langs.enterMail}
+              placeholder="Enter your email"
               className="bg-transparent w-full outline-none border-b border-aqua py-1"
             />
           </div>
@@ -67,24 +64,24 @@ const ContactForm = async ({ lang = "en" }) => {
       </div>
 
       <div>
-        <div dir={lang === "ar" ? "rtl" : "ltr"}>
-          <p className="text-aqua">{langs.yourmessage}*</p>
+        <div >
+          <p className="text-aqua">Your message*</p>
           <div>
             <input
               type="text"
               name="message"
-              placeholder={langs.enterNeed}
+              placeholder="Enter your needs"
               className="bg-transparent w-full outline-none border-b border-aqua py-1"
             />
           </div>
         </div>
       </div>
       <div
-        dir={lang === "ar" ? "rtl" : "ltr"}
+
         className="flex justify-center items-center"
       >
         <button className="bg-aqua text-deepBlack py-3 px-8 rounded-full flex justify-center items-center gap-3">
-          {langs.sendMessage} <FiSend />
+          Send Message <FiSend />
         </button>
       </div>
     </form>

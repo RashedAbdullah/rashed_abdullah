@@ -1,10 +1,9 @@
-import ScrollMouse from "@/app/[lang]/_components/scroll-mouse";
+import ScrollMouse from "@/app/_components/scroll-mouse";
 import { Boxes } from "@/components/ui/background-boxes";
 import MyPicture from "./my-pic";
-import { getManageLangs } from "@/manage-langs/manage-langs";
 
-export default async function AboutMe({ lang = "en" }) {
-  const langs = await getManageLangs(lang);
+export default async function AboutMe() {
+
   return (
     <div
       id="about"
@@ -17,22 +16,27 @@ export default async function AboutMe({ lang = "en" }) {
       <div className="container flex flex-col md:grid grid-cols-10 gap-10">
         <div className="col-span-6 flex flex-col gap-14 justify-center">
           <div
-            dir={lang === "ar" ? "rtl" : "ltr"}
+
             className="flex md:justify-start justify-center"
           >
             <div className="py-4 px-6 rounded-tl-xl rounded-br-xl border-4 border-aqua z-40 relative">
-              <h2 className="text-4xl font-semibold">{langs.about}</h2>
+              <h2 className="text-4xl font-semibold">About Me</h2>
             </div>
           </div>
-          <div dir={lang === "ar" ? "rtl" : "ltr"}>
+          <div>
             <div className="bg-lightBlack relative z-40 p-5 rounded-3xl text-sm">
               <p className="text-aqua">{`<p>`}</p>
               <br />
-              <h3 className="text-aqua text-xl">{langs.hey}!</h3>
+              <h3 className="text-aqua text-xl">Hey!</h3>
               <p>
-                {langs.desc1} <span className="text-aqua">React.js</span>{" "}
-                {langs.and} <span className="text-aqua">Next.js</span>{" "}
-                {langs.desc2} ✨
+                I`&apos;m Rashed Abdullah, a passionate front-end developer. I
+                specialize in crafting stunning web experiences using{" "}
+                <span className="text-aqua">React.js</span> And
+                <span className="text-aqua">Next.js</span> With a focus on
+                innovation and user engagement, I create immersive interfaces
+                and high-performance applications. Let&apos;s collaborate to
+                bring your ideas to life and enchant users with interactive
+                wonders on the web. ✨
               </p>
               <br />
               <p className="text-aqua">{`</p>`}</p>

@@ -3,12 +3,12 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { GiRotaryPhone } from "react-icons/gi";
 import { FaLink } from "react-icons/fa6";
-import { Button } from "@/components/ui/button";
-import { BiDownload } from "react-icons/bi";
-import { getManageLangs } from "@/manage-langs/manage-langs";
 
-const BesicInfo = async ({ lang }) => {
-  const langs = await getManageLangs(lang);
+import { BiDownload } from "react-icons/bi";
+
+
+const BesicInfo = async () => {
+
 
   return (
     <div className="col-span-3 flex justify-center items-center">
@@ -17,16 +17,16 @@ const BesicInfo = async ({ lang }) => {
           <div className="flex flex-col justify-center items-center">
             <Image
               src={`https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg`}
-              alt={langs.name}
+              alt="Rashed Abdullah"
               height={300}
               width={300}
               className={`h-[120px] w-[120px] object-cover bg-cover bg-no-repeat bg-center rounded-full`}
             ></Image>
             <div className="text-2xl font-semibold">
-              <h2>{langs.name}</h2>
+              <h2>Rashed Abdullah</h2>
             </div>
             <div>
-              <p>{langs.profession}</p>
+              <p>Front-end Developer</p>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ const BesicInfo = async ({ lang }) => {
             <div className="col-span-1 text-aqua">
               <IoLocationOutline />
             </div>
-            <div className="col-span-7">{langs.address}</div>
+            <div className="col-span-7">Feni, Bangladesh</div>
 
             <div className="col-span-1 text-aqua">
               <GiRotaryPhone />
@@ -72,7 +72,7 @@ const BesicInfo = async ({ lang }) => {
               download="RashedResume.pdf"
               className="bg-white text-deepBlack hover:text-white px-10 py-2 flex items-center gap-2 text-lg"
             >
-              {langs.resume} <BiDownload />
+              Resume <BiDownload />
             </a>
           </div>
         </div>

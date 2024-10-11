@@ -2,10 +2,9 @@ import React from "react";
 import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";
 import Projects from "../projects/projects";
-import { getManageLangs } from "@/manage-langs/manage-langs";
 
-export default async function Works({ lang = "en" }) {
-  const langs = await getManageLangs(lang);
+
+export default async function Works() {
 
   return (
     <div
@@ -19,8 +18,10 @@ export default async function Works({ lang = "en" }) {
           <ScrollMouse />
         </div>
         <div>
-          <PageTitle>{langs.projects}</PageTitle>
-          <p className="text-center text-sm">{langs.workDesc}</p>
+          <PageTitle>Works</PageTitle>
+          <p className="text-center text-sm">
+            I had the pleasure of working with these awesome projects
+          </p>
         </div>
         <div className="flex justify-center items-center my-10">
           <Projects />

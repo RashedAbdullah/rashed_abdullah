@@ -8,10 +8,10 @@ import mongodb from "@/public/mongodb.svg";
 import javascript from "@/public/js.svg";
 import Image from "next/image";
 import { BackgroundLines } from "@/components/ui/background-lines";
-import { getManageLangs } from "@/manage-langs/manage-langs";
 
-const Skills = async ({ lang = "en" }) => {
-  const langs = await getManageLangs(lang);
+
+const Skills = async () => {
+
   return (
     <div
       id="skills"
@@ -28,8 +28,10 @@ const Skills = async ({ lang = "en" }) => {
                 <ScrollMouse />
               </div>
               <div>
-                <PageTitle>{langs.skills}</PageTitle>
-                <p className="text-center text-sm">{langs.skillDesc}</p>
+                <PageTitle>Skills</PageTitle>
+                <p className="text-center text-sm">
+                  I&apos;m never striving to never stop learning and improving
+                </p>
               </div>
               <div className="flex flex-col md:flex-row justify-center items-center gap-10 my-10">
                 <div className="bg-white text-deepBlack py-2 px-7 flex flex-col justify-center gap-2 border-l-8 border-aqua rounded-lg min-w-64">
@@ -37,12 +39,10 @@ const Skills = async ({ lang = "en" }) => {
                     <FaRegUser />
                   </div>
                   <div className="text-center text-lg">
-                    <h2>{langs.self}</h2>
+                    <h2>Self Development</h2>
                   </div>
                   <div className="text-sm text-center">
-                    <p>
-                      {langs.creativity} - {langs.communication}
-                    </p>
+                    <p>Creativity - Communication</p>
                   </div>
                 </div>
 
@@ -51,7 +51,7 @@ const Skills = async ({ lang = "en" }) => {
                     <MdOutlineTv />
                   </div>
                   <div className="text-center text-lg">
-                    <h2>{langs.web}</h2>
+                    <h2>Web Development</h2>
                   </div>
                   <div className="text-sm text-center">
                     <p>Next.js - Node.js - MongoDB</p>
