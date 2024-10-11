@@ -46,7 +46,7 @@ export const BoxesCore = ({
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="w-16 h-8  border-r border-t border-slate-700 relative">
+              className="w-16 h-8  border-r border-t border-deepAqua dark:border-slate-700 relative">
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export const BoxesCore = ({
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 stroke-[1px] pointer-events-none">
+                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-deepAqua dark:text-slate-700 stroke-[1px] pointer-events-none">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                 </svg>
               ) : null}

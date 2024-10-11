@@ -20,7 +20,7 @@ const Skills = async () => {
         backgroundImage: `url(${"https://i.ibb.co.com/kHSHKLx/code-image.webp"})`,
       }}
     >
-      <div className="bg-deepBlack bg-opacity-80 min-h-screen w-full">
+      <div className="dark:bg-deepBlack dark:bg-opacity-80 bg-gray-800 bg-opacity-80 min-h-screen w-full">
         <div className="container relative">
           <BackgroundLines>
             <div className="z-40 relative">
@@ -29,7 +29,7 @@ const Skills = async () => {
               </div>
               <div>
                 <PageTitle>Skills</PageTitle>
-                <p className="text-center text-sm">
+                <p className="text-center text-sm text-white">
                   I&apos;m never striving to never stop learning and improving
                 </p>
               </div>

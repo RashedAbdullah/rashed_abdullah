@@ -29,6 +29,14 @@ const Navigations = async () => {
          Works
         </Link>
       </div>
+      <div>
+        <Link
+          href="/youtube"
+          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+        >
+         Youtube
+        </Link>
+      </div>
     </div>
   );
 };

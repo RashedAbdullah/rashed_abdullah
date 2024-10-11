@@ -3,10 +3,11 @@ import SocialLinks from "./social-links";
 import Navigations from "./navigations";
 import Logo from "./logo";
 import MobileNav from "./mobile-nav";
+import { ThemeSwitcher } from "./theme-switcher";
 
 const Navbar = () => {
   return (
-    <div className="border-b-[0.1px] sticky top-0 z-50">
+    <div className="border-b-[0.1px] sticky top-0 z-50 text-black backdrop-blur-lg dark:text-white">
       <header className="container py-6 flex justify-between items-center backdrop-blur-lg">
         <Logo />
 
@@ -15,6 +16,7 @@ const Navbar = () => {
           <Navigations />
           <NavSearch />
           <SocialLinks />
+          <ThemeSwitcher />
         </nav>
 
         {/* Mobile Navigation */}

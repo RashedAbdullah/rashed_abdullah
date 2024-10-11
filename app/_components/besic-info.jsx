@@ -6,10 +6,7 @@ import { FaLink } from "react-icons/fa6";
 
 import { BiDownload } from "react-icons/bi";
 
-
 const BesicInfo = async () => {
-
-
   return (
     <div className="col-span-3 flex justify-center items-center">
       <div>
@@ -32,36 +29,36 @@ const BesicInfo = async () => {
 
           {/* Info */}
           <div className="grid grid-cols-8 items-center align-middle">
-            <div className="col-span-1 text-aqua">
+            <div className="col-span-1 dark:text-aqua text-deepAqua">
               <MdOutlineMailOutline />
             </div>
             <div className="col-span-7">maarashed40@gmail.com</div>
 
-            <div className="col-span-1 text-aqua">
+            <div className="col-span-1 dark:text-aqua text-deepAqua">
               <IoLocationOutline />
             </div>
             <div className="col-span-7">Feni, Bangladesh</div>
 
-            <div className="col-span-1 text-aqua">
+            <div className="col-span-1 dark:text-aqua text-deepAqua">
               <GiRotaryPhone />
             </div>
             <div className="col-span-7">+8801603443214</div>
 
-            <div className="col-span-1 text-aqua">
+            <div className="col-span-1 dark:text-aqua text-deepAqua">
               <FaLink />
             </div>
             <div className="col-span-7">www.rashedabdullah.com</div>
           </div>
 
           {/* Skills */}
-          <div className="text-deepBlack flex justify-evenly items-center">
-            <div className="bg-aqua py-1 px-3 rounded-xl">
+          <div className="text-deepBlack flex justify-evenly items-center text-white dark:text-slate-900">
+            <div className="dark:bg-aqua bg-deepAqua py-1 px-3 rounded-xl">
               <p>JS</p>
             </div>
-            <div className="bg-aqua py-1 px-3 rounded-xl">
+            <div className="dark:bg-aqua bg-deepAqua py-1 px-3 rounded-xl">
               <p>Next.js</p>
             </div>
-            <div className="bg-aqua py-1 px-3 rounded-xl">
+            <div className="dark:bg-aqua bg-deepAqua py-1 px-3 rounded-xl">
               <p>Node.js</p>
             </div>
           </div>

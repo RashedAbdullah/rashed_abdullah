@@ -1,15 +1,11 @@
-import { Ubuntu, Hind_Siliguri, Aref_Ruqaa } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
 import HeaderNavigations from "./_components/header-navigtaions";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
-const hindSiliguri = Hind_Siliguri({
-  subsets: ["bengali"],
-  weight: ["400", "500"],
-});
-const arefRuqaa = Aref_Ruqaa({ subsets: ["arabic"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Rashed Abdullah",
@@ -33,10 +29,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rashedabdullah.vercel.app" />
         {/* Replace with your actual URL */}
-        <meta
-          property="og:rashedabdullah"
-          content="https://yourwebsite.com/image.jpg"
-        />
+        <meta property="og:image" content="https://yourwebsite.com/image.jpg" />
         {/* Replace with your actual image URL */}
         <link
           rel="canonical"
@@ -45,12 +38,19 @@ export default function RootLayout({ children }) {
         {/* Replace with your actual URL */}
       </head>
       <body
-        className={`${ubuntu.className} bg-deepBlack text-white min-h-screen selection:bg-lightBlack selection:text-aqua px-5 md:px-0`}
+        className={`${ubuntu.className} bg-[#C5DEFE] text-black dark:bg-deepBlack dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
       >
-        <Navbar />
-        <HeaderNavigations />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <HeaderNavigations />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

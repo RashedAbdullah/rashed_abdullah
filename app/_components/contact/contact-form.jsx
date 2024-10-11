@@ -39,25 +39,25 @@ const ContactForm = async () => {
     >
       <div className="flex flex-col md:grid grid-cols-8 justify-center gap-14">
         <div className="col-span-4" >
-          <p className="text-aqua">Your Name*</p>
+          <p className="text-deepAqua dark:text-aqua">Your Name*</p>
           <div>
             <input
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="bg-transparent w-full outline-none border-b border-aqua py-1"
+              className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
             />
           </div>
         </div>
 
         <div className="col-span-4" >
-          <p className="text-aqua">Your Email*</p>
+          <p className="text-deepAqua dark:text-aqua">Your Email*</p>
           <div>
             <input
               type="email"
               name="email"
               placeholder="Enter your email"
-              className="bg-transparent w-full outline-none border-b border-aqua py-1"
+              className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
             />
           </div>
         </div>
@@ -65,13 +65,13 @@ const ContactForm = async () => {
 
       <div>
         <div >
-          <p className="text-aqua">Your message*</p>
+          <p className="text-deepAqua dark:text-aqua">Your message*</p>
           <div>
             <input
               type="text"
               name="message"
               placeholder="Enter your needs"
-              className="bg-transparent w-full outline-none border-b border-aqua py-1"
+              className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
             />
           </div>
         </div>
@@ -80,7 +80,7 @@ const ContactForm = async () => {
 
         className="flex justify-center items-center"
       >
-        <button className="bg-aqua text-deepBlack py-3 px-8 rounded-full flex justify-center items-center gap-3">
+        <button className="bg-deepAqua dark:bg-aqua text-white dark:text-deepBlack py-3 px-8 rounded-full flex justify-center items-center gap-3">
           Send Message <FiSend />
         </button>
       </div>

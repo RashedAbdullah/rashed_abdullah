@@ -23,7 +23,7 @@ const Contact = async () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <div className="py-3 px-5 border-2 border-aqua text-aqua font-semibold text-2xl md:text-3xl rounded-tl-xl rounded-br-xl">
+            <div className="py-3 px-5 border-2 border-deepAqua dark:border-aqua text-deepAqua dark:text-aqua font-semibold text-2xl md:text-3xl rounded-tl-xl rounded-br-xl">
               <h3>Send Me A Message</h3>
             </div>
           </div>

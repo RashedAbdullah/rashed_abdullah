@@ -10,7 +10,10 @@ const HeaderInfo = () => {
           <BesicInfo />
           <NameTItle />
           <div className="col-span-3 flex justify-center items-center">
-            <div className="text-[200px] text-aqua font-semibold">{"</>"}</div>
+            {/* Apply specific colors for light mode */}
+            <div className="text-[200px] text-deepAqua dark:text-aqua font-semibold">
+              {"</>"}
+            </div>
           </div>
         </div>
       </BackgroundBeamsWithCollision>

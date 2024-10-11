@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -26,7 +27,7 @@ const MobileNav = async () => {
         </Button>
       </SheetTrigger>
       <SheetContent
-        side="top"
+        // side="bottom"
         className="bg-lightBlack text-white"
         role="dialog"
         aria-labelledby="sheet-title"
