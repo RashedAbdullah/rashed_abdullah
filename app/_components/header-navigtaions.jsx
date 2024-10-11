@@ -14,7 +14,7 @@ const HeaderNavigations = () => {
           <div>
             <a
               href="#hero"
-              className="flex justify-center items-center align-middle h-10 w-10 bg-white rounded-full text-lightBlack"
+              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
             >
               <MdOutlineDashboard />
             </a>
