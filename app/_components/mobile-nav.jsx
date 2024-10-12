@@ -19,7 +19,7 @@ const MobileNav = async () => {
     <Sheet>
       <SheetTrigger asChild>
         <Button
-          className="text-deepBlack"
+          className="bg-transparent dark:text-white border-transparent hover:bg-transparent"
           variant="outline"
           aria-label="Open mobile navigation"
         >
@@ -27,7 +27,7 @@ const MobileNav = async () => {
         </Button>
       </SheetTrigger>
       <SheetContent
-        // side="bottom"
+        side="left"
         className="bg-lightBlack text-white"
         role="dialog"
         aria-labelledby="sheet-title"

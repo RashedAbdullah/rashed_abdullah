@@ -63,11 +63,11 @@ const HeaderNavigations = () => {
       </div>
 
       {/* For medium and small screens */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-gray-100 dark:bg-deepBlack py-2 flex justify-around items-center">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-gray-100 dark:bg-lightBlack py-2 flex justify-around items-center">
         <div>
           <a
             href="#hero"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full text-lightBlack"
+            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
           >
             <MdOutlineDashboard />
           </a>
