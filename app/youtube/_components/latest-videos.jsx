@@ -3,6 +3,7 @@ import VideoCard from "./video-card";
 
 const LatestVideos = async () => {
   const latestVideos = await getLatestVideos();
+
   return (
     <div className="container mx-auto px-4 py-12">
       <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
@@ -10,7 +11,7 @@ const LatestVideos = async () => {
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {latestVideos.map((video) => (
-          <VideoCard key={video.id} video={video} />
+          <VideoCard key={video?.id} video={video} />
         ))}
       </div>
     </div>
