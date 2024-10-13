@@ -5,23 +5,23 @@ import { FaFacebook, FaInstagram } from "react-icons/fa6";
 
 
 export default async function FooterSocial() {
-  
+
   const links = [
     {
       title: "Facebook",
-      icon: <FaFacebook className="h-full w-full text-neutral-500" />,
+      icon: <FaFacebook className="h-full w-full" />,
       href: "https://www.facebook.com/Rashed4Abdullah",
       ariaLabel: `Visit Facabook profile`, // Added aria-label for accessibility
     },
     {
       title: "Instagram",
-      icon: <FaInstagram className="h-full w-full text-neutral-500" />,
+      icon: <FaInstagram className="h-full w-full" />,
       href: "#", // Update with a valid Instagram link
       ariaLabel: `Visit Instagram profile`, // Added aria-label for accessibility
     },
     {
       title: "Github",
-      icon: <IconBrandGithub className="h-full w-full text-neutral-500" />,
+      icon: <IconBrandGithub className="h-full w-full" />,
       href: "https://github.com/RashedAbdullah",
       ariaLabel: `Visit Github profile`, // Added aria-label for accessibility
     },

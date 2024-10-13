@@ -25,7 +25,6 @@ const VideoCategories = () => {
         Video Categories
       </h2>
       <div className="flex justify-center gap-8 flex-wrap">
-        {/* Quran */}
         {categories.map((category) => (
           <div key={category.category} className="relative group">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300 w-56">

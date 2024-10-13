@@ -2,7 +2,7 @@ import { Ubuntu } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
-
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
@@ -50,6 +50,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
