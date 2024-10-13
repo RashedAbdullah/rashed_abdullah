@@ -37,19 +37,20 @@ export default function RootLayout({ children }) {
         <meta name="google-adsense-account" content="ca-pub-6921856465558245" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        <meta name="author" content={metadata.author} />
+        <meta name="author" content={metadata.authors[0].name} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rashedabdullah.vercel.app" />
-        {/* Replace with your actual URL */}
-        <meta property="og:image" content="https://yourwebsite.com/image.jpg" />
-        {/* Replace with your actual image URL */}
+
+        <meta
+          property="og:image"
+          content="https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg"
+        />
         <link
           rel="canonical"
           href="https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg"
         />
-        {/* Replace with your actual URL */}
       </head>
       <body
         className={`${ubuntu.className} bg-[#C5DEFE] text-black dark:bg-deepBlack dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}

@@ -6,23 +6,70 @@ import { formatCount } from "@/utils/format-view";
 export async function generateMetadata({ params: { slug } }) {
   const singleVideo = await getSingleYoutubeVideo(slug);
 
+  const title = `${singleVideo?.title} | Rashed Abdullah YouTube`;
+  const description =
+    singleVideo?.description?.slice(0, 155) ||
+    "Watch high-quality videos by Rashed Abdullah, including Quran recitations, nasheeds, and lectures.";
+  const videoUrl = `https://www.youtube.com/watch?v=${singleVideo?.id}`;
+  const imageUrl = singleVideo?.thumbnailUrl;
+
   return {
-    title: singleVideo?.title,
-    keywords: singleVideo.tags,
-    description: singleVideo.description,
+    title,
+    description,
+    keywords: [
+      ...singleVideo.tags,
+      "Rashed Abdullah",
+      "YouTube",
+      "Islamic Videos",
+      "Nasheeds",
+      "Quran Recitations",
+    ],
     authors: [
       { name: "Rashed Abdullah", url: "https://rashedabdullah.vercel.app" },
     ],
     creator: "Rashed Abdullah",
     publisher: "Rashed Abdullah",
     formatDetection: {
-      email: "abdulahad4rashed@gmail.com",
+      email: false,
       address: "Feni, Bangladesh",
       telephone: "+8801603443214",
     },
-    // openGraph: {
-    //   images: ["/some-specific-page-image.jpg", ...previousImages],
-    // },
+    openGraph: {
+      title,
+      description,
+      url: `https://rashedabdullah.vercel.app/youtube/description/${slug}`,
+      type: "video.other",
+      video: {
+        url: videoUrl,
+        width: 1280,
+        height: 720,
+      },
+      images: [
+        {
+          url: imageUrl,
+          width: 1280,
+          height: 720,
+          alt: singleVideo?.title,
+        },
+      ],
+      site_name: "Rashed Abdullah's Portfolio",
+      locale: "en_US",
+      video: {
+        url: videoUrl,
+        secure_url: videoUrl,
+        type: "text/html",
+        width: 1280,
+        height: 720,
+      },
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
+      creator: "@RashedAbdullah",
+    },
   };
 }
 

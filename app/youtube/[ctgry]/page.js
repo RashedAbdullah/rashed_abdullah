@@ -1,6 +1,58 @@
 import VideoCard from "../_components/video-card";
 import { getVideosByCategories } from "@/utils/fetch-vidoes";
 
+export async function generateMetadata({ params }) {
+  const { ctgry } = params;
+
+  const selectCategory = (ctg) => {
+    if (ctg === "quran") {
+      return "Quran Kareem";
+    } else if (ctg === "nasheed") {
+      return "Nasheeds";
+    } else if (ctg === "lecture") {
+      return "Lectures";
+    }
+  };
+
+  const categoryName = selectCategory(ctgry);
+  const pageTitle = `Latest ${categoryName} Videos | Rashed Abdullah`;
+  const pageDescription = `Watch the latest ${categoryName} videos by Rashed Abdullah, including recitations, nasheeds, and lectures.`;
+
+  return {
+    title: pageTitle,
+    description: pageDescription,
+    keywords: [
+      "Rashed Abdullah",
+      categoryName,
+      "YouTube",
+      "Nasheeds",
+      "Lectures",
+      "Quran",
+      "Bangla Subtitles",
+    ],
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: `https://rashedabdullah.vercel.app/youtube/${ctgry}`,
+      images: [
+        {
+          url: "/path/to/category-specific-image.jpg", // Add appropriate image for each category
+          width: 800,
+          height: 600,
+          alt: `${categoryName} Videos`,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDescription,
+      images: ["/path/to/category-specific-twitter-image.jpg"],
+    },
+  };
+}
+
 const YoutubeVideoByCategoryPage = async ({ params }) => {
   const { ctgry } = params;
   const videos = await getVideosByCategories(ctgry);
@@ -14,6 +66,7 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
       return "Lectures";
     }
   };
+
   return (
     <div className="min-h-screen dark:text-gray-300">
       <div className="text-center py-16 bg-gradient-to-r from-blue-600 to-teal-600 dark:bg-gradient-to-r dark:from-darkTeal dark:to-darkBlue text-white">
