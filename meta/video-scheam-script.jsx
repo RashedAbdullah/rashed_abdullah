@@ -4,14 +4,15 @@ const VideoScheamScript = ({ video }) => {
     "@type": "VideoObject",
     name: video?.title,
     description: video?.description,
-    thumbnailUrl: video?.thumbnailUrl,
+    thumbnailUrl: [video?.thumbnailUrl],
+    contentUrl: "",
     embedUrl: `https://www.youtube.com/embed/${video?.embedCode}`,
     uploadDate: video?.publishedAt,
     interactionStatistic: [
       {
         "@type": "InteractionCounter",
         interactionType: "https://schema.org/WatchAction",
-        userInteractionCount: video?.viewsCount,
+        userInteractionCount: video?.totalView,
       },
       {
         "@type": "InteractionCounter",
