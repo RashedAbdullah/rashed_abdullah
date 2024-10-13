@@ -30,6 +30,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>{metadata.title}</title>
+        <meta
+          name="google-site-verification"
+          content="r9n7bB-gzXavkqRnGuhVozfe6QtB_OBR5cLFW9iKJAs"
+        />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
