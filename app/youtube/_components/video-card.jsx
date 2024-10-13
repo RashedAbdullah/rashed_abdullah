@@ -3,10 +3,12 @@ import { FaComment } from "react-icons/fa6";
 import { formatCount } from "@/utils/format-view";
 import { FaYoutube, FaEye, FaThumbsUp } from "react-icons/fa";
 import Link from "next/link";
+import VideoScheamScript from "@/meta/video-scheam-script";
 
 const VideoCard = ({ video }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+      <VideoScheamScript video={video} />
       <div className="relative group">
         <Image
           src={video?.thumbnailUrl}

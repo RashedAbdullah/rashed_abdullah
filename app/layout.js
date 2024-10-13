@@ -13,7 +13,16 @@ export const metadata = {
     "Rashed Abdullah's Portfolio Website, showcasing his work as a Programmer and Teacher of Madrasha.",
   keywords:
     "Rashed Abdullah, Programmer, Teacher, Portfolio, Student, Next.js, Web Development",
-  author: "Rashed Abdullah",
+  authors: [
+    { name: "Rashed Abdullah", url: "https://rashedabdullah.vercel.app" },
+  ],
+  creator: "Rashed Abdullah",
+  publisher: "Rashed Abdullah",
+  formatDetection: {
+    email: "abdulahad4rashed@gmail.com",
+    address: "Feni, Bangladesh",
+    telephone: "+8801603443214",
+  },
 };
 
 export default function RootLayout({ children }) {

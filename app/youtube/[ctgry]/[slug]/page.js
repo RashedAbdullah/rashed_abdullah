@@ -1,7 +1,30 @@
 import { getSingleYoutubeVideo } from "@/utils/fetch-vidoes";
 import Image from "next/image";
 import { FaEye, FaThumbsUp, FaComment, FaYoutube } from "react-icons/fa";
-import { formatCount } from "@/utils/format-view"; // Ensure this utility is available
+import { formatCount } from "@/utils/format-view";
+
+export async function generateMetadata({ params: { slug } }) {
+  const singleVideo = await getSingleYoutubeVideo(slug);
+
+  return {
+    title: singleVideo?.title,
+    keywords: singleVideo.tags,
+    description: singleVideo.description,
+    authors: [
+      { name: "Rashed Abdullah", url: "https://rashedabdullah.vercel.app" },
+    ],
+    creator: "Rashed Abdullah",
+    publisher: "Rashed Abdullah",
+    formatDetection: {
+      email: "abdulahad4rashed@gmail.com",
+      address: "Feni, Bangladesh",
+      telephone: "+8801603443214",
+    },
+    // openGraph: {
+    //   images: ["/some-specific-page-image.jpg", ...previousImages],
+    // },
+  };
+}
 
 const getSingleVideo = async ({ params: { ctgry, slug } }) => {
   const singleVideo = await getSingleYoutubeVideo(slug);
