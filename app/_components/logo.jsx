@@ -8,10 +8,10 @@ const Logo = async () => {
         aria-label={`Rashed Abdullah - Homepage`}
         title={`Rashed Abdullah - Homepage`}
       >
-        <h2 className="flex items-center">
+        <h1 className="flex items-center">
           <span className="text-deepAqua dark:text-aqua font-bold">{`</>`}</span>
           <span className="ml-2 font-semibold">Rashed Abdullah</span>{" "}
-        </h2>
+        </h1>
       </Link>
     </div>
   );

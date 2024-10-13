@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Rashed Abdullah's Portfolio Website, showcasing his work as a Programmer and Teacher of Madrasha.",
   keywords:
-    "Rashed Abdullah, Programmer, Teacher, Portfolio, Student, Next.js, Web Development",
+    "Rashed Abdullah, Programmer, Teacher, Portfolio, Student, Web Developer",
   authors: [
     { name: "Rashed Abdullah", url: "https://rashedabdullah.vercel.app" },
   ],
@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="r9n7bB-gzXavkqRnGuhVozfe6QtB_OBR5cLFW9iKJAs"
         />
+        <meta name="google-adsense-account" content="ca-pub-6921856465558245" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
