@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
       url: `https://rashedabdullah.vercel.app/youtube/${ctgry}`,
       images: [
         {
-          url: "/path/to/category-specific-image.jpg", // Add appropriate image for each category
+          url: "/path/to/category-specific-image.jpg",
           width: 800,
           height: 600,
           alt: `${categoryName} Videos`,

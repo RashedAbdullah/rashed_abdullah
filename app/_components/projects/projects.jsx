@@ -29,7 +29,7 @@ export default function Projects() {
         {projects.map((project, ind) => (
           <CarouselItem key={ind} className="pl-1 md:basis-1/2 lg:basis-1/5 ">
             <Card className="group relative transition-all bg-slate-200 dark:bg-slate-800 duration-300 transform hover:-translate-y-2 hover:shadow-xl  border border-gray-200 rounded-lg overflow-hidden">
-              {/* Project Image */}
+
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={"https://i.ibb.co.com/kHSHKLx/code-image.webp"}
@@ -41,7 +41,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
-              {/* Text Content */}
+          
               <CardContent className="p-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white truncate">
                   {project.title}

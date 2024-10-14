@@ -27,7 +27,7 @@ const BesicInfo = async () => {
             </div>
           </div>
 
-          {/* Info */}
+
           <div className="grid grid-cols-8 items-center align-middle">
             <div className="col-span-1 dark:text-aqua text-deepAqua">
               <MdOutlineMailOutline />
@@ -50,8 +50,8 @@ const BesicInfo = async () => {
             <div className="col-span-7">www.rashedabdullah.com</div>
           </div>
 
-          {/* Skills */}
-          <div className="text-deepBlack flex justify-evenly items-center text-white dark:text-slate-900">
+
+          <div className="flex justify-evenly items-center text-white dark:text-slate-900">
             <div className="dark:bg-aqua bg-deepAqua py-1 px-3 rounded-xl">
               <p>JS</p>
             </div>

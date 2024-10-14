@@ -4,6 +4,7 @@ import Skills from "./_components/skills/skills";
 import Works from "./_components/works/works";
 import Contact from "./_components/contact/contact";
 import HeaderNavigations from "./_components/header-navigtaions";
+import NotFound from "./not-found";
 
 export default async function Home() {
   return (

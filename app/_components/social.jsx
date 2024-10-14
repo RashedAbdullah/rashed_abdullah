@@ -11,26 +11,26 @@ export default async function FooterSocial() {
       title: "Facebook",
       icon: <FaFacebook className="h-full w-full" />,
       href: "https://www.facebook.com/Rashed4Abdullah",
-      ariaLabel: `Visit Facabook profile`, // Added aria-label for accessibility
+      ariaLabel: `Visit Facabook profile`,
     },
     {
       title: "Instagram",
       icon: <FaInstagram className="h-full w-full" />,
-      href: "#", // Update with a valid Instagram link
-      ariaLabel: `Visit Instagram profile`, // Added aria-label for accessibility
+      href: "#", 
+      ariaLabel: `Visit Instagram profile`,
     },
     {
       title: "Github",
       icon: <IconBrandGithub className="h-full w-full" />,
       href: "https://github.com/RashedAbdullah",
-      ariaLabel: `Visit Github profile`, // Added aria-label for accessibility
+      ariaLabel: `Visit Github profile`,
     },
   ];
 
   return (
     <div>
       <h2 className="sr-only">Connect with me on social media</h2>{" "}
-      {/* Screen reader only heading */}
+
       <FloatingDock
         mobileClassName="translate-y-20"
         items={links.map(({ title, icon, href, ariaLabel }) => ({

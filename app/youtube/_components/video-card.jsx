@@ -34,7 +34,7 @@ const VideoCard = ({ video }) => {
             </h3>
           </Link>
 
-          {/* Date and Time */}
+
           <div className="text-gray-500 dark:text-gray-400 text-sm mt-3 flex items-center gap-2">
             <p>{new Date(video?.publishedAt).toLocaleDateString()}</p>
             <p>|</p>
@@ -42,7 +42,7 @@ const VideoCard = ({ video }) => {
           </div>
         </div>
 
-        {/* Stats Section */}
+        
         <div className="flex justify-between items-center mt-4">
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaEye className="mr-2 text-blue-500 dark:text-teal-300" />

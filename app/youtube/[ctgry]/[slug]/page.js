@@ -86,7 +86,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
 
   return (
     <div className="container mx-auto p-4 md:p-8 lg:p-12">
-      {/* Video Section */}
+
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-6">
         <div className="relative">
           <Image
@@ -107,12 +107,12 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
         </div>
       </div>
 
-      {/* Title Section */}
+
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
         {singleVideo.title}
       </h1>
 
-      {/* Stats Section */}
+
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:flex-wrap items-center justify-between bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-2 mb-4">
         <div className="flex items-center">
           <FaEye className="mr-2 text-blue-500 dark:text-teal-300" />
@@ -137,7 +137,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
         </div>
       </div>
 
-      {/* Description Section */}
+      
       <div className="mt-6">
         <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
           Description
