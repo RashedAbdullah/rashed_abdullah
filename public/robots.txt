@@ -2,7 +2,6 @@
 User-agent: *
 Allow: /
 
-Disallow: /admin/
-Disallow: /private/
+Disallow: /dashboard/
 
 Sitemap: https://yourdomain.com/sitemap.xml

@@ -1,8 +1,6 @@
-
 import Link from "next/link";
 
 const Navigations = async () => {
-
   return (
     <div className="lg:flex justify-center md:gap-10 gap-2">
       <div>
@@ -10,7 +8,7 @@ const Navigations = async () => {
           href="/"
           className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
         >
-         Home
+          Home
         </Link>
       </div>
       <div>
@@ -18,7 +16,7 @@ const Navigations = async () => {
           href="/blogs"
           className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
         >
-         Blogs
+          Blogs
         </Link>
       </div>
       <div>
@@ -26,7 +24,15 @@ const Navigations = async () => {
           href="/projects"
           className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
         >
-         Works
+          Works
+        </Link>
+      </div>
+      <div>
+        <Link
+          href="/diary"
+          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+        >
+          Diary
         </Link>
       </div>
       <div>
@@ -34,7 +40,7 @@ const Navigations = async () => {
           href="/youtube"
           className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
         >
-         Youtube
+          Youtube
         </Link>
       </div>
     </div>

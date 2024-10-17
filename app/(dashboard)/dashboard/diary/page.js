@@ -1,7 +1,5 @@
 import markdownToHtml from "@/utils/mark-down-to-html";
-import { Tiro_Bangla } from "next/font/google";
 
-const tiroBangla = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 const DashDiaryPage = async () => {
   const handleTextArea = async (formData) => {
     "use server";
@@ -21,7 +19,7 @@ const DashDiaryPage = async () => {
 
   return (
     <div
-      className={`${tiroBangla.className} min-h-screen flex items-center justify-center py-5 px-4 sm:px-6 lg:px-8 transition-colors duration-300`}
+      className={`min-h-screen flex items-center justify-center py-5 px-4 sm:px-6 lg:px-8 transition-colors duration-300`}
     >
       <div className="max-w-xl w-full space-y-8">
         <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
