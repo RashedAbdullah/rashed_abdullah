@@ -42,7 +42,11 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rashedabdullah.vercel.app" />
-
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
+          crossorigin="anonymous"
+        ></script>
         <meta
           property="og:image"
           content="https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg"
