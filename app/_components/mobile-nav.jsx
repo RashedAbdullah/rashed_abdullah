@@ -13,6 +13,7 @@ import { Menu } from "lucide-react";
 import Navigations from "./navigations";
 
 import FooterSocial from "./social";
+import Link from "next/link";
 
 const MobileNav = async () => {
   return (
@@ -44,7 +45,56 @@ const MobileNav = async () => {
 
         <div className="text-center py-4">
           <nav className="py-5">
-            <Navigations />
+            <div>
+              <SheetClose asChild>
+                <Link
+                  href="/"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Home
+                </Link>
+              </SheetClose>
+            </div>
+            <div>
+              <SheetClose asChild>
+                <Link
+                  href="/blogs"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Blogs
+                </Link>
+              </SheetClose>
+            </div>
+            <div>
+              <SheetClose asChild>
+                <Link
+                  href="/projects"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Works
+                </Link>
+              </SheetClose>
+            </div>
+            <div>
+              <SheetClose asChild>
+                <Link
+                  href="/diary"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Diary
+                </Link>
+              </SheetClose>
+            </div>
+            <div>
+              <SheetClose asChild>
+                <Link
+                  href="/youtube"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Youtube
+                </Link>
+              </SheetClose>
+            </div>
           </nav>
 
           <div className="flex justify-center">

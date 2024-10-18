@@ -1,3 +1,5 @@
+import { Dialog } from "@/components/ui/dialog";
+import { SheetClose } from "@/components/ui/sheet";
 import Link from "next/link";
 
 const Navigations = async () => {

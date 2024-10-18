@@ -1,15 +1,10 @@
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";
-
-
 import ContactForm from "./contact-form";
 
 const Contact = async () => {
-
   return (
     <div id="contact" className="min-h-screen w-full relative antialiased">
-      <BackgroundBeams />
       <div className="container z-20 relative">
         <div className="flex justify-center items-center mt-20">
           <ScrollMouse />
@@ -30,7 +25,7 @@ const Contact = async () => {
 
           <div className="grid grid-cols-12 mb-10">
             <div className="col-span-2"></div>
-            <ContactForm  />
+            <ContactForm />
             <div className="col-span-2"></div>
           </div>
         </div>
