@@ -4,4 +4,4 @@ Allow: /
 
 Disallow: /dashboard/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+https://rashedabdullah.vercel.app/sitemap.xml
