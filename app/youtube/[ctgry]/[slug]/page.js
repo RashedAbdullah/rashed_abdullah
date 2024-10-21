@@ -2,6 +2,7 @@ import { getSingleYoutubeVideo } from "@/utils/fetch-vidoes";
 import Image from "next/image";
 import { FaEye, FaThumbsUp, FaComment, FaYoutube } from "react-icons/fa";
 import { formatCount } from "@/utils/format-view";
+import Ads from "@/components/ads";
 
 export async function generateMetadata({ params: { slug } }) {
   const singleVideo = await getSingleYoutubeVideo(slug);
@@ -86,7 +87,6 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
 
   return (
     <div className="container mx-auto p-4 md:p-8 lg:p-12">
-
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-6">
         <div className="relative">
           <Image
@@ -105,13 +105,12 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
             Watch Now
           </a>
         </div>
+        <Ads />
       </div>
-
 
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
         {singleVideo.title}
       </h1>
-
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:flex-wrap items-center justify-between bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-2 mb-4">
         <div className="flex items-center">
@@ -137,7 +136,6 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
         </div>
       </div>
 
-      
       <div className="mt-6">
         <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
           Description

@@ -3,15 +3,12 @@ import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";
 import Projects from "../projects/projects";
 
-
 export default async function Works() {
-
   return (
     <div
       id="works"
       className="min-h-screen w-full dark:bg-deepBlack bg-grid-small-white/[0.2] relative"
     >
-
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-[#C5DEFE] dark:bg-deepBlack [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="container">
         <div className="flex justify-center items-center mt-20">
