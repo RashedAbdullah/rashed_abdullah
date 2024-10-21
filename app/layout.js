@@ -47,6 +47,11 @@ export default function RootLayout({ children }) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
           crossOrigin="anonymous"
         ></script>
+        <script
+          async
+          custom-element="amp-auto-ads"
+          src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
+        ></script>
         <meta
           property="og:image"
           content="https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg"
@@ -59,6 +64,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${ubuntu.className} bg-[#C5DEFE] text-black dark:bg-deepBlack dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
       >
+        <amp-auto-ads
+          type="adsense"
+          data-ad-client="ca-pub-6921856465558245"
+        ></amp-auto-ads>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
