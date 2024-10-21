@@ -45,8 +45,39 @@ const YoutubePage = async () => {
   return (
     <div className="min-h-screen dark:text-gray-300">
       <YoutubeHeroSection />
+
       <VideoCategories />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
+        crossorigin="anonymous"
+      ></script>
+
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6921856465558245"
+        data-ad-slot="2560710651"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <LatestVideos />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
+        crossorigin="anonymous"
+      ></script>
+
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6921856465558245"
+        data-ad-slot="2560710651"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   );
 };

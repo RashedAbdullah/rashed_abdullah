@@ -77,7 +77,21 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
           Enjoy our collection of {selectCategory(ctgry)}.
         </p>
       </div>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
+        crossorigin="anonymous"
+      ></script>
 
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6921856465558245"
+        data-ad-slot="2560710651"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
           Latest {selectCategory(ctgry)} Videos
