@@ -105,7 +105,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
             Watch Now
           </a>
         </div>
-        <Ads />
+        {/* <Ads /> */}
       </div>
 
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4">

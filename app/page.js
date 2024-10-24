@@ -11,13 +11,13 @@ export default async function Home() {
     <main className="flex flex-col">
       <HeaderNavigations />
       <HeaderInfo />
-      <Ads />
+      {/* <Ads /> */}
       <AboutMe />
-      <Ads />
+      {/* <Ads /> */}
       <Skills />
-      <Ads />
+      {/* <Ads /> */}
       <Works />
-      <Ads />
+      {/* <Ads /> */}
       <Contact />
     </main>
   );
