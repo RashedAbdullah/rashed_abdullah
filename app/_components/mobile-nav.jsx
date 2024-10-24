@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/sheet";
 
 import { Menu } from "lucide-react";
-import Navigations from "./navigations";
 
 import FooterSocial from "./social";
 import Link from "next/link";

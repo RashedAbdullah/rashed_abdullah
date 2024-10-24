@@ -4,111 +4,77 @@ import { BsCodeSlash } from "react-icons/bs";
 import { MdTv } from "react-icons/md";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
+import ActiveHash from "./active-hash";
 
 const HeaderNavigations = () => {
   return (
     <>
+      <ActiveHash />
       <div className="hidden lg:flex fixed top-1/2 left-28 transform -translate-x-1/2 -translate-y-1/2 z-50">
-        <div className="border bg-gray-100 dark:bg-deepBlack px-1 py-2 rounded-full flex flex-col gap-2 text-lg">
+        <div className="border backdrop-blur-sm px-1 py-2 rounded-full flex flex-col gap-2 text-lg">
           <div>
-            <a
-              href="#hero"
-              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-            >
+            <ActiveHash hashId="#hero">
               <MdOutlineDashboard />
-            </a>
+            </ActiveHash>
           </div>
           <div>
-            <a
-              href="#about"
-              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-            >
+            <ActiveHash hashId="#about">
               <LuUser2 />
-            </a>
+            </ActiveHash>
           </div>
           <div>
-            <a
-              href="#skills"
-              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-            >
+            <ActiveHash hashId="#skills">
               <BsCodeSlash size={20} />
-            </a>
+            </ActiveHash>
           </div>
           <div>
-            <a
-              href="#works"
-              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-            >
+            <ActiveHash hashId="#works">
               <MdTv />
-            </a>
+            </ActiveHash>
           </div>
           <div>
-            <a
-              href="#blogs"
-              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-            >
+            <ActiveHash hashId="#blogs">
               <FaRegPenToSquare />
-            </a>
+            </ActiveHash>
           </div>
           <div>
-            <a
-              href="#contact"
-              className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-            >
+            <ActiveHash hashId="#contact">
               <MdOutlineEmail />
-            </a>
+            </ActiveHash>
           </div>
         </div>
       </div>
 
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-gray-100 dark:bg-lightBlack py-2 flex justify-around items-center">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-lg py-2 flex justify-around items-center">
         <div>
-          <a
-            href="#hero"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-          >
+          <ActiveHash hashId="#hero">
             <MdOutlineDashboard />
-          </a>
+          </ActiveHash>
         </div>
         <div>
-          <a
-            href="#about"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-          >
+          <ActiveHash hashId="#about">
             <LuUser2 />
-          </a>
+          </ActiveHash>
         </div>
         <div>
-          <a
-            href="#skills"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-          >
+          <ActiveHash hashId="#skills">
             <BsCodeSlash size={20} />
-          </a>
+          </ActiveHash>
         </div>
         <div>
-          <a
-            href="#works"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-          >
+          <ActiveHash hashId="#works">
             <MdTv />
-          </a>
+          </ActiveHash>
         </div>
         <div>
-          <a
-            href="#blogs"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-          >
+          <ActiveHash hashId="#blogs">
             <FaRegPenToSquare />
-          </a>
+          </ActiveHash>
         </div>
         <div>
-          <a
-            href="#contact"
-            className="flex justify-center items-center align-middle h-10 w-10 rounded-full"
-          >
+          <ActiveHash hashId="#contact">
             <MdOutlineEmail />
-          </a>
+          </ActiveHash>
         </div>
       </div>
     </>

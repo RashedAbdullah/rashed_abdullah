@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import BlogSchemaScript from "@/meta/blog-schema-script";
 import Image from "next/image";
 
 import Link from "next/link";
@@ -7,6 +8,7 @@ import React from "react";
 const BlogCard = ({ blog }) => {
   return (
     <div className="relative group block p-2 h-full w-full">
+      <BlogSchemaScript blog={blog} />
       <span className="absolute inset-0 h-full w-full bg-slate-500 dark:bg-neutral-400 block rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
 
       <div className="rounded-2xl h-full w-full p-4 overflow-hidden dark:bg-lightBlack bg-slate-400 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors duration-300">
@@ -37,7 +39,10 @@ const BlogCard = ({ blog }) => {
             <p className="mt-8 text-slate-800 dark:text-white tracking-wide leading-relaxed text-sm">
               {blog?.description?.slice(0, 120) + "..."}
             </p>
-            <Link href={`/blogs/${blog.title.replaceAll(" ", "-")}`} className="block text-end mt-2">
+            <Link
+              href={`/blogs/${blog.title.replaceAll(" ", "-")}`}
+              className="block text-end mt-2"
+            >
               <Button>Details</Button>
             </Link>
           </div>

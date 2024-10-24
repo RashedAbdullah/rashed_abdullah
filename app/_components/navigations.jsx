@@ -1,49 +1,23 @@
-import { Dialog } from "@/components/ui/dialog";
-import { SheetClose } from "@/components/ui/sheet";
 import Link from "next/link";
+import ActiveLink from "./active-link";
 
 const Navigations = async () => {
   return (
     <div className="lg:flex justify-center md:gap-10 gap-2">
       <div>
-        <Link
-          href="/"
-          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
-        >
-          Home
-        </Link>
+        <ActiveLink link="/">Home</ActiveLink>
       </div>
       <div>
-        <Link
-          href="/blogs"
-          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
-        >
-          Blogs
-        </Link>
+        <ActiveLink link="/blogs">Blogs</ActiveLink>
       </div>
       <div>
-        <Link
-          href="/projects"
-          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
-        >
-          Works
-        </Link>
+        <ActiveLink link="/projects">Works</ActiveLink>
       </div>
       <div>
-        <Link
-          href="/diary"
-          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
-        >
-          Diary
-        </Link>
+        <ActiveLink link="/diary">Diary</ActiveLink>
       </div>
       <div>
-        <Link
-          href="/youtube"
-          className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
-        >
-          Youtube
-        </Link>
+        <ActiveLink link="/youtube">Youtube</ActiveLink>
       </div>
     </div>
   );

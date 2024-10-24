@@ -29,7 +29,7 @@ const VideoScheamScript = ({ video }) => {
     creator: {
       "@type": "Person",
       name: "Rashed Abdullah",
-      url: "https://rashedabdullah.vercel.app",
+      url: "https://rashedabdullah.com",
     },
     contentLocation: {
       "@type": "Place",

@@ -4,4 +4,4 @@ Allow: /
 
 Disallow: /dashboard/
 
-https://rashedabdullah.vercel.app/sitemap.xml
+https://rashedabdullah.com/sitemap.xml

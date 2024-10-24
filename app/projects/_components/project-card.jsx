@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
+import ProjectSchemaScript from "@/meta/project-schema-script";
 import Image from "next/image";
-
-import Link from "next/link";
-
 
 const ProjectCard = ({ project }) => {
   return (
     <div className="relative group block p-2 h-full w-full">
+      <ProjectSchemaScript project={project} />
       <span className="absolute inset-0 h-full w-full bg-slate-500 dark:bg-neutral-400 block rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
 
       <div className="rounded-2xl h-full w-full p-4 overflow-hidden dark:bg-lightBlack bg-slate-400 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors duration-300">
@@ -16,7 +15,11 @@ const ProjectCard = ({ project }) => {
               {project?.title}
             </h4>
             <Image
-              src="https://i.ibb.co.com/kHSHKLx/code-image.webp"
+              src={
+                project?.image
+                  ? project?.image
+                  : "https://i.ibb.co.com/kHSHKLx/code-image.webp"
+              }
               alt={project?.title}
               height={400}
               width={500}
@@ -26,7 +29,11 @@ const ProjectCard = ({ project }) => {
             <p className="mt-8 text-slate-800 dark:text-white tracking-wide leading-relaxed text-sm">
               {project?.description?.slice(0, 120) + "..."}
             </p>
-            <a target="_blank" href={project.link} className="block text-end mt-2">
+            <a
+              target="_blank"
+              href={project.link}
+              className="block text-end mt-2"
+            >
               <Button>Details</Button>
             </a>
           </div>

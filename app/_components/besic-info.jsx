@@ -10,7 +10,7 @@ const BesicInfo = async () => {
   return (
     <div className="col-span-3 flex justify-center items-center">
       <div>
-        <div className="border-4 flex flex-col justify-center  gap-5 p-10 rounded-tl-[60px] rounded-br-[60px]">
+        <div className="border-4 flex flex-col justify-center  gap-5 p-10 rounded-tl-[60px] rounded-br-[60px] border-deepAqua dark:border-white">
           <div className="flex flex-col justify-center items-center">
             <Image
               src={`https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg`}
@@ -26,7 +26,6 @@ const BesicInfo = async () => {
               <p>Front-end Developer</p>
             </div>
           </div>
-
 
           <div className="grid grid-cols-8 items-center align-middle">
             <div className="col-span-1 dark:text-aqua text-deepAqua">
@@ -50,7 +49,6 @@ const BesicInfo = async () => {
             <div className="col-span-7">www.rashedabdullah.com</div>
           </div>
 
-
           <div className="flex justify-evenly items-center text-white dark:text-slate-900">
             <div className="dark:bg-aqua bg-deepAqua py-1 px-3 rounded-xl">
               <p>JS</p>
@@ -67,7 +65,7 @@ const BesicInfo = async () => {
             <a
               href="/RashedAbdullahResume.pdf"
               download="RashedResume.pdf"
-              className="bg-white text-deepBlack hover:text-white px-10 py-2 flex items-center gap-2 text-lg"
+              className="bg-white text-deepBlack hover:text-white hover:bg-deepAqua transition-all duration-300 px-10 py-2 flex items-center gap-2 text-lg"
             >
               Resume <BiDownload />
             </a>

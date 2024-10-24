@@ -1,6 +1,7 @@
 import { blogs } from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
+import BlogSchemaScript from "@/meta/blog-schema-script";
 
 const SingleBlogPage = ({ params: { slug } }) => {
   const id = decodeURIComponent(slug.replaceAll("-", " "));
@@ -27,12 +28,12 @@ const SingleBlogPage = ({ params: { slug } }) => {
     );
   }
 
-  // Destructure the first blog object
   const { title, content, description, createdAt, author, thumbnail } =
     singleBlogArray[0];
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <BlogSchemaScript blog={singleBlogArray[0]} />
       <div className="bg-slate-200 dark:bg-lightBlack rounded-lg shadow-lg p-6">
         {/* Thumbnail Image */}
         <div className="flex justify-center">

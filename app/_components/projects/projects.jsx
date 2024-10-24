@@ -11,6 +11,7 @@ import { projects } from "@/data/projects";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import ProjectSchemaScript from "@/meta/project-schema-script";
 
 export default function Projects() {
   return (
@@ -18,10 +19,15 @@ export default function Projects() {
       <CarouselContent className="-ml-1">
         {projects.map((project, ind) => (
           <CarouselItem key={ind} className="pl-1 md:basis-1/2 lg:basis-1/5 ">
+            <ProjectSchemaScript project={project} />
             <Card className="group relative transition-all bg-slate-200 dark:bg-slate-800 mx-1 duration-300 transform hover:-translate-y-2 hover:shadow-xl  border border-gray-200 rounded-lg overflow-hidden">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src={"https://i.ibb.co.com/kHSHKLx/code-image.webp"}
+                  src={
+                    project?.image
+                      ? project?.image
+                      : "https://i.ibb.co.com/kHSHKLx/code-image.webp"
+                  }
                   alt={project?.title}
                   height={500}
                   width={500}

@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: pageTitle,
       description: pageDescription,
-      url: `https://rashedabdullah.vercel.app/youtube/${ctgry}`,
+      url: `https://rashedabdullah.com/youtube/${ctgry}`,
       images: [
         {
           url: "/path/to/category-specific-image.jpg",

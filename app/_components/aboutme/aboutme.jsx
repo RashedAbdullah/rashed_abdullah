@@ -5,7 +5,7 @@ export default async function AboutMe() {
   return (
     <div
       id="about"
-      className="min-h-screen relative w-full md:py-0 py-10 overflow-hidden dark:bg-deepBlack flex flex-col items-center justify-center"
+      className="min-h-screen relative w-full md:py-0 py-10 overflow-hidden flex flex-col items-center justify-center"
     >
       <ScrollMouse />
 

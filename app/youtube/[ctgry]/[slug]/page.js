@@ -26,7 +26,7 @@ export async function generateMetadata({ params: { slug } }) {
       "Quran Recitations",
     ],
     authors: [
-      { name: "Rashed Abdullah", url: "https://rashedabdullah.vercel.app" },
+      { name: "Rashed Abdullah", url: "https://rashedabdullah.com" },
     ],
     creator: "Rashed Abdullah",
     publisher: "Rashed Abdullah",
@@ -38,7 +38,7 @@ export async function generateMetadata({ params: { slug } }) {
     openGraph: {
       title,
       description,
-      url: `https://rashedabdullah.vercel.app/youtube/description/${slug}`,
+      url: `https://rashedabdullah.com/youtube/description/${slug}`,
       type: "video.other",
       video: {
         url: videoUrl,

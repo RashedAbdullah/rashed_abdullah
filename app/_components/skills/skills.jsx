@@ -17,7 +17,7 @@ const Skills = async () => {
         backgroundImage: `url(${"https://i.ibb.co.com/kHSHKLx/code-image.webp"})`,
       }}
     >
-      <div className="dark:bg-deepBlack dark:bg-opacity-80 bg-gray-800 bg-opacity-80 min-h-screen w-full">
+      <div className="dark:bg-slate-900 dark:bg-opacity-80 bg-gray-800 bg-opacity-80 min-h-screen w-full">
         <div className="container relative">
           <div className="z-40 relative">
             <div className="flex justify-center mt-20">
