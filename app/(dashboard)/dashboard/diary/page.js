@@ -11,7 +11,7 @@ const DashDiaryPage = async () => {
         texts,
         date,
       };
-      console.log(data);
+    
     } catch (err) {
       console.log(err.message);
     }

@@ -18,11 +18,9 @@ const ActiveHash = ({ hashId = "", children }) => {
         const sectionTop = section.getBoundingClientRect().top;
         const sectionHeight = section.offsetHeight;
 
-        // Check if the section is in the viewport
         if (sectionTop >= 0 && sectionTop < window.innerHeight / 2) {
           const newHash = `#${section.id}`;
           if (window.location.hash !== newHash) {
-            // Use router.push to update the hash
             router.push(newHash, undefined, { shallow: true });
             updateHash();
           }
@@ -30,10 +28,8 @@ const ActiveHash = ({ hashId = "", children }) => {
       });
     };
 
-    // Initial hash value
     updateHash();
 
-    // Listen for hash changes and scroll events
     window.addEventListener("hashchange", updateHash);
     window.addEventListener("scroll", handleScroll);
 

@@ -2,16 +2,6 @@ const DashboardPage = () => {
   return (
     <div className="min-h-screen py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            ড্যাশবোর্ড
-          </h1>
-          <button className="bg-slate-600 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">
-            নতুন ডায়েরি
-          </button>
-        </div>
-
         {/* Dashboard Sections */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Projects Section */}

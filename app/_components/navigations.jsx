@@ -1,7 +1,9 @@
-import Link from "next/link";
+import { auth } from "@/auth";
 import ActiveLink from "./active-link";
+import { GrDashboard } from "react-icons/gr";
 
 const Navigations = async () => {
+  const session = await auth();
   return (
     <div className="lg:flex justify-center md:gap-10 gap-2">
       <div>

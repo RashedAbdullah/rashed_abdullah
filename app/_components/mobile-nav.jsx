@@ -13,8 +13,10 @@ import { Menu } from "lucide-react";
 
 import FooterSocial from "./social";
 import Link from "next/link";
+import { auth } from "@/auth";
 
 const MobileNav = async () => {
+  const session = await auth();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -94,6 +96,15 @@ const MobileNav = async () => {
                 </Link>
               </SheetClose>
             </div>
+
+            {/* Auth */}
+            {session && (
+              <div>
+                <p className="text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack">
+                  {session.user.name}
+                </p>
+              </div>
+            )}
           </nav>
 
           <div className="flex justify-center">

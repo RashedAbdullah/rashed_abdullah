@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const ActiveLink = ({ link = "", children }) => {
   const path = usePathname();
-  console.log(path);
+
   return (
     <Link
       className={`${
