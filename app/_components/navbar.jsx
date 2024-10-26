@@ -24,11 +24,6 @@ const Navbar = async () => {
           <Navigations />
 
           <SocialLinks />
-          {session && (
-            <div>
-              <p className="text-green-500">{session.user.name}</p>
-            </div>
-          )}
 
           <ThemeSwitcher />
         </nav>

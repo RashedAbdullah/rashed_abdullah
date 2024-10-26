@@ -1,11 +1,12 @@
 import { auth } from "@/auth";
 import ActiveLink from "./active-link";
 import { GrDashboard } from "react-icons/gr";
+import NavigationsSelection from "./navigation-selection";
 
 const Navigations = async () => {
   const session = await auth();
   return (
-    <div className="lg:flex justify-center md:gap-10 gap-2">
+    <div className="lg:flex justify-center items-center md:gap-10 gap-2">
       <div>
         <ActiveLink link="/">Home</ActiveLink>
       </div>
@@ -15,12 +16,8 @@ const Navigations = async () => {
       <div>
         <ActiveLink link="/projects">Works</ActiveLink>
       </div>
-      <div>
-        <ActiveLink link="/diary">Diary</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/youtube">Youtube</ActiveLink>
-      </div>
+
+      <NavigationsSelection user={session?.user} />
     </div>
   );
 };

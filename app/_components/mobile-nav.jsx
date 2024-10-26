@@ -97,12 +97,16 @@ const MobileNav = async () => {
               </SheetClose>
             </div>
 
-            {/* Auth */}
             {session && (
               <div>
-                <p className="text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack">
-                  {session.user.name}
-                </p>
+                <SheetClose asChild>
+                  <Link
+                    href="/dashboard"
+                    className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                  >
+                    {session.user.name}
+                  </Link>
+                </SheetClose>
               </div>
             )}
           </nav>
