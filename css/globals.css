@@ -1,3 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap");
+@font-face {
+  font-family: "Basmalah";
+  src: url("/fonts/Basmalah .otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "uthamanic";
+  src: url("/fonts/UthmanicQaloun.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hafs";
+  src: url("/fonts/hafs.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hafs2";
+  src: url("/fonts/hafs2.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hafs3";
+  src: url("/fonts/hafs3.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "scheherazade";
+  src: url("/fonts/scheherazade.new.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.basmalah {
+  font-family: "Basmalah", serif;
+}
+
+.amiriQuran {
+  font-family: "Amiri Quran", serif;
+}
+
+.ayah-font {
+  font-family: "scheherazade", serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
