@@ -114,10 +114,7 @@ const QuranFetcher = () => {
         className="fixed bottom-4 left-4 md:hidden p-3 bg-blue-500 text-white rounded-full shadow-lg"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio possimus,
-        numquam quia maiores doloribus tenetur aliquam unde inventore aspernatur
-        optio expedita esse perferendis quidem hic, nobis obcaecati quis
-        pariatur? Repellat!
+        Options
       </button>
     </div>
   );
