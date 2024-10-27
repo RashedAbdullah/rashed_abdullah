@@ -1,10 +1,8 @@
 import { getEngToAr } from "@/utils/getEngToAr";
-import React from "react";
 
-const QuranPage = ({ surahData, translationData }) => {
-  console.log(translationData)
+const SingleSurahPage = ({ surahData, translationData }) => {
   return (
-    <div className="px-8 py-10 dark:bg-deepBlack bg-[#C5DEFE] text-slate-900 dark:text-white min-h-screen flex justify-center items-center">
+    <div className="px-8 py-10 dark:bg-deepBlack dark:text-white min-h-screen flex justify-center items-center">
       <div className="max-w-2xl mx-auto">
         {/* Surah Header */}
         <h1 className="text-3xl mb-3 text-center amiriQuran font-bold">
@@ -37,7 +35,7 @@ const QuranPage = ({ surahData, translationData }) => {
             return (
               <div
                 key={ayah.number}
-                className="p-6 bg-gray-100 dark:bg-gray-800 rounded-md shadow-md ayah-font"
+                className="p-6 bg-white dark:bg-deepBlack rounded-md shadow-md ayah-font"
               >
                 <p
                   dir="rtl"
@@ -64,4 +62,4 @@ const QuranPage = ({ surahData, translationData }) => {
   );
 };
 
-export default QuranPage;
+export default SingleSurahPage;

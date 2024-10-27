@@ -59,7 +59,7 @@ const MobileNav = async () => {
             <div>
               <SheetClose asChild>
                 <Link
-                  href="/quran"
+                  href="/quran/surah"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
                   Quran kareem
