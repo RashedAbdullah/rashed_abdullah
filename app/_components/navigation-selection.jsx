@@ -29,6 +29,7 @@ export default function NavigationsSelection({ user }) {
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Navigations</SelectLabel>
+          <SelectItem value="/quran">Quran kareem</SelectItem>
           <SelectItem value="/youtube">YouTube</SelectItem>
           <SelectItem value="/diary">Diary</SelectItem>
         </SelectGroup>
