@@ -59,6 +59,16 @@ const MobileNav = async () => {
             <div>
               <SheetClose asChild>
                 <Link
+                  href="/quran"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Quran kareem
+                </Link>
+              </SheetClose>
+            </div>
+            <div>
+              <SheetClose asChild>
+                <Link
                   href="/blogs"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >

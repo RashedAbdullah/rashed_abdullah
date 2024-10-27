@@ -1,9 +1,11 @@
+"use client"
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const QuranKareemLayoutPage = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -11,23 +13,14 @@ const QuranKareemLayoutPage = ({ children }) => {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
+      {/* Sidebar with toggle button */}
       <aside
         className={`fixed top-0 left-0 z-20 h-full w-64 transition-transform duration-300 transform bg-[#C5DEFE] text-slate-900 dark:bg-deepBlack dark:text-white p-6 space-y-4
         ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:relative md:translate-x-0`}
       >
-        {/* Toggle Button in Sidebar */}
-        <button
-          onClick={toggleSidebar}
-          className="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full"
-          aria-label="Toggle Sidebar"
-        >
-          {isSidebarOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-        </button>
-
-        <h2 className="text-2xl font-bold mb-6 mt-8">Quran Kareem</h2>
+        <h2 className="text-2xl font-bold mb-6">Quran Kareem</h2>
         <nav className="space-y-2">
           <Link
             href="/quran/surah"
@@ -73,6 +66,15 @@ const QuranKareemLayoutPage = ({ children }) => {
           </Link>
         </nav>
       </aside>
+
+      {/* Sidebar Toggle Button */}
+      <button
+        onClick={toggleSidebar}
+        className="z-30 md:hidden fixed top-20 left-4 p-2 bg-gray-800 text-white rounded-full"
+        aria-label="Toggle Sidebar"
+      >
+        {isSidebarOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+      </button>
 
       {/* Main Content */}
       <main
