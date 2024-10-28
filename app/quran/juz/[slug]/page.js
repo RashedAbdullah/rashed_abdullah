@@ -3,7 +3,7 @@ import React from "react";
 
 const GetSingleJuzPage = async ({ params: { slug } }) => {
   const singleJuz = await getQuranByJuz(slug);
-  const ayahs = singleJuz.data.ayahs; // Assuming this is the structure returned by your API
+  const ayahs = singleJuz.data.ayahs;
 
   return (
     <div className="p-8 min-h-screen flex flex-col items-center container">

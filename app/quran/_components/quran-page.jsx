@@ -1,5 +1,6 @@
 import { getEngToAr } from "@/utils/getEngToAr";
-
+import basmalah from "@/public/basmalah.png";
+import Image from "next/image";
 const SingleSurahPage = ({ surahData, translationData }) => {
   return (
     <div className="px-8 py-10 dark:text-white min-h-screen flex justify-center items-center">
@@ -16,9 +17,9 @@ const SingleSurahPage = ({ surahData, translationData }) => {
           {surahData.numberOfAyahs}
         </p>
 
-        <h2 className="text-3xl font-semibold text-gray-700 dark:text-gray-300 text-center amiriQuran basmalah mb-10">
-          بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ
-        </h2>
+        <div className="flex justify-center">
+          <Image src={basmalah} alt="Bismillahir rahim" width={300} />
+        </div>
 
         {/* Ayahs Content */}
         <div className="space-y-6">
