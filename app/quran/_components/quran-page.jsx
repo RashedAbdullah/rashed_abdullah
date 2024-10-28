@@ -2,7 +2,7 @@ import { getEngToAr } from "@/utils/getEngToAr";
 
 const SingleSurahPage = ({ surahData, translationData }) => {
   return (
-    <div className="px-8 py-10 dark:bg-deepBlack dark:text-white min-h-screen flex justify-center items-center">
+    <div className="px-8 py-10 dark:text-white min-h-screen flex justify-center items-center">
       <div className="max-w-2xl mx-auto">
         {/* Surah Header */}
         <h1 className="text-3xl mb-3 text-center amiriQuran font-bold">
@@ -42,7 +42,7 @@ const SingleSurahPage = ({ surahData, translationData }) => {
                   className="text-right text-xl md:text-2xl font-arabic leading-relaxed md:leading-loose"
                 >
                   {ayahText}{" "}
-                  <span className="bg-gray-200 h-8 w-8 text-lg inline-block rounded-full text-center leading-8 ml-2">
+                  <span className="bg-gray-200 dark:text-slate-950 h-8 w-8 text-lg inline-block rounded-full text-center leading-8 ml-2">
                     {getEngToAr(ayah.numberInSurah)}
                   </span>
                 </p>

@@ -1,22 +1,7 @@
-import { getSingleSurah } from "@/data/fetch-quran-by-surah";
-import SingleSurahPage from "../../_components/quran-page";
+import React from "react";
 
-const QuranFetcher = async ({ params: { slug } }) => {
-  const singleSurah = await getSingleSurah(slug);
-  const { surah, transition } = singleSurah;
-
-  return (
-    <div className="flex min-h-screen text-slate-900 dark:text-white">
-      <div className="flex-1 p-4">
-        {surah && transition && (
-          <SingleSurahPage
-            surahData={surah}
-            translationData={transition.ayahs}
-          />
-        )}
-      </div>
-    </div>
-  );
+const SurahPage = () => {
+  return <div>SurahPage</div>;
 };
 
-export default QuranFetcher;
+export default SurahPage;
