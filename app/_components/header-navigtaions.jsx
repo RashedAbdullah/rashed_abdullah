@@ -11,7 +11,7 @@ const HeaderNavigations = () => {
     <>
       <ActiveHash />
       <div className="hidden lg:flex fixed top-1/2 left-28 transform -translate-x-1/2 -translate-y-1/2 z-50">
-        <div className="border backdrop-blur-sm px-1 py-2 rounded-full flex flex-col gap-2 text-lg">
+        <div className="border backdrop-blur-sm shadow-lg border-slate-800 px-1 py-2 rounded-full flex flex-col gap-2 text-lg">
           <div>
             <ActiveHash hashId="#hero">
               <MdOutlineDashboard />

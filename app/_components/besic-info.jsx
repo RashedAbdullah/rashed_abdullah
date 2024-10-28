@@ -8,7 +8,7 @@ import { BiDownload } from "react-icons/bi";
 
 const BesicInfo = async () => {
   return (
-    <div className="col-span-3 flex justify-center items-center">
+    <div className="col-span-3 flex justify-center items-center backdrop-blur-lg">
       <div>
         <div className="border-4 flex flex-col justify-center  gap-5 p-10 rounded-tl-[60px] rounded-br-[60px] border-deepAqua dark:border-white">
           <div className="flex flex-col justify-center items-center">
@@ -65,7 +65,7 @@ const BesicInfo = async () => {
             <a
               href="/RashedAbdullahResume.pdf"
               download="RashedResume.pdf"
-              className="bg-white text-deepBlack hover:text-white hover:bg-deepAqua transition-all duration-300 px-10 py-2 flex items-center gap-2 text-lg"
+              className="bg-white shadow text-deepBlack hover:text-white hover:bg-deepAqua transition-all duration-300 px-10 py-2 flex items-center gap-2 text-lg"
             >
               Resume <BiDownload />
             </a>

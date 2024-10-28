@@ -8,27 +8,24 @@ const NameTitle = async () => {
       <div className="flex flex-col justify-center gap-4">
         <header>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"<h1>"}</p>
-          <h1 className="lg:text-5xl md:text-4xl text-3xl font-semibold ml-6">
+          <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold ml-6">
             Hey
-          </h1>
+          </h2>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"</h1>"}</p>
         </header>
 
-
-        <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold ml-6 text-nowrap">
+        <h1 className="lg:text-5xl md:text-4xl text-3xl font-semibold ml-6 text-nowrap">
           <span>I&apos;m</span>{" "}
           <strong className="text-deepAqua dark:text-aqua">
             Rashed Abdullah
           </strong>
-        </h2>
-
+        </h1>
 
         <div className="flex items-end gap-3 ml-6">
           <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold text-nowrap">
             Front-end Developer
           </h2>
         </div>
-
 
         <div>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"<p>"}</p>
@@ -39,7 +36,6 @@ const NameTitle = async () => {
           </p>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"</p>"}</p>
         </div>
-
 
         <div className="ml-6 flex items-center gap-4">
           <h3 className="text-3xl text-deepAqua dark:text-aqua">
