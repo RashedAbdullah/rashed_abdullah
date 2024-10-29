@@ -1,13 +1,15 @@
-import { getQuranByJuz } from "@/data/fetch-quran-by-juz";
 import { getEngToAr } from "@/utils/getEngToAr";
 import Link from "next/link";
 import React from "react";
 import ToggleSurahJuz from "../_components/toggle-surah-jux";
+import { getQuranByJuzList } from "@/data/fetch-quran-by-juz";
 
 const QuranByJuzPage = async () => {
   const juzArray = Array.from({ length: 30 }, (_, index) => index + 1);
 
-  const juzData = await Promise.all(juzArray.map((juz) => getQuranByJuz(juz)));
+  const juzData = await Promise.all(
+    juzArray.map((juz) => getQuranByJuzList(juz))
+  );
 
   return (
     <>

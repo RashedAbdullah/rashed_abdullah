@@ -6,7 +6,7 @@ import { useSelectedLayoutSegment } from "next/navigation";
 const SidebarSurah = () => {
   const path = useSelectedLayoutSegment();
   return (
-    <div className="backdrop-blur-lg dark:text-white w-72 h-[870px] fixed top-20 left-0 p-6 shadow-lg overflow-y-auto">
+    <div className="backdrop-blur-lg dark:text-white w-72 h-[870px] fixed top-20 z-20 left-0 p-6 shadow-lg overflow-y-auto">
       <h2 className="text-2xl font-semibold text-center mb-4">Surah List</h2>
       <ul className="space-y-3">
         {surahNames.map((surah) => (

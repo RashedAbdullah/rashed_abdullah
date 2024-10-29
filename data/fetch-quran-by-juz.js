@@ -17,3 +17,13 @@ export const getQuranByJuz = async (
     translation: data2.data.ayahs,
   };
 };
+
+export const getQuranByJuzList = async (juz = 1, translation2 = "ar") => {
+  const response = await fetch(
+    `https://api.alquran.cloud/v1/juz/${juz}/${translation2}`
+  );
+
+  const data = await response.json();
+
+  return data;
+};

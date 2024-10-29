@@ -1,9 +1,10 @@
 import { getEngToAr } from "@/utils/getEngToAr";
 import basmalah from "@/public/basmalah.png";
 import Image from "next/image";
+
 const SingleSurahPage = ({ surahData, translationData }) => {
   return (
-    <div className="px-8 py-10 dark:text-white min-h-screen flex justify-center items-center">
+    <div className="px-8 py-10 dark:text-white min-h-screen flex justify-center items-center relative">
       <div className="max-w-2xl mx-auto">
         {/* Surah Header */}
         <h1 className="text-3xl mb-3 text-center amiriQuran font-bold">
@@ -17,7 +18,7 @@ const SingleSurahPage = ({ surahData, translationData }) => {
           {surahData.numberOfAyahs}
         </p>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-10">
           <Image src={basmalah} alt="Bismillahir rahim" width={300} />
         </div>
 
@@ -54,6 +55,13 @@ const SingleSurahPage = ({ surahData, translationData }) => {
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center">
                   Ayah {ayah.numberInSurah} | Juz {ayah.juz} | Page {ayah.page}
                 </p>
+
+                <audio controls className="w-full mt-3">
+                  <source
+                    src={`https://cdn.islamic.network/quran/audio/64/ar.alafasy/${ayah.number}.mp3`}
+                    type="audio/mpeg"
+                  />
+                </audio>
               </div>
             );
           })}
