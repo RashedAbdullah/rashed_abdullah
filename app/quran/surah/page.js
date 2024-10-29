@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { surahNames } from "@/data/surah-names";
-import ActiveSurahJuz from "../_components/active-surah-suz";
 import ToggleSurahJuz from "../_components/toggle-surah-jux";
 
 const QuranBySurahPage = () => {

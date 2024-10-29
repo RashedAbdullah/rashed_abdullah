@@ -5,9 +5,9 @@ import basmalah from "@/public/basmalah.png";
 
 const QuranJuzByPage = async ({ params: { slug } }) => {
   const singleJuz = await getQuranByJuz(slug);
-  const ayahs = singleJuz.data.ayahs;
+  const { juz } = singleJuz;
 
-  const ayahsByPage = ayahs.reduce((pages, ayah) => {
+  const ayahsByPage = juz.reduce((pages, ayah) => {
     if (!pages[ayah.page]) pages[ayah.page] = [];
     pages[ayah.page].push(ayah);
     return pages;

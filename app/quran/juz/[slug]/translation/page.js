@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const QuranJuzByTranslation = async ({ params: { slug } }) => {
   const singleJuz = await getQuranByJuz(slug);
-  const ayahs = singleJuz.data.ayahs;
+  const { juz, translation } = singleJuz;
 
   return (
     <div className="flex min-h-screen">
@@ -25,7 +25,7 @@ const QuranJuzByTranslation = async ({ params: { slug } }) => {
             </p>
 
             <div className="space-y-6">
-              {ayahs.map((ayah) => {
+              {juz.map((ayah, ind) => {
                 const ayahText = ayah.text.startsWith(
                   "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
                 )
@@ -72,8 +72,7 @@ const QuranJuzByTranslation = async ({ params: { slug } }) => {
                       </p>
 
                       <p className="mt-4 text-base text-gray-700 dark:text-gray-300 italic text-center">
-                        Translation here{" "}
-                        {/* Add translation text if available */}
+                        {translation[ind].text}
                       </p>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center">
                         {ayah.surah.englishName} | Ayah {ayah.numberInSurah} |
