@@ -8,9 +8,9 @@ import { BiDownload } from "react-icons/bi";
 
 const BesicInfo = async () => {
   return (
-    <div className="col-span-3 flex justify-center items-center backdrop-blur-lg">
+    <div className="col-span-3 flex justify-center items-center">
       <div>
-        <div className="border-4 flex flex-col justify-center  gap-5 p-10 rounded-tl-[60px] rounded-br-[60px] border-deepAqua dark:border-white">
+        <div className="border-4 backdrop-blur-lg flex flex-col justify-center  gap-5 p-10 rounded-tl-[60px] rounded-br-[60px] border-deepAqua dark:border-white">
           <div className="flex flex-col justify-center items-center">
             <Image
               src={`https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg`}
