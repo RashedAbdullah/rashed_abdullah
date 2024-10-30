@@ -9,7 +9,6 @@ const SingleBlogPage = ({ params: { slug } }) => {
   // Filter the blogs array to find the matching blog
   const singleBlogArray = blogs.filter((blog) => blog.title === id);
 
-  // Ensure there's at least one matching blog
   if (singleBlogArray.length === 0) {
     return (
       <div className="container mx-auto px-4 py-8">
