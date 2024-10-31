@@ -22,7 +22,7 @@ export const getLatestVideos = async () => {
     return result;
   } catch (err) {
     console.log(err.message);
-    return []; // Return an empty array in case of error
+    return [];
   }
 };
 
