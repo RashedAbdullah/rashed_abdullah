@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta
           name="google-site-verification"
-          content="r9n7bB-gzXavkqRnGuhVozfe6QtB_OBR5cLFW9iKJAs"
+          content="0HkNNGr94rr80ljfJoeaBbzofA25UWIZ5so-LeTNVzM"
         />
         <meta name="google-adsense-account" content="ca-pub-6921856465558245" />
         <meta name="description" content={metadata.description} />
@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rashedabdullah.com" />
+
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6921856465558245"
