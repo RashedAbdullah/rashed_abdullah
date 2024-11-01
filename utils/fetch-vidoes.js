@@ -16,7 +16,7 @@ export const getLatestVideos = async () => {
       })
     );
 
-    // Sort the result by createdAt in descending order to get the newest videos first
+    
     result.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
     return result;
@@ -37,13 +37,13 @@ export const getVideosByCategories = async (category) => {
       })
     );
 
-    // Sort the result by createdAt in descending order to get the newest videos first
+
     result.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
     return result;
   } catch (err) {
     console.log(err.message);
-    return []; // Return an empty array in case of error
+    return [];
   }
 };
 
@@ -56,6 +56,6 @@ export const getSingleYoutubeVideo = async (id) => {
     return result;
   } catch (err) {
     console.log(err.message);
-    return []; // Return an empty array in case of error
+    return [];
   }
 };

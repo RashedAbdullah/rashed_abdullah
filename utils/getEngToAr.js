@@ -1,6 +1,6 @@
 export const getEngToAr = (num) => {
   let surahNumbers = parseInt(num, 10);
-  // English to Arabic:
+  
   const numbers = `٠١٢٣٤٥٦٧٨٩`;
   const convert = (surahNumbers) => {
     let res = "";
