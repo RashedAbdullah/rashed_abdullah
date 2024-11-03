@@ -1,15 +1,16 @@
-import { blogs } from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
 import BlogSchemaScript from "@/meta/blog-schema-script";
+import { getSingleBlog } from "@/controllers/blogs";
 
-const SingleBlogPage = ({ params: { slug } }) => {
-  const id = decodeURIComponent(slug.replaceAll("-", " "));
+const SingleBlogPage = async ({ params: { slug } }) => {
+  const title = decodeURIComponent(
+    decodeURIComponent(slug.replaceAll("-", " "))
+  );
 
-  // Filter the blogs array to find the matching blog
-  const singleBlogArray = blogs.filter((blog) => blog.title === id);
+  const singleBlog = await getSingleBlog(title);
 
-  if (singleBlogArray.length === 0) {
+  if (!singleBlog) {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white dark:bg-lightBlack rounded-lg shadow-lg p-6">
@@ -27,31 +28,37 @@ const SingleBlogPage = ({ params: { slug } }) => {
     );
   }
 
-  const { title, content, description, createdAt, author, thumbnail } =
-    singleBlogArray[0];
+  const {
+    title: titleOfBlog,
+    content,
+    description,
+    createdAt,
+    author,
+    thumbnail,
+  } = singleBlog;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <BlogSchemaScript blog={singleBlogArray[0]} />
+      <BlogSchemaScript blog={singleBlog} />
       <div className="bg-slate-200 dark:bg-lightBlack rounded-lg shadow-lg p-6">
         {/* Thumbnail Image */}
         <div className="flex justify-center">
           <Image
-            src="https://i.ibb.co.com/kHSHKLx/code-image.webp"
-            alt={title}
+            src={thumbnail}
+            alt={titleOfBlog}
             height={800}
-            width={600}
+            width={1000}
             className="h-96 w-full rounded-lg mb-4 object-cover"
           />
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-zinc-100 mb-4">
-          {title}
+          {titleOfBlog}
         </h1>
 
         <div className="flex justify-between items-center text-sm text-slate-500 dark:text-zinc-400 mb-4">
           <p>{author}</p>
-          <p>{new Date(createdAt).toLocaleDateString("bn")}</p>
+          <p>{new Date(createdAt).toLocaleDateString("bn")} ইং</p>
         </div>
 
         <p className="text-sm text-slate-800 dark:text-zinc-400 mb-4">

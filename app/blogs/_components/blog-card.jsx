@@ -18,7 +18,7 @@ const BlogCard = ({ blog }) => {
               {blog?.title}
             </h4>
             <Image
-              src="https://i.ibb.co.com/kHSHKLx/code-image.webp"
+              src={blog?.thumbnail}
               alt={blog?.title}
               height={400}
               width={500}

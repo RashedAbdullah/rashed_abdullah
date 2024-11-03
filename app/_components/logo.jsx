@@ -1,17 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Logo = async () => {
   return (
-    <div className="text-2xl">
+    <div className="hidden lg:flex items-center justify-center">
       <Link
         href="/"
-        aria-label={`Rashed Abdullah - Homepage`}
-        title={`Rashed Abdullah - Homepage`}
+        aria-label="Rashed Abdullah - Homepage"
+        title="Rashed Abdullah - Homepage"
       >
-        <h1 className="flex items-center">
-          <span className="text-deepAqua dark:text-aqua font-bold">{`</>`}</span>
-          <span className="ml-2 font-semibold">Rashed Abdullah</span>{" "}
-        </h1>
+        <Image
+          src="/logo.png"
+          alt="Rashed Abdullah Logo"
+          width={100}
+          height={100}
+          className="w-12 h-12 object-contain rounded-full"
+          priority
+        />
       </Link>
     </div>
   );

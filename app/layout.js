@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
         ></amp-auto-ads>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
