@@ -3,6 +3,7 @@ import Image from "next/image";
 import BlogSchemaScript from "@/meta/blog-schema-script";
 import { getSingleBlog } from "@/controllers/blogs";
 import { FaUserAlt } from "react-icons/fa";
+import Ads from "@/components/ads";
 
 const SingleBlogPage = async ({ params: { slug } }) => {
   const title = decodeURIComponent(
@@ -59,7 +60,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             {titleOfBlog}
           </h1>
-
+          <Ads />
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-500 dark:text-gray-400 italic mb-6 space-y-2 md:space-y-0">
             <p className="font-medium flex items-center gap-1">
               <FaUserAlt size={12} />
@@ -94,6 +95,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
           </div>
         </div>
       </div>
+      <Ads/>
     </div>
   );
 };

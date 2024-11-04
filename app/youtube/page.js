@@ -46,10 +46,10 @@ const YoutubePage = async () => {
   return (
     <div className="min-h-screen dark:text-gray-300">
       <YoutubeHeroSection />
+      <Ads />
       <VideoCategories />
-      {/* <Ads /> */}
       <LatestVideos />
-      {/* <Ads /> */}
+      <Ads />
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import { projects } from "@/data/projects";
 import ProjectCard from "./_components/project-card";
 import { getProjects } from "@/controllers/projects";
+import Ads from "@/components/ads";
 
-const ProjectPage = async() => {
+const ProjectPage = async () => {
   const projects = await getProjects();
   return (
     <div className="container min-h-screen">
@@ -11,6 +12,7 @@ const ProjectPage = async() => {
           <ProjectCard key={idx} project={project} />
         ))}
       </div>
+      <Ads />
     </div>
   );
 };
