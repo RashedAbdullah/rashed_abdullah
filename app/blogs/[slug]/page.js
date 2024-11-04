@@ -15,6 +15,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
   if (!singleBlog) {
     return (
       <div className="container mx-auto px-4 py-16">
+        <Ads />
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Blog Not Found
@@ -29,6 +30,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
             Back to Blogs
           </Link>
         </div>
+        <Ads />
       </div>
     );
   }
@@ -44,6 +46,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Ads />
       <BlogSchemaScript blog={singleBlog} />
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
         <div className="relative">
@@ -95,7 +98,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
           </div>
         </div>
       </div>
-      <Ads/>
+      <Ads />
     </div>
   );
 };

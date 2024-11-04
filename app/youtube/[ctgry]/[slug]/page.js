@@ -25,9 +25,7 @@ export async function generateMetadata({ params: { slug } }) {
       "Nasheeds",
       "Quran Recitations",
     ],
-    authors: [
-      { name: "Rashed Abdullah", url: "https://rashedabdullah.com" },
-    ],
+    authors: [{ name: "Rashed Abdullah", url: "https://rashedabdullah.com" }],
     creator: "Rashed Abdullah",
     publisher: "Rashed Abdullah",
     formatDetection: {
@@ -105,7 +103,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
             Watch Now
           </a>
         </div>
-        {/* <Ads /> */}
+        <Ads />
       </div>
 
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
@@ -149,6 +147,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
           ))}
         </p>
       </div>
+      <Ads />
     </div>
   );
 };

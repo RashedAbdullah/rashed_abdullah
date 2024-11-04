@@ -5,7 +5,7 @@ const LatestVideos = async () => {
   const latestVideos = await getLatestVideos();
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="mx-auto px-4 py-12">
       <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
         Latest Videos
       </h2>

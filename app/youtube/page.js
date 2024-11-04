@@ -44,7 +44,7 @@ export async function generateMetadata() {
 
 const YoutubePage = async () => {
   return (
-    <div className="min-h-screen dark:text-gray-300">
+    <div className="min-h-screen dark:text-gray-300 container">
       <YoutubeHeroSection />
       <Ads />
       <VideoCategories />

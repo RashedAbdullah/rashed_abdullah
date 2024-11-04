@@ -69,7 +69,7 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
   };
 
   return (
-    <div className="min-h-screen dark:text-gray-300">
+    <div className="min-h-screen dark:text-gray-300 container">
       <div className="text-center py-16 backdrop-blur-xl border-b border-b-slate-700">
         <h1 className="text-3xl font-bold tracking-tight">
           {selectCategory(ctgry)}
