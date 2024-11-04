@@ -29,15 +29,17 @@ const ContactForm = () => {
     emailjs
       .send(serviceID, templateID, formData, userID)
       .then((response) => {
-        toast("Message sent successfully!", {
-          description: new Date().toLocaleString(),
+        // Show success toast
+        toast.success("Message sent successfully!", {
+          description: `Sent on: ${new Date().toLocaleString()}`,
         });
         console.log("SUCCESS!", response.status, response.text);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "" }); // Clear form fields
       })
       .catch((err) => {
-        toast("Failed to send message. Please try again.", {
-          description: new Date().toLocaleString(),
+        // Show error toast
+        toast.error("Failed to send message. Please try again.", {
+          description: `Error: ${err.message}`,
         });
         console.error("FAILED...", err);
       });

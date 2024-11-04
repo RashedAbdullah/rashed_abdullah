@@ -4,9 +4,11 @@ import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";
 import ContactForm from "./contact-form";
 
+
 const Contact = async () => {
   return (
     <div id="contact" className="min-h-screen w-full relative antialiased">
+
       <div className="container z-20 relative">
         <div className="flex justify-center items-center mt-20">
           <ScrollMouse />
