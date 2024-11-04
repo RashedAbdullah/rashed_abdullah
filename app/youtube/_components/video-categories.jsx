@@ -27,7 +27,7 @@ const VideoCategories = () => {
       <div className="flex justify-center gap-8 flex-wrap">
         {categories.map((category) => (
           <div key={category.category} className="relative group">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300 w-56">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-center transition-shadow duration-300 w-56">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                 {category.category}
               </h3>
@@ -37,7 +37,7 @@ const VideoCategories = () => {
             </div>
             <Link
               href={`/youtube/${category.navlink}`}
-              className="absolute inset-0 dark:bg-gray-900 bg-gray-200 bg-opacity-40 flex justify-center items-center text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="absolute inset-0 flex justify-center  items-center text-white text-2xl font-bold transition-opacity duration-300"
             ></Link>
           </div>
         ))}

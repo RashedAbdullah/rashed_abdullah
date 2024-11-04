@@ -61,3 +61,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+ol {
+  @apply list-decimal ml-4;
+}
+
+ul {
+  @apply list-disc ml-4;
+}

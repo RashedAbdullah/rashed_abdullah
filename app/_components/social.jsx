@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export default async function FooterSocial() {
   const links = [
@@ -20,6 +20,12 @@ export default async function FooterSocial() {
       href: "https://github.com/RashedAbdullah",
       ariaLabel: "Visit Github profile",
     },
+    {
+      title: "Linkedin",
+      icon: <FaLinkedin className="h-full w-full" />,
+      href: "https://www.linkedin.com/in/rashed4abdullah/",
+      ariaLabel: "Visit Linkedin profile",
+    },
   ];
 
   return (
@@ -29,7 +35,7 @@ export default async function FooterSocial() {
         {links.map((link) => (
           <div
             key={link.title}
-            className="transform transition duration-500 hover:scale-125"
+            className="transform transition duration-500 hover:scale-125 border p-2 rounded-full h-10 w-10"
           >
             <a
               href={link.href}

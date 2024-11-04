@@ -14,7 +14,7 @@ const Navigations = async () => {
         <ActiveLink link="/blogs">Blogs</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/projects">Works</ActiveLink>
+        <ActiveLink link="/projects">Projects</ActiveLink>
       </div>
 
       <NavigationsSelection user={session?.user} />

@@ -1,50 +1,56 @@
 import { Button } from "@/components/ui/button";
 import BlogSchemaScript from "@/meta/blog-schema-script";
 import Image from "next/image";
-
+import { FaUserAlt } from "react-icons/fa";
 import Link from "next/link";
 import React from "react";
 
 const BlogCard = ({ blog }) => {
   return (
-    <div className="relative group block p-2 h-full w-full">
+    <div className="relative group block p-4 h-full w-full rounded-3xl">
       <BlogSchemaScript blog={blog} />
-      <span className="absolute inset-0 h-full w-full bg-slate-500 dark:bg-neutral-400 block rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
 
-      <div className="rounded-2xl h-full w-full p-4 overflow-hidden dark:bg-lightBlack bg-slate-400 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-colors duration-300">
+      <div className="rounded-2xl h-full w-full p-6 overflow-hidden dark:bg-gray-800 bg-white border border-gray-200 dark:border-gray-700 group-hover:border-gray-300 relative z-20 transition-colors duration-300">
         <div className="relative z-50">
-          <div className="p-4">
-            <h4 className="text-slate-900 dark:text-zinc-100 text-xl md:text-2xl font-bold tracking-wide my-2">
+          <div className="space-y-4">
+            <h4 className="text-slate-900 dark:text-zinc-100 text-2xl md:text-3xl font-semibold tracking-wide">
               {blog?.title}
             </h4>
-            <Image
-              src={blog?.thumbnail}
-              alt={blog?.title}
-              height={400}
-              width={500}
-              className="transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="flex justify-between items-center mt-4">
+            <div className="relative overflow-hidden rounded-lg shadow-md">
+              <Image
+                src={blog?.thumbnail}
+                alt={blog?.title}
+                height={400}
+                width={500}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <div className="flex justify-between items-center mt-4 text-sm italic">
               {blog?.author && (
-                <p className="text-sm text-slate-500 dark:text-white">
+                <p className="text-gray-600 dark:text-gray-300 flex items-center gap-1">
+                  <FaUserAlt size={12} />
                   {blog?.author}
                 </p>
               )}
               {blog?.createdAt && (
-                <p className="text-sm text-slate-500 dark:text-white">
-                  {new Date(blog?.createdAt).toLocaleString("bn")}
+                <p className="text-gray-600 dark:text-gray-300">
+                  {new Date(blog?.createdAt).toLocaleDateString("bn", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}{" "}
+                  ইং
                 </p>
               )}
             </div>
-            <p className="mt-8 text-slate-800 dark:text-white tracking-wide leading-relaxed text-sm">
+            <p className="mt-4 text-gray-700 dark:text-gray-200 tracking-wide leading-relaxed text-sm line-clamp-3 bg-gradient-to-t from-transparent to-gray-50 dark:to-gray-800 bg-clip-text">
               {blog?.description?.slice(0, 120) + "..."}
             </p>
-            <Link
-              href={`/blogs/${blog.title.replaceAll(" ", "-")}`}
-              className="block text-end mt-2"
-            >
-              <Button>Details</Button>
-            </Link>
+            <div className="text-right mt-4">
+              <Link href={`/blogs/${blog.title.replaceAll(" ", "-")}`}>
+                <Button>বিস্তারিত</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

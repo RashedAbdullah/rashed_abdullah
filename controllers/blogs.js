@@ -4,7 +4,7 @@ const { blogModel } = require("@/models/blog-model");
 const getBlogs = async () => {
   try {
     await mongoDBConnection();
-    const blogs = await blogModel.find({}).sort({ createAt: -1 });
+    const blogs = await blogModel.find({}).sort({ createdAt: -1 });
     return blogs;
   } catch (err) {
     console.log(err.message);

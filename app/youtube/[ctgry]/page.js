@@ -70,8 +70,8 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
 
   return (
     <div className="min-h-screen dark:text-gray-300">
-      <div className="text-center py-16 bg-gradient-to-r from-blue-600 to-teal-600 dark:bg-gradient-to-r dark:from-darkTeal dark:to-darkBlue text-white">
-        <h1 className="text-5xl font-bold tracking-tight">
+      <div className="text-center py-16 backdrop-blur-xl border-b border-b-slate-700">
+        <h1 className="text-3xl font-bold tracking-tight">
           {selectCategory(ctgry)}
         </h1>
         <p className="mt-6 text-2xl font-light">
@@ -80,7 +80,7 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
       </div>
       {/* <Ads /> */}
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
+        <h2 className="text-2xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
           Latest {selectCategory(ctgry)} Videos
         </h2>
         <div

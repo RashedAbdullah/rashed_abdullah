@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
+import { Toaster } from "sonner";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
 
@@ -94,8 +95,9 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="dark:bg-grid-white/[0.1] bg-grid-black/[0.2]">
+          <div className="dark:bg-grid-white/[0.05] bg-grid-black/[0.05]">
             <Navbar />
+            <Toaster position="top-center"  />
             {children}
             <Footer />
           </div>

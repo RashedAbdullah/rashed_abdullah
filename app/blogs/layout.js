@@ -1,9 +1,9 @@
-import { Hind_Siliguri } from "next/font/google";
+import { Tiro_Bangla } from "next/font/google";
 
-const hindFont = Hind_Siliguri({ subsets: ["bengali"], weight: "400" });
+const tiroBangla = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const BlogLayout = ({ children }) => {
-  return <div className={`${hindFont.className}`}>{children}</div>;
+  return <div className={`${tiroBangla.className}`}>{children}</div>;
 };
 
 export default BlogLayout;

@@ -10,12 +10,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useRouter } from "next/navigation";
+import { memo } from "react";
 
-export default function NavigationsSelection({ user }) {
+const NavigationsSelection = ({ user }) => {
   const router = useRouter();
 
   const handleNavigation = (value) => {
-    if (value) router.push(value);
+    if (value) {
+      router.push(value);
+    }
   };
 
   return (
@@ -29,7 +32,7 @@ export default function NavigationsSelection({ user }) {
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Navigations</SelectLabel>
-          <SelectItem value="/quran/surah">Quran kareem</SelectItem>
+          <SelectItem value="/quran/surah">Quran Kareem</SelectItem>
           <SelectItem value="/youtube">YouTube</SelectItem>
           <SelectItem value="/diary">Diary</SelectItem>
         </SelectGroup>
@@ -37,10 +40,13 @@ export default function NavigationsSelection({ user }) {
         {user && (
           <SelectGroup>
             <SelectLabel className="text-green-500">Dashboard</SelectLabel>
-            <SelectItem value="/dashboard">{user.name}</SelectItem>
+            <SelectItem value="/dashboard">{user.name || "Dashboard"}</SelectItem>
           </SelectGroup>
         )}
       </SelectContent>
     </Select>
   );
-}
+};
+
+// Memoizing the component to prevent unnecessary re-renders
+export default memo(NavigationsSelection);

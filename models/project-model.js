@@ -5,6 +5,7 @@ const ProjectSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
+      trim: true,
     },
     image: {
       type: String,
@@ -14,10 +15,32 @@ const ProjectSchema = new mongoose.Schema(
     description: {
       type: String,
       required: true,
+      minlength: 10,
     },
     link: {
       type: String,
       required: true,
+      validate: {
+        validator: function (v) {
+          return /^https?:\/\/.+\..+/i.test(v);
+        },
+        message: (props) => `${props.value} is not a valid URL!`,
+      },
+    },
+    live: {
+      type: String,
+      required: true,
+      validate: {
+        validator: function (v) {
+          return /^https?:\/\/.+\..+/i.test(v);
+        },
+        message: (props) => `${props.value} is not a valid URL!`,
+      },
+    },
+
+    category: {
+      type: String,
+      required: false,
     },
   },
   {

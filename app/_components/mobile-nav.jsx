@@ -82,7 +82,7 @@ const MobileNav = async () => {
                   href="/projects"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  Works
+                  Projects
                 </Link>
               </SheetClose>
             </div>
