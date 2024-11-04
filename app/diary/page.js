@@ -8,11 +8,13 @@ const DiaryPage = async () => {
   const diries = await getDirais();
 
   return (
-    <div className={`${tiro.className} container mx-auto px-4 py-8`}>
+    <div
+      className={`${tiro.className} container mx-auto px-4 py-8 min-h-screen`}
+    >
       <h1 className="text-4xl font-bold text-center mb-8 text-slate-900 dark:text-zinc-100">
         ডায়েরি
       </h1>
-      <DiarySchemaScript entries={entries} />
+      <DiarySchemaScript entries={diries} />
       <div className="space-y-8">
         {diries.map((entry) => (
           <div
