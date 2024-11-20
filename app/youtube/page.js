@@ -1,7 +1,6 @@
 import VideoCategories from "./_components/video-categories";
 import LatestVideos from "./_components/latest-videos";
 import YoutubeHeroSection from "./_components/youtube-hero-section";
-import Ads from "@/components/ads";
 
 export async function generateMetadata() {
   return {
@@ -46,10 +45,8 @@ const YoutubePage = async () => {
   return (
     <div className="min-h-screen dark:text-gray-300 container">
       <YoutubeHeroSection />
-      <Ads />
       <VideoCategories />
       <LatestVideos />
-      <Ads />
     </div>
   );
 };

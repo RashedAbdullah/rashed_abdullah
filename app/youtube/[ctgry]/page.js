@@ -1,4 +1,3 @@
-import Ads from "@/components/ads";
 import VideoCard from "../_components/video-card";
 import { getVideosByCategories } from "@/utils/fetch-vidoes";
 
@@ -78,7 +77,7 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
           Enjoy our collection of {selectCategory(ctgry)}.
         </p>
       </div>
-      <Ads />
+
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-2xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
           Latest {selectCategory(ctgry)} Videos
@@ -112,7 +111,6 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
           )}
         </div>
       </div>
-      <Ads />
     </div>
   );
 };

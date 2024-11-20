@@ -7,7 +7,17 @@ import { ThemeProvider } from "@/components/theme-provider";
 import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
 
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
+const ubuntu = Ubuntu({
+  subsets: [
+    "latin",
+    "latin-ext",
+    "cyrillic",
+    "cyrillic-ext",
+    "greek",
+    "greek-ext",
+  ],
+  weight: ["400", "300", "500", "700"],
+});
 
 export const metadata = {
   title:
@@ -81,7 +91,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${ubuntu.className} bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
+        className={` ${ubuntu.className}  bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
       >
         <PersonSchemaScript person={myInfo} />
         <amp-auto-ads

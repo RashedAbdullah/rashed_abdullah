@@ -1,7 +1,5 @@
-import { projects } from "@/data/projects";
 import ProjectCard from "./_components/project-card";
 import { getProjects } from "@/controllers/projects";
-import Ads from "@/components/ads";
 
 const ProjectPage = async () => {
   const projects = await getProjects();
@@ -12,7 +10,6 @@ const ProjectPage = async () => {
           <ProjectCard key={idx} project={project} />
         ))}
       </div>
-      <Ads />
     </div>
   );
 };

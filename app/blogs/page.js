@@ -1,4 +1,3 @@
-import Ads from "@/components/ads";
 import BlogCard from "./_components/blog-card";
 import { getBlogs } from "@/controllers/blogs";
 
@@ -11,7 +10,6 @@ const BlogsPage = async () => {
           <BlogCard key={idx} blog={blog} />
         ))}
       </div>
-      <Ads />
     </div>
   );
 };

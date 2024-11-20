@@ -2,7 +2,6 @@ import { getSingleYoutubeVideo } from "@/utils/fetch-vidoes";
 import Image from "next/image";
 import { FaEye, FaThumbsUp, FaComment, FaYoutube } from "react-icons/fa";
 import { formatCount } from "@/utils/format-view";
-import Ads from "@/components/ads";
 
 export async function generateMetadata({ params: { slug } }) {
   const singleVideo = await getSingleYoutubeVideo(slug);
@@ -103,7 +102,6 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
             Watch Now
           </a>
         </div>
-        <Ads />
       </div>
 
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
@@ -147,7 +145,6 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
           ))}
         </p>
       </div>
-      <Ads />
     </div>
   );
 };
