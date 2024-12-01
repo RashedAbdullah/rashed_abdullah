@@ -29,7 +29,6 @@ const ContactForm = () => {
     emailjs
       .send(serviceID, templateID, formData, userID)
       .then((response) => {
-        // Show success toast
         toast.success("Message sent successfully!", {
           description: `Sent on: ${new Date().toLocaleString()}`,
         });
@@ -37,7 +36,6 @@ const ContactForm = () => {
         setFormData({ name: "", email: "", message: "" }); // Clear form fields
       })
       .catch((err) => {
-        // Show error toast
         toast.error("Failed to send message. Please try again.", {
           description: `Error: ${err.message}`,
         });
