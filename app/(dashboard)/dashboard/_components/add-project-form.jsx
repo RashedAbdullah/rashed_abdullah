@@ -86,7 +86,7 @@ const AddProjectForm = ({ handlingNewProject }) => {
 
         <div className="mb-4">
           <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">
-            লিঙ্ক
+            গিটহাব লিঙ্ক
           </label>
           <input
             type="text"
