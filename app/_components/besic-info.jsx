@@ -23,7 +23,7 @@ const BesicInfo = async () => {
               <h2>Rashed Abdullah</h2>
             </div>
             <div>
-              <p>Front-end Developer</p>
+              <p>Teacher & Developer</p>
             </div>
           </div>
 

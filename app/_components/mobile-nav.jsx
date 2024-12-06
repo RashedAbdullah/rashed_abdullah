@@ -69,6 +69,16 @@ const MobileNav = async () => {
             <div>
               <SheetClose asChild>
                 <Link
+                  href="/resources"
+                  className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
+                >
+                  Learning resources
+                </Link>
+              </SheetClose>
+            </div>
+            <div>
+              <SheetClose asChild>
+                <Link
                   href="/blogs"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >

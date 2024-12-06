@@ -69,3 +69,27 @@ ol {
 ul {
   @apply list-disc ml-4;
 }
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fff transparent;
+}

@@ -33,6 +33,7 @@ const NavigationsSelection = ({ user }) => {
         <SelectGroup>
           <SelectLabel>Navigations</SelectLabel>
           <SelectItem value="/quran/surah">Quran Kareem</SelectItem>
+          <SelectItem value="/resources">Learning resources</SelectItem>
           <SelectItem value="/youtube">YouTube</SelectItem>
           <SelectItem value="/diary">Diary</SelectItem>
         </SelectGroup>
@@ -40,7 +41,9 @@ const NavigationsSelection = ({ user }) => {
         {user && (
           <SelectGroup>
             <SelectLabel className="text-green-500">Dashboard</SelectLabel>
-            <SelectItem value="/dashboard">{user.name || "Dashboard"}</SelectItem>
+            <SelectItem value="/dashboard">
+              {user.name || "Dashboard"}
+            </SelectItem>
           </SelectGroup>
         )}
       </SelectContent>

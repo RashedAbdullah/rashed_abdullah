@@ -17,23 +17,20 @@ export default async function AboutMe() {
             </div>
           </div>
           <div>
-            <div className="dark:bg-lightBlack bg-gray-100 relative z-40 p-5 rounded-3xl text-sm">
-              <p className="text-deepAqua dark:text-aqua">{`<p>`}</p>
-              <br />
+            <div className="dark:bg-lightBlack bg-gray-100 relative z-40 p-5 rounded-3xl">
               <h3 className="text-deepAqua dark:text-aqua text-xl">Hey!</h3>
               <p>
-                I&apos;m Rashed Abdullah, a passionate front-end developer. I
-                specialize in crafting stunning web experiences using{" "}
-                <span className="text-deepAqua dark:text-aqua">React.js</span>{" "}
-                And{" "}
+                I&apos;m Rashed Abdullah, a passionate front-end developer and a
+                dedicated teacher. I specialize in crafting stunning web
+                experiences using{" "}
                 <span className="text-deepAqua dark:text-aqua">Next.js</span>{" "}
+                And{" "}
+                <span className="text-deepAqua dark:text-aqua">Node.js</span>{" "}
                 With a focus on innovation and user engagement, I create
                 immersive interfaces and high-performance applications.
                 Let&apos;s collaborate to bring your ideas to life and enchant
-                users with interactive wonders on the web. ✨
+                users with interactive wonders on the web.
               </p>
-              <br />
-              <p className="text-deepAqua dark:text-aqua">{`</p>`}</p>
             </div>
           </div>
         </div>
