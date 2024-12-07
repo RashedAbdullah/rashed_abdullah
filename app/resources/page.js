@@ -29,7 +29,7 @@ const LearningResourcesPage = () => {
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-8 text-center text-white">
+        <h1 className="text-3xl font-extrabold mb-8 text-center text-white">
           Explore Learning Resources
         </h1>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
