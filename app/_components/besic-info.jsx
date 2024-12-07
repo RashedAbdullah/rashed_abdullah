@@ -13,11 +13,11 @@ const BesicInfo = async () => {
         <div className="border-4 backdrop-blur-lg flex flex-col justify-center  gap-5 p-10 rounded-tl-[60px] rounded-br-[60px] border-deepAqua dark:border-white">
           <div className="flex flex-col justify-center items-center">
             <Image
-              src={`https://i.ibb.co.com/GkdZpf8/IMG-20240621-WA0029-Copy.jpg`}
+              src="/logo.png"
               alt="Rashed Abdullah"
               height={300}
               width={300}
-              className={`h-[120px] w-[120px] object-cover bg-cover bg-no-repeat bg-center rounded-full`}
+              className={`h-[120px] w-[120px] object-cover bg-cover bg-no-repeat bg-center rounded-full border-2`}
             ></Image>
             <div className="text-2xl font-semibold">
               <h2>Rashed Abdullah</h2>
