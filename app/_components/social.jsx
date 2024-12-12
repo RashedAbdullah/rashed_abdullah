@@ -1,7 +1,19 @@
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export default async function FooterSocial() {
   const links = [
+    {
+      title: "Youtube",
+      icon: <FaYoutube className="h-full w-full" />,
+      href: "https://www.youtube.com/@RashedAbdullahBD",
+      ariaLabel: "Visit Facebook profile",
+    },
     {
       title: "Facebook",
       icon: <FaFacebook className="h-full w-full" />,

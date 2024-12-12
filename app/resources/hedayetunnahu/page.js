@@ -1,9 +1,9 @@
 import { getHedayetunnahuQuestion } from "@/controllers/hedayetunnahu";
 import React from "react";
-import { Aref_Ruqaa } from "next/font/google";
+import { Aref_Ruqaa, Scheherazade_New } from "next/font/google";
 import { getEngToAr } from "@/utils/getEngToAr";
 
-const aref = Aref_Ruqaa({ subsets: ["arabic"], weight: "400" });
+const arabicFont = Scheherazade_New({ subsets: ["arabic"], weight: "400" });
 
 const HedayetunnahuPage = async () => {
   const questionsData = await getHedayetunnahuQuestion();
@@ -11,7 +11,7 @@ const HedayetunnahuPage = async () => {
   return (
     <div
       dir="rtl"
-      className={`min-h-screen p-8 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 ${aref.className}`}
+      className={`min-h-screen p-8 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 ${arabicFont.className}`}
     >
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
