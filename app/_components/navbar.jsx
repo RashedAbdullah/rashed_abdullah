@@ -20,7 +20,7 @@ const Navbar = async () => {
         <nav className="hidden lg:flex gap-10 justify-center items-center">
           <Navigations />
 
-          {/* <SocialLinks /> */}
+          <SocialLinks />
 
           <ThemeSwitcher />
         </nav>

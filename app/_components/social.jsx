@@ -20,12 +20,12 @@ export default async function FooterSocial() {
       href: "https://www.facebook.com/Rashed4Abdullah",
       ariaLabel: "Visit Facebook profile",
     },
-    {
-      title: "Instagram",
-      icon: <FaInstagram className="h-full w-full" />,
-      href: "#",
-      ariaLabel: "Visit Instagram profile",
-    },
+    // {
+    //   title: "Instagram",
+    //   icon: <FaInstagram className="h-full w-full" />,
+    //   href: "#",
+    //   ariaLabel: "Visit Instagram profile",
+    // },
     {
       title: "Github",
       icon: <FaGithub className="h-full w-full" />,
