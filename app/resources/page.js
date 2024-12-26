@@ -10,9 +10,9 @@ const LearningResourcesPage = () => {
       path: "/resources/hedayetunnahu",
     },
     {
-      title: "Next.js Guide",
+      title: "الطريق إلى الإنشاء",
       desc: "",
-      path: "/resources/nextjs-guide",
+      path: "/resources/insha",
     },
     {
       title: "JavaScript Essentials",
