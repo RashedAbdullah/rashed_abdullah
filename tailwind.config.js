@@ -35,6 +35,38 @@ module.exports = {
     },
 
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              textAlign: "center",
+              color: "#0c4a6e",
+              fontWeight: "700",
+            },
+            h2: {
+              textAlign: "center",
+              color: "#2563eb",
+              fontWeight: "600",
+            },
+            h3: {
+              textAlign: "center",
+              color: "#1e3a8a",
+              fontWeight: "500",
+            },
+            h4: {
+              textAlign: "center",
+              color: "#1e3a8a",
+              fontWeight: "400",
+            },
+            p: {
+              textAlign: "justify",
+            },
+          },
+        },
+      },
+    },
+
+    extend: {
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -60,6 +92,7 @@ module.exports = {
   },
 
   plugins: [
+    require("@tailwindcss/typography"),
     addVariablesForColors,
     require("tailwindcss-animate"),
     function ({ matchUtilities, theme }) {
