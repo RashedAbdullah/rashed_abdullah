@@ -11,7 +11,7 @@ const SocialLinks = async () => {
         className="flex justify-center items-center gap-1 hover:text-aqua2 transition duration-300"
         aria-label={`Visit Github profile`}
       >
-        <GrGithub /> <span>Guthub</span>
+        <GrGithub /> <span>গিটহাব</span>
       </a>
       <a
         target="_blank"
@@ -20,7 +20,7 @@ const SocialLinks = async () => {
         className="flex justify-center items-center gap-1 hover:text-aqua2 transition duration-300"
         aria-label={`Visit Linkedin profile`}
       >
-        <FaLinkedin /> <span>Linkedin</span>
+        <FaLinkedin /> <span>লিঙ্কডিন</span>
       </a>
     </nav>
   );

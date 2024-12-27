@@ -8,13 +8,13 @@ const Navigations = async () => {
   return (
     <div className="lg:flex justify-center items-center md:gap-10 gap-2">
       <div>
-        <ActiveLink link="/">Home</ActiveLink>
+        <ActiveLink link="/">হোম</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/blogs">Blogs</ActiveLink>
+        <ActiveLink link="/blogs">ব্লগ</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/projects">Projects</ActiveLink>
+        <ActiveLink link="/projects">প্রজেক্ট</ActiveLink>
       </div>
 
       <NavigationsSelection user={session?.user} />

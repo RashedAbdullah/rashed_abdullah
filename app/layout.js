@@ -1,4 +1,4 @@
-import { Ubuntu } from "next/font/google";
+import { Ubuntu, Tiro_Bangla } from "next/font/google";
 import "@/css/globals.css";
 import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
@@ -7,21 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
 
-const ubuntu = Ubuntu({
-  subsets: [
-    "latin",
-    "latin-ext",
-    "cyrillic",
-    "cyrillic-ext",
-    "greek",
-    "greek-ext",
-  ],
-  weight: ["400", "300", "500", "700"],
+const tiro = Tiro_Bangla({
+  subsets: ["bengali"],
+  weight: ["400"],
 });
 
 export const metadata = {
-  title:
-    "Rashed Abdullah - Programmer & Teacher | রাশেদ আব্দুল্লাহ - প্রোগ্রামার ও শিক্ষক",
+  title: "Rashed Abdullah | রাশেদ আব্দুল্লাহ",
   description:
     "Rashed Abdullah is a passionate web developer specializing in React.js and Next.js, and a committed teacher at Jamiatul Latif Rupgaj Madrasha. His portfolio highlights his work in programming, education, and personal projects.",
   keywords:
@@ -44,10 +36,10 @@ export const metadata = {
       "Explore Rashed Abdullah's works, including web development projects, teaching endeavors, and insightful blogs in both English and Bangla.",
     images: [
       {
-        url: "https://i.ibb.co/GkdZpf8/IMG-20240621-WA0029-Copy.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Rashed Abdullah Portfolio",
+        url: "https://i.ibb.co.com/VDVrwHW/rashed-avatar.png",
+        width: 800,
+        height: 800,
+        alt: "রাশেদ আব্দুল্লাহ পোর্টফোলিও",
       },
     ],
   },
@@ -55,7 +47,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <head>
         <title>{metadata.title}</title>
         <meta
@@ -92,7 +84,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         id="hero"
-        className={` ${ubuntu.className}  bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
+        className={` ${tiro.className}  bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
       >
         <PersonSchemaScript person={myInfo} />
         <amp-auto-ads

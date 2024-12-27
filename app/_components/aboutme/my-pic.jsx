@@ -17,10 +17,10 @@ const MyPicture = () => {
 
         <div className="absolute inset-0 flex flex-col justify-end py-2 items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <h2 className="font-bold text-xl text-gray-800 dark:text-white">
-            Rashed Abdullah
+            রাশেদ আব্দুল্লাহ
           </h2>
           <p className="font-normal text-sm text-gray-600 dark:text-gray-300">
-            Web Developer
+            শিক্ষক ও সফটওয়্যার ডেভেলপার
           </p>
         </div>
       </div>

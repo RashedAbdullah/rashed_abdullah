@@ -25,17 +25,17 @@ const NavigationsSelection = ({ user }) => {
     <Select className="bg-transparent" onValueChange={handleNavigation}>
       <SelectTrigger className="w-[180px] py-1">
         <SelectValue
-          placeholder="Navigations"
+          placeholder="মেনু"
           className="placeholder:text-green-500"
         />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Navigations</SelectLabel>
-          <SelectItem value="/quran/surah">Quran Kareem</SelectItem>
-          <SelectItem value="/resources">Learning resources</SelectItem>
-          <SelectItem value="/youtube">YouTube</SelectItem>
-          <SelectItem value="/diary">Diary</SelectItem>
+          <SelectLabel>মেনু</SelectLabel>
+          <SelectItem value="/quran/surah">কুরআন কারীম</SelectItem>
+          <SelectItem value="/resources">পাঠ উপকরণ</SelectItem>
+          <SelectItem value="/youtube">ইউটিউব</SelectItem>
+          <SelectItem value="/diary">দিনলিপি</SelectItem>
         </SelectGroup>
 
         {user && (

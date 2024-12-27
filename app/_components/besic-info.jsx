@@ -14,16 +14,16 @@ const BesicInfo = async () => {
           <div className="flex flex-col justify-center items-center">
             <Image
               src="/logo.png"
-              alt="Rashed Abdullah"
+              alt="রাশেদ আব্দুল্লাহ"
               height={300}
               width={300}
               className={`h-[120px] w-[120px] object-cover bg-cover bg-no-repeat bg-center rounded-full border-2`}
             ></Image>
             <div className="text-2xl font-semibold">
-              <h2>Rashed Abdullah</h2>
+              <h2>রাশেদ আব্দুল্লাহ</h2>
             </div>
             <div>
-              <p>Teacher & Developer</p>
+              <p>শিক্ষক ও ডেভেলপার</p>
             </div>
           </div>
 
@@ -36,12 +36,12 @@ const BesicInfo = async () => {
             <div className="col-span-1 dark:text-aqua text-deepAqua">
               <IoLocationOutline />
             </div>
-            <div className="col-span-7">Feni, Bangladesh</div>
+            <div className="col-span-7">ফেনী, বাংলাদেশ।</div>
 
             <div className="col-span-1 dark:text-aqua text-deepAqua">
               <GiRotaryPhone />
             </div>
-            <div className="col-span-7">+8801603443214</div>
+            <div className="col-span-7">+৮৮০১৬০৩-৪৪৩২১৪</div>
 
             <div className="col-span-1 dark:text-aqua text-deepAqua">
               <FaLink />
@@ -67,7 +67,7 @@ const BesicInfo = async () => {
               download="RashedResume.pdf"
               className="bg-white shadow text-deepBlack hover:text-white hover:bg-deepAqua transition-all duration-300 px-10 py-2 flex items-center gap-2 text-lg"
             >
-              Resume <BiDownload />
+              রিজিউমি <BiDownload />
             </a>
           </div>
         </div>

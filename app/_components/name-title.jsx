@@ -7,39 +7,38 @@ const NameTitle = async () => {
       <div className="flex flex-col justify-center gap-4">
         <header>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"<h1>"}</p>
-          <h2 className="md:text-4xl text-3xl font-semibold ml-6">
-            Hey
-          </h2>
+          <h2 className="md:text-4xl text-3xl font-semibold ml-6">হ্যালো,</h2>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"</h1>"}</p>
         </header>
 
         <h1 className="md:text-4xl text-3xl font-semibold ml-6">
-          <span>I&apos;m</span>{" "}
+          <span>আমি</span>{" "}
           <strong className="text-deepAqua dark:text-aqua">
-            Rashed Abdullah
+            রাশেদ আব্দুল্লাহ
           </strong>
         </h1>
 
         <div className="flex items-end gap-3 ml-6">
           <h2 className="md:text-4xl text-3xl font-semibold">
-            A Teacher & Developer
+            শিক্ষক ও ডেভেলপার
           </h2>
         </div>
 
         <div>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"<p>"}</p>
           <p className="leading-6 ml-6">
-            I&apos;m Rashed Abdullah, a devoted teacher and passionate front-end
-            developer. While I teach subjects outside of web development, I
-            channel my creativity and expertise into crafting exceptional web
-            experiences using Next.js and Node.js.
+            শিক্ষা ও প্রযুক্তির মেলবন্ধনে সবসময় নতুন কিছু তৈরি করতে ভালোবাসি।
+            React.js, React Native, Next.js এবং Node.js ব্যবহার করে চমৎকার,
+            আধুনিক ও ইউজার ফ্রেন্ডলি সফটওয়্যার তৈরি করি। পাশাপাশি
+            ছাত্র-শিক্ষকদের জন্য মানসম্মত পাঠ উপকরণ সরবরাহ করে শিক্ষাকে সহজলভ্য
+            করার চেষ্টা করি।
           </p>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"</p>"}</p>
         </div>
 
         <div className="ml-6 flex items-center gap-4">
           <h3 className="text-3xl text-deepAqua dark:text-aqua">
-            Let&apos;s Talk
+            কানেক্ট উইথ মি
           </h3>
           <a
             href="#contact"

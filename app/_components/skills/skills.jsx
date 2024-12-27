@@ -24,7 +24,7 @@ const Skills = async () => {
               <ScrollMouse />
             </div>
             <div>
-              <PageTitle>Skills</PageTitle>
+              <PageTitle>প্রোগ্রামিং স্কিল</PageTitle>
               <p className="text-center text-sm text-white">
                 I&apos;m never striving to never stop learning and improving
               </p>

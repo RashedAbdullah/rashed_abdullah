@@ -47,14 +47,14 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="flex flex-col gap-14 col-span-8">
       <div className="flex flex-col md:grid grid-cols-8 justify-center gap-14">
         <div className="col-span-4">
-          <p className="text-deepAqua dark:text-aqua">Your Name*</p>
+          <p className="text-deepAqua dark:text-aqua">আপনার নাম*</p>
           <div>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Enter your name"
+              placeholder="নাম লিখুন"
               className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
               required
             />
@@ -62,14 +62,14 @@ const ContactForm = () => {
         </div>
 
         <div className="col-span-4">
-          <p className="text-deepAqua dark:text-aqua">Your Email*</p>
+          <p className="text-deepAqua dark:text-aqua">আপনার ইমেইল*</p>
           <div>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="ইমেইল লিখুন"
               className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
               required
             />
@@ -79,13 +79,13 @@ const ContactForm = () => {
 
       <div>
         <div>
-          <p className="text-deepAqua dark:text-aqua">Your message*</p>
+          <p className="text-deepAqua dark:text-aqua">বার্তা*</p>
           <div>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Enter your needs"
+              placeholder="বলুন..."
               className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
               required
             />
@@ -97,7 +97,7 @@ const ContactForm = () => {
           type="submit"
           className="bg-deepAqua dark:bg-aqua text-white dark:text-deepBlack py-3 px-8 rounded-full flex justify-center items-center gap-3"
         >
-          Send Message <FiSend />
+          সাবমিট করুন <FiSend />
         </button>
       </div>
     </form>

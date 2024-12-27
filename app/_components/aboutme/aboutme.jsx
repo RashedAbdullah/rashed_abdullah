@@ -13,23 +13,18 @@ export default async function AboutMe() {
         <div className="col-span-6 flex flex-col gap-14 justify-center">
           <div className="flex md:justify-start justify-center">
             <div className="py-4 px-6 rounded-tl-xl rounded-br-xl border-4 border-deepAqua dark:border-aqua z-40 relative">
-              <h2 className="text-4xl font-semibold">About Me</h2>
+              <h2 className="text-4xl font-semibold">আমার সম্পর্কে</h2>
             </div>
           </div>
           <div>
             <div className="dark:bg-lightBlack bg-gray-100 relative z-40 p-5 rounded-3xl">
-              <h3 className="text-deepAqua dark:text-aqua text-xl">Hey!</h3>
               <p>
-                I&apos;m Rashed Abdullah, a passionate front-end developer and a
-                dedicated teacher. I specialize in crafting stunning web
-                experiences using{" "}
-                <span className="text-deepAqua dark:text-aqua">Next.js</span>{" "}
-                And{" "}
-                <span className="text-deepAqua dark:text-aqua">Node.js</span>{" "}
-                With a focus on innovation and user engagement, I create
-                immersive interfaces and high-performance applications.
-                Let&apos;s collaborate to bring your ideas to life and enchant
-                users with interactive wonders on the web.
+                আমি রাশেদ আব্দুল্লাহ। শিক্ষক ও সফটওয়্যার ডেভেলপার। শিক্ষা ও
+                প্রযুক্তির মেলবন্ধনে সবসময় নতুন কিছু তৈরি করতে ভালোবাসি।
+                React.js, React Native, Next.js এবং Node.js ব্যবহার করে চমৎকার,
+                আধুনিক ও ইউজার ফ্রেন্ডলি সফটওয়্যার তৈরি করি। পাশাপাশি
+                ছাত্র-শিক্ষকদের জন্য মানসম্মত পাঠ উপকরণ সরবরাহ করে শিক্ষাকে
+                সহজলভ্য করার চেষ্টা করি।
               </p>
             </div>
           </div>
