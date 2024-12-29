@@ -13,13 +13,13 @@ const ActiveSurahJuz = ({ link, children }) => {
   const path = usePathname();
 
   const iconForLink = () => {
-    if (children === "Translation") {
+    if (children === "তরজমা") {
       return <AiOutlineTranslation size={18} />;
-    } else if (children === "Reading") {
+    } else if (children === "তিলাওয়াত") {
       return <IoReader size={18} />;
-    } else if (children === "Surah") {
+    } else if (children === "সুরা ভিত্তিক") {
       return <FaQuran size={18} />;
-    } else if (children === "Juz") {
+    } else if (children === "পারা ভিত্তিক") {
       return <LiaQuranSolid size={20} />;
     }
   };

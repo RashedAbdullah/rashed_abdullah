@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { surahNames } from "@/data/surah-names";
+import { bnSurahList } from "@/utils/bn-surah-list";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { CgMoveRight } from "react-icons/cg";
@@ -26,7 +27,7 @@ export function SurahSideBarMobile() {
       </SheetTrigger>
       <SheetContent side="left" className="overflow-auto">
         <SheetHeader>
-          <SheetTitle className="text-center">Surah List</SheetTitle>
+          <SheetTitle className="text-center">সুরা সমূহ</SheetTitle>
         </SheetHeader>
         <ul className="space-y-4">
           {surahNames.map((surah) => (
@@ -39,7 +40,9 @@ export function SurahSideBarMobile() {
                   <p className="text-lg font-semibold ayah-font text-black">
                     سورة {surah.name}
                   </p>
-                  <p className="text-sm text-gray-600">{surah.englishName}</p>
+                  <p className="text-sm text-gray-600">
+                    {bnSurahList[surah.number - 1].name}
+                  </p>
                 </Link>
               </SheetTrigger>
             </li>

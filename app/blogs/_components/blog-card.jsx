@@ -3,7 +3,6 @@ import BlogSchemaScript from "@/meta/blog-schema-script";
 import Image from "next/image";
 import { FaUserAlt } from "react-icons/fa";
 import Link from "next/link";
-import React from "react";
 
 const BlogCard = ({ blog }) => {
   return (

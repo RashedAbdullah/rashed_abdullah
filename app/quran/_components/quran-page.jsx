@@ -1,6 +1,7 @@
-import { getEngToAr } from "@/utils/getEngToAr";
+import { getEngToAr, getEngToBn } from "@/utils/getEngToAr";
 import basmalah from "@/public/basmalah.png";
 import Image from "next/image";
+import { bnSurahList } from "@/utils/bn-surah-list";
 
 const SingleSurahPage = ({ surahData, translationData }) => {
   return (
@@ -11,11 +12,12 @@ const SingleSurahPage = ({ surahData, translationData }) => {
           {surahData.name}
         </h1>
         <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 text-center">
-          {surahData.englishName} - {surahData.englishNameTranslation}
+          {bnSurahList[surahData.number - 1].name} -{" "}
+          {surahData.englishNameTranslation}
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-4 text-center">
-          Revelation Type: {surahData.revelationType} | Ayahs:{" "}
-          {surahData.numberOfAyahs}
+          অবতীর্ণ: {surahData.revelationType === "Medinan" ? "মাদানী" : "মক্কী"}{" "}
+          | আয়াত: {getEngToBn(surahData.numberOfAyahs)}
         </p>
 
         <div className="flex justify-center mb-10">
@@ -53,7 +55,8 @@ const SingleSurahPage = ({ surahData, translationData }) => {
                   {translationText}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center">
-                  Ayah {ayah.numberInSurah} | Juz {ayah.juz} | Page {ayah.page}
+                  আয়াত {getEngToBn(ayah.numberInSurah)} | পৃষ্ঠা
+                  {getEngToBn(ayah.page)} | পারা {getEngToBn(ayah.juz)}
                 </p>
 
                 <audio controls className="w-full mt-3">

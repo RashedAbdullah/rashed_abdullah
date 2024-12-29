@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { surahNames } from "@/data/surah-names";
 import ToggleSurahJuz from "../_components/toggle-surah-jux";
+import { bnSurahList } from "@/utils/bn-surah-list";
+import { getEngToBn } from "@/utils/getEngToAr";
 
 export const metadata = {
   title: "Quran Kareem - Surah List",
@@ -36,7 +38,7 @@ const QuranBySurahPage = () => {
       <ToggleSurahJuz />
       <main className="p-8 flex flex-col items-center">
         <h1 className="text-4xl font-extrabold text-center mb-10 text-indigo-800 dark:text-cyan-300">
-          Surah List
+          সুরা সমূহ
         </h1>
         <section
           aria-label="List of Quran Surahs"
@@ -51,7 +53,7 @@ const QuranBySurahPage = () => {
               className="p-6 border rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-indigo-50 dark:hover:bg-gray-700"
             >
               <div className="text-lg font-medium text-gray-600 dark:text-gray-300 text-center mb-2">
-                {surah.englishName}
+                {bnSurahList[surah.number - 1]?.name}
               </div>
               <div
                 className="text-2xl font-extrabold text-indigo-700 dark:text-cyan-300 mt-1 text-center mb-3 ayah-font"
@@ -60,8 +62,10 @@ const QuranBySurahPage = () => {
                 سورة {surah.name}
               </div>
               <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                Total Ayahs:{" "}
-                <span className="font-medium">{surah.ayahCount}</span>
+                আয়াত সংখ্যা:{" "}
+                <span className="font-medium">
+                  {getEngToBn(surah.ayahCount)}
+                </span>
               </div>
             </Link>
           ))}

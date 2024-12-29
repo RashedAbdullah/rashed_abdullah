@@ -1,7 +1,8 @@
 import { getSingleSurah } from "@/data/fetch-quran-by-surah";
-import { getEngToAr } from "@/utils/getEngToAr";
+import { getEngToAr, getEngToBn } from "@/utils/getEngToAr";
 import Image from "next/image";
 import basmalah from "@/public/basmalah.png";
+import { bnSurahList } from "@/utils/bn-surah-list";
 
 export const metadata = {
   title: "Quran Kareem - Surah by Page",
@@ -37,10 +38,11 @@ const SurahByPagePage = async ({ params: { slug } }) => {
   return (
     <div className="min-h-screen p-6 container lg:w-[800px]">
       <h1 className="text-3xl font-bold text-center mb-8 text-teal-900 dark:text-teal-200">
-        {surah.englishName} - {surah.englishNameTranslation}
+        {bnSurahList[surah.number - 1].name} - {surah.englishNameTranslation}
       </h1>
       <h3 className="text-sm font-semibold text-center mb-6 text-gray-800 dark:text-gray-300">
-        Surah {surah.number} | Total Ayahs: {surah.numberOfAyahs}
+        সুরা নং: {getEngToBn(surah.number)} | আয়াত সংখ্যা:{" "}
+        {getEngToBn(surah.numberOfAyahs)}
       </h3>
 
       <div className="flex justify-center">
@@ -59,7 +61,7 @@ const SurahByPagePage = async ({ params: { slug } }) => {
           >
             <header className="flex justify-between items-center border-b pb-2 mb-4">
               <h2 className="text-lg font-semibold text-teal-700 dark:text-teal-300 ayah-font">
-                Page {page} - {surah.englishName}
+                পৃষ্ঠা {getEngToBn(page)} - {bnSurahList[surah.number - 1].name}
               </h2>
             </header>
             <div
@@ -90,7 +92,7 @@ const SurahByPagePage = async ({ params: { slug } }) => {
         {/* Sticky Audio Player */}
         <div className="sticky bottom-5 left-0 right-0 mx-auto mt-10 bg-slate-600 dark:bg-slate-800 p-4 rounded-lg shadow-lg max-w-md text-center">
           <h3 className="text-lg font-semibold text-white mb-2">
-            Listen to {surah?.englishName} Audio
+            সুরা {bnSurahList[surah?.number - 1].name} শুনুন
           </h3>
           <audio
             controls

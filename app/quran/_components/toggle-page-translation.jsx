@@ -6,10 +6,10 @@ const TogglePageAndTranslation = ({ slug, type = "surah" }) => {
       <div className="mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex space-x-4">
           <ActiveSurahJuz link={`/quran/${type}/${slug}/page`}>
-            Reading
+            তিলাওয়াত
           </ActiveSurahJuz>
           <ActiveSurahJuz link={`/quran/${type}/${slug}/translation`}>
-            Translation
+            তরজমা
           </ActiveSurahJuz>
         </div>
       </div>
