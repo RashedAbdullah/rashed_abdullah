@@ -2,18 +2,18 @@ import Link from "next/link";
 
 const categories = [
   {
-    category: "Quran Kareem",
-    desc: "Recitations",
+    category: "কুরআন কারীম",
+    desc: "মনোরম তিলাওয়াত",
     navlink: "quran",
   },
   {
-    category: "Nasheeds",
-    desc: "Bangla Subtitle",
+    category: "নাশীদ",
+    desc: "বাংলা সাইবটাইটেলসহ",
     navlink: "nasheed",
   },
   {
-    category: "Lectures",
-    desc: "Islamic Talks",
+    category: "লেকচার",
+    desc: "গুরুত্বপূর্ণ আলোচনা",
     navlink: "lecture",
   },
 ];
@@ -22,7 +22,7 @@ const VideoCategories = () => {
   return (
     <div className="mx-auto px-4 py-12">
       <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
-        Video Categories
+        ভিডিও ক্যাটাগরি
       </h2>
       <div className="flex justify-center gap-8 flex-wrap">
         {categories.map((category) => (

@@ -77,7 +77,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
   if (!singleVideo) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <h2 className="text-xl text-gray-500">Video not found.</h2>
+        <h2 className="text-xl text-gray-500">খুঁজে পাওয়া যায় নি।</h2>
       </div>
     );
   }
@@ -99,7 +99,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
             className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300"
           >
             <FaYoutube className="mr-2" />
-            Watch Now
+            এখনই দেখুন
           </a>
         </div>
       </div>
@@ -112,29 +112,29 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
         <div className="flex items-center">
           <FaEye className="mr-2 text-blue-500 dark:text-teal-300" />
           <span className="text-gray-700 dark:text-gray-300 font-medium">
-            {formatCount(singleVideo.totalView)} Views
+            {formatCount(singleVideo.totalView)} ভিউ
           </span>
         </div>
         <div className="flex items-center justify-end md:justify-normal">
           <FaThumbsUp className="mr-2 text-green-500 dark:text-green-400" />
           <span className="text-gray-700 dark:text-gray-300 font-medium">
-            {formatCount(singleVideo.likes)} Likes
+            {formatCount(singleVideo.likes)} লাইক
           </span>
         </div>
         <div className="flex items-center">
           <FaComment className="mr-2 text-purple-500 dark:text-purple-400" />
           <span className="text-gray-700 dark:text-gray-300 font-medium">
-            {formatCount(singleVideo.comments)} Comments
+            {formatCount(singleVideo.comments)} কমেন্ট
           </span>
         </div>
         <div className="text-gray-500 dark:text-gray-400 text-sm mt-2 sm:mt-0 text-right">
-          <p>{new Date(singleVideo.publishedAt).toLocaleDateString()}</p>
+          <p>{new Date(singleVideo.publishedAt).toLocaleDateString("bn-bd")}</p>
         </div>
       </div>
 
       <div className="mt-6">
         <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          Description
+          ডেসক্রিপশন
         </h2>
         <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed">
           {singleVideo.description.split("\n").map((line, index) => (

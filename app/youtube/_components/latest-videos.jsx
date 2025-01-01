@@ -7,7 +7,7 @@ const LatestVideos = async () => {
   return (
     <div className="mx-auto px-4 py-12">
       <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
-        Latest Videos
+        সর্বশেষ ভিডিও সমূহ
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {latestVideos.map((video) => (

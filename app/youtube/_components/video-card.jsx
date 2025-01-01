@@ -4,6 +4,7 @@ import { formatCount } from "@/utils/format-view";
 import { FaYoutube, FaEye, FaThumbsUp } from "react-icons/fa";
 import Link from "next/link";
 import VideoScheamScript from "@/meta/video-scheam-script";
+import { getEngToBn } from "@/utils/getEngToAr";
 
 const VideoCard = ({ video }) => {
   return (
@@ -23,7 +24,7 @@ const VideoCard = ({ video }) => {
           className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
           <FaYoutube className="mr-2" />
-          Watch Now
+          এখনই দেখুন
         </a>
       </div>
       <div className="p-6 flex-1 flex flex-col justify-between">
@@ -34,32 +35,36 @@ const VideoCard = ({ video }) => {
             </h3>
           </Link>
 
-
           <div className="text-gray-500 dark:text-gray-400 text-sm mt-3 flex items-center gap-2">
-            <p>{new Date(video?.publishedAt).toLocaleDateString()}</p>
+            <p>
+              {new Date(video?.publishedAt).toLocaleDateString("bn-bd", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
             <p>|</p>
-            <p>{new Date(video?.publishedAt).toLocaleTimeString()}</p>
+            <p>{new Date(video?.publishedAt).toLocaleTimeString("bn-bd")}</p>
           </div>
         </div>
 
-        
         <div className="flex justify-between items-center mt-4">
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaEye className="mr-2 text-blue-500 dark:text-teal-300" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {formatCount(video?.totalView)}
+              {getEngToBn(formatCount(video?.totalView))}
             </span>
           </div>
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaThumbsUp className="mr-2 text-green-500 dark:text-green-400" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {formatCount(video?.likes)}
+              {getEngToBn(formatCount(video?.likes))}
             </span>
           </div>
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaComment className="mr-2 text-purple-500 dark:text-purple-400" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {formatCount(video?.comments)} Comments
+              {getEngToBn(formatCount(video?.comments))} কমেন্ট
             </span>
           </div>
         </div>
