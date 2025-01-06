@@ -3,13 +3,16 @@ import { videoModel } from "@/models/video-model";
 import { fetchFromYoutube } from "@/utils/fetch-from-youtube";
 import { NextResponse } from "next/server";
 
-export const GET = async () => {
+export const GET = async (req) => {
   try {
-    // Establish database connection
+    const url = new URL(req.url);
+    const category = url.searchParams.get("category");
+
+    // Fetching:
     await mongoDBConnection();
 
     // Fetch all videos
-    const videos = await videoModel.find({}).limit(10);
+    const videos = await videoModel.find({ category });
 
     const result = await Promise.all(
       videos.map(async (video) => {

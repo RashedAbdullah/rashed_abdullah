@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 
 export const GET = async (req) => {
   try {
+    //
     const url = new URL(req.url);
     // Get the selected year from the query parameters
     const year = url.searchParams.get("year");
