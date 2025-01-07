@@ -42,6 +42,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "QayyumBook";
+  src: url("/fonts/QayyumBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .basmalah {
   font-family: "Basmalah", serif;
 }
@@ -60,6 +67,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "QayyumBook";
 }
 
 ol {
@@ -94,6 +105,4 @@ ul {
   scrollbar-color: #fff transparent;
 }
 
-
 /* Insha */
-
