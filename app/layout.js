@@ -16,13 +16,13 @@ export const metadata = {
   creator: "Rashed Abdullah",
   publisher: "Rashed Abdullah",
   formatDetection: {
-    email: "abdulahad4rashed@gmail.com",
+    email: "maarashed40@gmail.com",
     address: "Feni, Bangladesh | ফেনী, বাংলাদেশ",
     telephone: "+8801603443214",
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "bn_BD",
     url: "https://rashedabdullah.com",
     title:
       "Rashed Abdullah - Programmer & Teacher | রাশেদ আব্দুল্লাহ - প্রোগ্রামার ও শিক্ষক",
