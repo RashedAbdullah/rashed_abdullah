@@ -53,11 +53,3 @@ Welcome to the source code of my personal portfolio website. This project is bui
 ### 6. **About Me Page**
 
 - Provides detailed information about my background, skills, and professional journey.
-
-## Design
-
-- **Colors**:
-  - Light background: `#C5DEFE`
-  - Dark background: `#0f172a`
-- **Fonts**: Clean and readable typography to enhance user experience (Ubuntu, Hind Siliguri).
-- **Animations**: Simple hover effects and subtle animations for improved interactivity, using Tailwind CSS, Framer motion, Shadcn, Aceternity UI.
