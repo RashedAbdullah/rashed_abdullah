@@ -6,7 +6,6 @@ const VideoScheamScript = ({ video }) => {
     description: video?.description,
     thumbnailUrl: [video?.thumbnailUrl],
     contentUrl: `https://www.youtube.com/watch?v=${video?.id}`,
-    embedUrl: `https://www.youtube.com/embed/${video?.embedCode}`,
     uploadDate: video?.publishedAt,
     interactionStatistic: [
       {

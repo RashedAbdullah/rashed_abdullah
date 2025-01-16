@@ -8,12 +8,12 @@ const BlogSchemaScript = ({ blog }) => {
       : "https://i.ibb.co.com/kHSHKLx/code-image.webp",
     author: {
       "@type": "Person",
-      name: blog?.author || "Rashed Abdullah",
+      name: blog?.author || "রাশেদ আব্দুল্লাহ",
       url: "https://rashedabdullah.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "Rashed Abdullah",
+      name: "রাশেদ আব্দুল্লাহ",
       logo: {
         "@type": "ImageObject",
         url: "https://i.ibb.co/GkdZpf8/IMG-20240621-WA0029-Copy.jpg",

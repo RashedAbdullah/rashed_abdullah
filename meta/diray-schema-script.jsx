@@ -2,9 +2,9 @@ const DiarySchemaScript = ({ entries }) => {
   const formattedData = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Diary of Rashed Abdullah",
+    name: "রাশেদ আব্দুল্লাহ’র দিনলিপি।",
     description:
-      "A personal diary documenting the daily life and reflections of Rashed Abdullah.",
+      "রাশেদ আব্দুল্লাহ’র দিনলিপি। শিক্ষাদিক্ষা। ভাবনার আদানপ্রদান। প্রভৃতি।",
     author: {
       "@type": "Person",
       name: "Rashed Abdullah",
@@ -17,11 +17,11 @@ const DiarySchemaScript = ({ entries }) => {
       articleBody: entry.text,
       author: {
         "@type": "Person",
-        name: "Rashed Abdullah",
+        name: "রাশেদ আব্দুল্লাহ",
       },
       publisher: {
         "@type": "Organization",
-        name: "Rashed Abdullah's Diray",
+        name: "রাশেদ আব্দুল্লাহ’র দিনলিপি।",
         logo: {
           "@type": "ImageObject",
           url: "https://i.ibb.co/GkdZpf8/IMG-20240621-WA0029-Copy.jpg",

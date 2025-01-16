@@ -9,9 +9,9 @@ import { myInfo } from "@/data/my-info";
 export const metadata = {
   title: "Rashed Abdullah | রাশেদ আব্দুল্লাহ",
   description:
-    "Rashed Abdullah is a passionate web developer specializing in React.js and Next.js, and a committed teacher at Jamiatul Latif Rupgaj Madrasha. His portfolio highlights his work in programming, education, and personal projects.",
+    "রাশেদ আব্দুল্লাহ। সফটওয়্যার ডেভেলপার ও শিক্ষক। ২০২৩ থেকে ওয়েবসাইট ও মোবাইল এপ্লিকেশন ডেভেলপ করছেন। পাশাপাশি জামিয়াতুল লতিফ রূপগঞ্জ এর শিক্ষক।",
   keywords:
-    "Rashed Abdullah, Programmer, Web Developer, React.js, Next.js, Teacher, Madrasha, Portfolio, Projects, Blog, রাশেদ আব্দুল্লাহ, প্রোগ্রামার, ওয়েব ডেভেলপার, শিক্ষক, জামিয়াতুল লতিফ রূপগঞ্জ",
+    "Rashed Abdullah, রাশেদ আব্দুল্লাহ, Programmer, প্রোগ্রামার, ডেভেলপার, Web Developer, React.js, Next.js, Teacher, Madrasha, Portfolio, Projects, Blog, রাশেদ আব্দুল্লাহ, ওয়েব ডেভেলপার, শিক্ষক, জামিয়াতুল লতিফ রূপগঞ্জ",
   authors: [{ name: "Rashed Abdullah", url: "https://rashedabdullah.com" }],
   creator: "Rashed Abdullah",
   publisher: "Rashed Abdullah",
@@ -24,10 +24,9 @@ export const metadata = {
     type: "website",
     locale: "bn_BD",
     url: "https://rashedabdullah.com",
-    title:
-      "Rashed Abdullah - Programmer & Teacher | রাশেদ আব্দুল্লাহ - প্রোগ্রামার ও শিক্ষক",
+    title: "Developer & Teacher | রাশেদ আব্দুল্লাহ - ডেভেলপার ও শিক্ষক",
     description:
-      "Explore Rashed Abdullah's works, including web development projects, teaching endeavors, and insightful blogs in both English and Bangla.",
+      "রাশেদ আব্দুল্লাহর কাজ। পড়াশোনা রিলেটেড টপিকস। লার্নিং রিসোর্স। আর্টিকেলস। দিনলিপি। প্রভৃতি।",
     images: [
       {
         url: "https://i.ibb.co.com/VDVrwHW/rashed-avatar.png",

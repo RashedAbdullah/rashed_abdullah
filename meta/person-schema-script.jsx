@@ -2,15 +2,15 @@ const PersonSchemaScript = ({ person }) => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: person?.name || "Rashed Abdullah",
-    alternateName: person?.alternateName || "রাশেদ আব্দুল্লাহ",
+    name: person?.name || "রাশেদ আব্দুল্লাহ",
+    alternateName: person?.alternateName || "Rashed Abdullah",
     url: person?.website || "https://rashedabdullah.com",
     image:
       person?.image || "https://i.ibb.co/GkdZpf8/IMG-20240621-WA0029-Copy.jpg",
-    jobTitle: person?.jobTitle || "Web Developer, Teacher",
+    jobTitle: person?.jobTitle || "সফটওয়্যার ডেভেলপার, শিক্ষক",
     worksFor: {
       "@type": "Organization",
-      name: person?.worksFor?.name || "Jamiatul Latif Rupganj Madrasha",
+      name: person?.worksFor?.name || "জামিয়াতুল লতিফ রূপগঞ্জ, নারায়ণগঞ্জ।",
       url: person?.worksFor?.url || "https://jamiatullatif.com",
     },
     sameAs: person?.sameAs || [
@@ -33,21 +33,21 @@ const PersonSchemaScript = ({ person }) => {
     ],
     homeLocation: {
       "@type": "Place",
-      name: person?.location?.name || "Feni, Bangladesh",
+      name: person?.location?.name || "ফেনী, বাংলাদেশ",
       address: {
         "@type": "PostalAddress",
-        addressLocality: person?.location?.addressLocality || "Feni",
-        addressCountry: person?.location?.addressCountry || "Bangladesh",
+        addressLocality: person?.location?.addressLocality || "ফেনী",
+        addressCountry: person?.location?.addressCountry || "বাংলাদেশ",
       },
     },
     email: person?.email || "abdulahad4rashed@gmail.com",
     telephone: person?.telephone || "+8801603443214",
     alumniOf: {
       "@type": "EducationalOrganization",
-      name: person?.alumni || "Jamia Shariyyah Malibagh, Dhaka",
+      name: person?.alumni || "জামিয়া শারইয়্যাহ মালিগাব, ঢাকা।",
     },
-    birthDate: person?.birthDate ||  "1999-11-30",
-    nationality: person?.nationality || "Bangladeshi",
+    birthDate: person?.birthDate || "1999-11-30",
+    nationality: person?.nationality || "বাংলাদেশী",
   };
 
   return (
