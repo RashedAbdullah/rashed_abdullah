@@ -7,7 +7,7 @@ import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
 
 export const metadata = {
-  title: "Rashed Abdullah | রাশেদ আব্দুল্লাহ",
+  title: "রাশেদ আব্দুল্লাহ | Rashed Abdullah",
   description:
     "রাশেদ আব্দুল্লাহ। সফটওয়্যার ডেভেলপার ও শিক্ষক। ২০২৩ থেকে ওয়েবসাইট ও মোবাইল এপ্লিকেশন ডেভেলপ করছেন। পাশাপাশি জামিয়াতুল লতিফ রূপগঞ্জ এর শিক্ষক।",
   keywords:
