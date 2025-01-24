@@ -4,24 +4,15 @@ import { IoMail } from "react-icons/io5";
 const NameTitle = async () => {
   return (
     <div className="col-span-4 flex flex-col justify-center gap-5">
-      <div className="flex flex-col justify-center gap-4">
-        <header>
-          <p className="text-[13px] text-deepAqua dark:text-aqua2">{"<h1>"}</p>
-          <h2 className="md:text-4xl text-3xl font-semibold ml-6">হ্যালো,</h2>
-          <p className="text-[13px] text-deepAqua dark:text-aqua2">{"</h1>"}</p>
-        </header>
-
-        <h1 className="md:text-4xl text-3xl font-semibold ml-6">
-          <span>আমি</span>{" "}
+      <div className="flex flex-col justify-center">
+        <h1 className="md:text-4xl text-3xl ml-6">
           <strong className="text-deepAqua dark:text-aqua">
             রাশেদ আব্দুল্লাহ
           </strong>
         </h1>
 
         <div className="flex items-end gap-3 ml-6">
-          <h2 className="md:text-4xl text-3xl font-semibold">
-            শিক্ষক ও ডেভেলপার
-          </h2>
+          <h2 className="md:text-3xl text-3xl">শিক্ষক ও ডেভেলপার</h2>
         </div>
 
         <div>
