@@ -21,7 +21,6 @@ export const fetchFromYoutube = async (VIDEO_ID) => {
     const description = video.snippet.description;
     const publishedAt = video.snippet.publishedAt;
     const thumbnailUrl = video.snippet.thumbnails.standard.url;
-    const embedCode = `https://www.youtube.com/embed/${VIDEO_ID}`;
     const viewsCount = video.statistics.viewCount;
     const likes = video.statistics.likeCount;
     const comments = video.statistics.commentCount;
@@ -32,7 +31,6 @@ export const fetchFromYoutube = async (VIDEO_ID) => {
       title,
       description,
       thumbnailUrl,
-      embedCode,
       totalView: viewsCount,
       publishedAt,
       likes,

@@ -63,7 +63,7 @@ const VideoCard = ({ video }) => {
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaComment className="mr-2 text-purple-500 dark:text-purple-400" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {formatCount(video?.comments)} কমেন্ট
+              {formatCount(video?.comments)}
             </span>
           </div>
         </div>

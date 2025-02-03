@@ -5,7 +5,7 @@ const getVideos = async () => {
   try {
     await mongoDBConnection();
 
-    const videos = await videoModel.find({}).limit(9);
+    const videos = await videoModel.find({}).limit(6);
     return videos;
   } catch (err) {
     console.log(err.message);
