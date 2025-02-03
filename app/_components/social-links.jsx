@@ -1,4 +1,4 @@
-import { FaLinkedin } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa6";
 import { GrGithub } from "react-icons/gr";
 
 const SocialLinks = async () => {
@@ -16,11 +16,11 @@ const SocialLinks = async () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.linkedin.com/in/rashed4abdullah/"
+        href="https://www.youtube.com/@RashedAbdullahBD"
         className="flex justify-center items-center gap-1 hover:text-aqua2 transition duration-300"
         aria-label={`Visit Linkedin profile`}
       >
-        <FaLinkedin /> <span>লিঙ্কডিন</span>
+        <FaYoutube /> <span>ইউটিউব</span>
       </a>
     </nav>
   );
