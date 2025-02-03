@@ -4,7 +4,6 @@ import { formatCount } from "@/utils/format-view";
 import { FaYoutube, FaEye, FaThumbsUp } from "react-icons/fa";
 import Link from "next/link";
 import VideoScheamScript from "@/meta/video-scheam-script";
-import { getEngToBn } from "@/utils/getEngToAr";
 
 const VideoCard = ({ video }) => {
   return (
@@ -52,19 +51,19 @@ const VideoCard = ({ video }) => {
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaEye className="mr-2 text-blue-500 dark:text-teal-300" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {getEngToBn(formatCount(video?.totalView))}
+              {formatCount(video?.totalView)}
             </span>
           </div>
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaThumbsUp className="mr-2 text-green-500 dark:text-green-400" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {getEngToBn(formatCount(video?.likes))}
+              {formatCount(video?.likes)}
             </span>
           </div>
           <div className="flex items-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-lg">
             <FaComment className="mr-2 text-purple-500 dark:text-purple-400" />
             <span className="text-gray-700 dark:text-gray-300 font-medium">
-              {getEngToBn(formatCount(video?.comments))} কমেন্ট
+              {formatCount(video?.comments)} কমেন্ট
             </span>
           </div>
         </div>
