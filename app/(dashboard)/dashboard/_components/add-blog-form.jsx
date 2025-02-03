@@ -4,8 +4,9 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 
+import "react-quill/dist/quill.snow.css"; // এটিকে আলাদাভাবে ইমপোর্ট করো
+
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-import "react-quill/dist/quill.snow.css";
 
 const AddBlogForm = ({ createBlog }) => {
   const [title, setTitle] = useState("");
@@ -37,6 +38,7 @@ const AddBlogForm = ({ createBlog }) => {
       setLoading(false);
     }
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
