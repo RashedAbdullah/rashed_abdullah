@@ -14,7 +14,7 @@ const HomeDiarySection = async () => {
       className={`${tiro.className} container mx-auto px-4 py-12`}
     >
       <h2 className="text-4xl font-bold text-center mb-8 text-slate-900 dark:text-zinc-100">
-        ✍️ সাম্প্রতিক দিনলিপি
+        ✍️ দিনলিপি
       </h2>
 
       <div className="grid md:grid-cols-3 gap-6">
