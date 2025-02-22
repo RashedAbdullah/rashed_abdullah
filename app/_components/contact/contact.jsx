@@ -1,4 +1,4 @@
-"use cleint";
+
 
 import ScrollMouse from "../scroll-mouse";
 import PageTitle from "@/components/page-title";

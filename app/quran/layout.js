@@ -1,3 +1,7 @@
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
+
 export const metadata = {
   title: "Quran Kareem - Recitations and Translations",
   description:
@@ -23,7 +27,9 @@ export const metadata = {
 
 const QuranKareemLayout = ({ children }) => {
   return (
-    <div className="bg-gradient-to-r from-indigo-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 min-h-screen">
+    <div
+      className={`${tiro.className} bg-gradient-to-r from-indigo-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 min-h-screen`}
+    >
       {children}
     </div>
   );
