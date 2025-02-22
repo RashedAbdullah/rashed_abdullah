@@ -67,7 +67,7 @@ const HeaderNavigations = () => {
           </ActiveHash>
         </div>
         <div>
-          <ActiveHash hashId="#blogs">
+          <ActiveHash hashId="#diray">
             <FaRegPenToSquare />
           </ActiveHash>
         </div>

@@ -1,9 +1,14 @@
 import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const SubscribeSection = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 py-12 px-6 text-center shadow-md rounded-lg">
+    <div
+      className={`${tiro.className} bg-white dark:bg-gray-900 py-12 px-6 text-center shadow-md rounded-lg`}
+    >
       <div className="max-w-2xl mx-auto">
         <div className="flex justify-center">
           <FaYoutube className="text-red-600 dark:text-red-400 text-6xl mb-4" />

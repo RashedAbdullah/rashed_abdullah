@@ -37,10 +37,10 @@ const MobileNav = async () => {
       >
         <SheetHeader>
           <SheetTitle id="sheet-title" className="text-white">
-            রাশেদ আব্দুল্লাহ
+            Rashed Abdullah
           </SheetTitle>
           <SheetDescription id="sheet-description" className="text-slate-300">
-            শিক্ষক ও প্রোগ্রামার
+            Teacher & Software Developer
           </SheetDescription>
         </SheetHeader>
 
@@ -52,7 +52,7 @@ const MobileNav = async () => {
                   href="/"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  হোম
+                  Home
                 </Link>
               </SheetClose>
             </div>
@@ -62,7 +62,7 @@ const MobileNav = async () => {
                   href="/quran/surah"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  কুরআন কারীম
+                  Quran Kareem
                 </Link>
               </SheetClose>
             </div>
@@ -72,7 +72,7 @@ const MobileNav = async () => {
                   href="/resources"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  পাঠ উপকরণ
+                  Learing Resources
                 </Link>
               </SheetClose>
             </div>
@@ -82,7 +82,7 @@ const MobileNav = async () => {
                   href="/blogs"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  ব্লগ
+                  Articles
                 </Link>
               </SheetClose>
             </div>
@@ -92,7 +92,7 @@ const MobileNav = async () => {
                   href="/projects"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  প্রজেক্ট
+                  Projects
                 </Link>
               </SheetClose>
             </div>
@@ -102,7 +102,7 @@ const MobileNav = async () => {
                   href="/diary"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  দিনলিপি
+                  Diray
                 </Link>
               </SheetClose>
             </div>
@@ -112,7 +112,7 @@ const MobileNav = async () => {
                   href="/youtube"
                   className="hover:text-aqua w-full lg:inline block p-2 rounded-md hover:bg-deepBlack"
                 >
-                  ইউটিউব
+                  Youtube
                 </Link>
               </SheetClose>
             </div>

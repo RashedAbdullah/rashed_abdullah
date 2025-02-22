@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { getEngToBn } from "@/utils/getEngToAr";
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const HomeLearningResources = () => {
   const resources = [
@@ -22,9 +25,9 @@ const HomeLearningResources = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className={`${tiro.className} container mx-auto px-4 py-12`}>
       <h2 className="text-3xl font-bold text-center mb-6 text-slate-900 dark:text-zinc-100">
-        💡 পাঠ উপকরণ
+        পাঠ উপকরণ 💡
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

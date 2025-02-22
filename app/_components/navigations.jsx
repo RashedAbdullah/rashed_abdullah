@@ -1,23 +1,31 @@
 import { auth } from "@/auth";
 import ActiveLink from "./active-link";
-import { GrDashboard } from "react-icons/gr";
-import NavigationsSelection from "./navigation-selection";
 
 const Navigations = async () => {
   const session = await auth();
   return (
     <div className="lg:flex justify-center items-center md:gap-10 gap-2">
       <div>
-        <ActiveLink link="/">হোম</ActiveLink>
+        <ActiveLink link="/">Home</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/blogs">ব্লগ</ActiveLink>
+        <ActiveLink link="/blogs">Articles</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/projects">প্রজেক্ট</ActiveLink>
+        <ActiveLink link="/projects">Projects</ActiveLink>
       </div>
-
-      <NavigationsSelection user={session?.user} />
+      <div>
+        <ActiveLink link="/diary">Diary</ActiveLink>
+      </div>
+      <div>
+        <ActiveLink link="/quran/surah">Quran</ActiveLink>
+      </div>
+      <div>
+        <ActiveLink link="/youtube">Youtube</ActiveLink>
+      </div>
+      <div>
+        <ActiveLink link="/resources">Resources</ActiveLink>
+      </div>
     </div>
   );
 };

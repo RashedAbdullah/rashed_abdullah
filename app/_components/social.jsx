@@ -32,12 +32,12 @@ export default async function FooterSocial() {
       href: "https://github.com/RashedAbdullah",
       ariaLabel: "Visit Github profile",
     },
-    // {
-    //   title: "Linkedin",
-    //   icon: <FaLinkedin className="h-full w-full" />,
-    //   href: "https://www.linkedin.com/in/rashed4abdullah/",
-    //   ariaLabel: "Visit Linkedin profile",
-    // },
+    {
+      title: "Linkedin",
+      icon: <FaLinkedin className="h-full w-full" />,
+      href: "https://www.linkedin.com/in/rashed4abdullah/",
+      ariaLabel: "Visit Linkedin profile",
+    },
   ];
 
   return (

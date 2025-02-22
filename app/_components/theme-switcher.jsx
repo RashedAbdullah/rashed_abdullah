@@ -29,13 +29,13 @@ export function ThemeSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          লাইট
+          Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          ডার্ক
+          Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          সিস্টেম
+          System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

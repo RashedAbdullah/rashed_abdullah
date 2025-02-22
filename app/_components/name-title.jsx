@@ -7,29 +7,29 @@ const NameTitle = async () => {
       <div className="flex flex-col justify-center">
         <h1 className="md:text-4xl text-3xl ml-6">
           <strong className="text-deepAqua dark:text-aqua">
-            রাশেদ আব্দুল্লাহ
+            Rashed Abdullah
           </strong>
         </h1>
 
         <div className="flex items-end gap-3 ml-6">
-          <h2 className="md:text-3xl text-3xl">শিক্ষক ও ডেভেলপার</h2>
+          <h2 className="md:text-3xl text-3xl">Teacher & Software developer</h2>
         </div>
 
         <div>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"<p>"}</p>
           <p className="leading-6 ml-6">
-            শিক্ষা ও প্রযুক্তির মেলবন্ধনে সবসময় নতুন কিছু তৈরি করতে ভালোবাসি।
-            React.js, React Native, Next.js এবং Node.js ব্যবহার করে চমৎকার,
-            আধুনিক ও ইউজার ফ্রেন্ডলি সফটওয়্যার তৈরি করি। পাশাপাশি
-            ছাত্র-শিক্ষকদের জন্য মানসম্মত পাঠ উপকরণ সরবরাহ করে শিক্ষাকে সহজলভ্য
-            করার চেষ্টা করি।
+            I always love creating something new at the intersection of
+            education and technology. Using React.js, React Native, Next.js, and
+            Node.js, I develop modern, user-friendly, and efficient software. At
+            the same time, I strive to make education more accessible by
+            providing high-quality learning materials for students and teachers.
           </p>
           <p className="text-[13px] text-deepAqua dark:text-aqua2">{"</p>"}</p>
         </div>
 
         <div className="ml-6 flex items-center gap-4">
           <h3 className="text-3xl text-deepAqua dark:text-aqua">
-            কানেক্ট উইথ মি
+            Contact with me
           </h3>
           <a
             href="#contact"

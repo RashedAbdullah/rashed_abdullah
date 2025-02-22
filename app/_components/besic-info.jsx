@@ -4,7 +4,6 @@ import { IoLocationOutline } from "react-icons/io5";
 import { GiRotaryPhone } from "react-icons/gi";
 import { FaLink } from "react-icons/fa6";
 
-import { BiDownload } from "react-icons/bi";
 
 const BesicInfo = async () => {
   return (
@@ -14,16 +13,16 @@ const BesicInfo = async () => {
           <div className="flex flex-col justify-center items-center">
             <Image
               src="/logo.png"
-              alt="রাশেদ আব্দুল্লাহ"
+              alt="Rashed Abdullah"
               height={300}
               width={300}
               className={`h-[120px] w-[120px] object-cover bg-cover bg-no-repeat bg-center rounded-full border-2`}
             ></Image>
             <div className="text-2xl font-semibold">
-              <h2>রাশেদ আব্দুল্লাহ</h2>
+              <h2>Rashed Abdullah</h2>
             </div>
             <div>
-              <p>শিক্ষক ও ডেভেলপার</p>
+              <p>Teacher & Software Developer</p>
             </div>
           </div>
 
@@ -36,7 +35,7 @@ const BesicInfo = async () => {
             <div className="col-span-1 dark:text-aqua text-deepAqua">
               <IoLocationOutline />
             </div>
-            <div className="col-span-7">ফেনী, বাংলাদেশ।</div>
+            <div className="col-span-7">Dhaka, Bangladesh</div>
 
             <div className="col-span-1 dark:text-aqua text-deepAqua">
               <GiRotaryPhone />

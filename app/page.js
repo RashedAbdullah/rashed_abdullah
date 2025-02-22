@@ -15,10 +15,10 @@ export default async function Home() {
       <HeaderNavigations />
       <HeaderInfo />
       <AboutMe />
-      <HomeDiarySection />
-      <HomeLearningResources />
       <Skills />
       <Works />
+      <HomeDiarySection />
+      <HomeLearningResources />
       <SubscribeSection />
       <div className="container">
         <LatestVideos />

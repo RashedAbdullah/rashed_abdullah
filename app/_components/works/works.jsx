@@ -13,7 +13,7 @@ export default async function Works() {
           <ScrollMouse />
         </div>
         <div>
-          <PageTitle>প্রজেক্ট</PageTitle>
+          <PageTitle>Projects</PageTitle>
           <p className="text-center text-sm">
             I had the pleasure of working with these awesome projects
           </p>

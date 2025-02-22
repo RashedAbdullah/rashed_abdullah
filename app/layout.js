@@ -5,34 +5,40 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
+import { Ubuntu } from "next/font/google";
+
+const ubuntu = Ubuntu({
+  weight: ["400", "700"],
+  subsets: ["latin", "latin-ext"],
+});
 
 export const metadata = {
-  title: "রাশেদ আব্দুল্লাহ | Rashed Abdullah",
+  title: "Rashed Abdullah | Software Developer & Educator",
   description:
-    "রাশেদ আব্দুল্লাহ। সফটওয়্যার ডেভেলপার ও শিক্ষক। ২০২৩ থেকে ওয়েবসাইট ও মোবাইল এপ্লিকেশন ডেভেলপ করছেন। পাশাপাশি জামিয়াতুল লতিফ রূপগঞ্জ এর শিক্ষক।",
+    "Rashed Abdullah is a skilled software developer and educator. Developing websites and mobile applications since 2023. Also a teacher at Jamiatul Latif Rupganj.",
   keywords:
-    "Rashed Abdullah, রাশেদ আব্দুল্লাহ, Programmer, প্রোগ্রামার, ডেভেলপার, Web Developer, React.js, Next.js, Teacher, Madrasha, Portfolio, Projects, Blog, রাশেদ আব্দুল্লাহ, ওয়েব ডেভেলপার, শিক্ষক, জামিয়াতুল লতিফ রূপগঞ্জ",
+    "Rashed Abdullah, রাশেদ আব্দুল্লাহ, Software Developer, Web Developer, React.js, Next.js, Full Stack Developer, JavaScript, Educator, Teacher, Madrasha, Portfolio, Projects, Blog, Programming, Coding, Islamic Software",
   authors: [{ name: "Rashed Abdullah", url: "https://rashedabdullah.com" }],
   creator: "Rashed Abdullah",
   publisher: "Rashed Abdullah",
   formatDetection: {
     email: "maarashed40@gmail.com",
-    address: "Feni, Bangladesh | ফেনী, বাংলাদেশ",
+    address: "Feni, Bangladesh",
     telephone: "+8801603443214",
   },
   openGraph: {
     type: "website",
-    locale: "bn_BD",
+    locale: "en_US",
     url: "https://rashedabdullah.com",
-    title: "Developer & Teacher | রাশেদ আব্দুল্লাহ - ডেভেলপার ও শিক্ষক",
+    title: "Rashed Abdullah | Developer & Educator",
     description:
-      "রাশেদ আব্দুল্লাহর কাজ। পড়াশোনা রিলেটেড টপিকস। লার্নিং রিসোর্স। আর্টিকেলস। দিনলিপি। প্রভৃতি।",
+      "Explore Rashed Abdullah’s work, educational resources, learning materials, articles, diary entries, and more.",
     images: [
       {
         url: "https://i.ibb.co.com/VDVrwHW/rashed-avatar.png",
         width: 800,
         height: 800,
-        alt: "রাশেদ আব্দুল্লাহ পোর্টফোলিও",
+        alt: "Rashed Abdullah Portfolio",
       },
     ],
   },
@@ -40,7 +46,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="bn">
+    <html lang="en">
       <head>
         <title>{metadata.title}</title>
         <meta
@@ -77,7 +83,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         id="hero"
-        className={`bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
+        className={`${ubuntu.className} bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
       >
         <PersonSchemaScript person={myInfo} />
         <amp-auto-ads

@@ -6,7 +6,7 @@ const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const HomeDiarySection = async () => {
   const diries = await getDirais();
-  const latestDiries = diries.slice(0, 3); // সর্বশেষ ৩টি এন্ট্রি দেখানো হবে
+  const latestDiries = diries.slice(0, 3);
 
   return (
     <div
@@ -14,7 +14,7 @@ const HomeDiarySection = async () => {
       className={`${tiro.className} container mx-auto px-4 py-12`}
     >
       <h2 className="text-4xl font-bold text-center mb-8 text-slate-900 dark:text-zinc-100">
-        ✍️ দিনলিপি
+        ডায়েরি 📑
       </h2>
 
       <div className="grid md:grid-cols-3 gap-6">

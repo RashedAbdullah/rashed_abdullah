@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import emailjs from "emailjs-com";
-import { toast } from "sonner";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +10,8 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -21,6 +22,8 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
+    setSuccessMessage("");
 
     const serviceID = "service_bo8oxl3";
     const templateID = "template_l7aby7b";
@@ -29,17 +32,17 @@ const ContactForm = () => {
     emailjs
       .send(serviceID, templateID, formData, userID)
       .then((response) => {
-        toast.success("Message sent successfully!", {
-          description: `Sent on: ${new Date().toLocaleString()}`,
-        });
         console.log("SUCCESS!", response.status, response.text);
-        setFormData({ name: "", email: "", message: "" }); // Clear form fields
+        setFormData({ name: "", email: "", message: "" });
+        setSuccessMessage(
+          "Thank you for your message! I will get back to you soon."
+        );
       })
       .catch((err) => {
-        toast.error("Failed to send message. Please try again.", {
-          description: `Error: ${err.message}`,
-        });
         console.error("FAILED...", err);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -47,59 +50,57 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="flex flex-col gap-14 col-span-8">
       <div className="flex flex-col md:grid grid-cols-8 justify-center gap-14">
         <div className="col-span-4">
-          <p className="text-deepAqua dark:text-aqua">আপনার নাম*</p>
-          <div>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="নাম লিখুন"
-              className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
-              required
-            />
-          </div>
+          <p className="text-deepAqua dark:text-aqua">Name*</p>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Write your name..."
+            className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
+            required
+          />
         </div>
 
         <div className="col-span-4">
-          <p className="text-deepAqua dark:text-aqua">আপনার ইমেইল*</p>
-          <div>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="ইমেইল লিখুন"
-              className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
-              required
-            />
-          </div>
+          <p className="text-deepAqua dark:text-aqua">Email*</p>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Write your Email..."
+            className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
+            required
+          />
         </div>
       </div>
 
       <div>
-        <div>
-          <p className="text-deepAqua dark:text-aqua">বার্তা*</p>
-          <div>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="বলুন..."
-              className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
-              required
-            />
-          </div>
-        </div>
+        <p className="text-deepAqua dark:text-aqua">Message*</p>
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Write what you want..."
+          className="bg-transparent w-full outline-none border-b border-deepAqua dark:border-aqua py-1"
+          required
+        />
       </div>
+
       <div className="flex justify-center items-center">
         <button
           type="submit"
           className="bg-deepAqua dark:bg-aqua text-white dark:text-deepBlack py-3 px-8 rounded-full flex justify-center items-center gap-3"
+          disabled={loading}
         >
-          সাবমিট করুন <FiSend />
+          {loading ? "Loading..." : "Submit"} <FiSend />
         </button>
       </div>
+
+      {successMessage && (
+        <p className="text-green-500 text-center mt-4">{successMessage}</p>
+      )}
     </form>
   );
 };

@@ -1,11 +1,14 @@
 import { getLatestVideos } from "@/utils/fetch-vidoes";
 import VideoCard from "./video-card";
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const LatestVideos = async () => {
   const latestVideos = await getLatestVideos();
 
   return (
-    <div className="mx-auto px-4 py-12">
+    <div className={`${tiro.className} mx-auto px-4 py-12`}>
       <h2 className="text-4xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
         সর্বশেষ ভিডিও সমূহ
       </h2>
