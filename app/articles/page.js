@@ -1,5 +1,5 @@
 import BlogCard from "./_components/blog-card";
-import { getBlogs } from "@/controllers/blogs";
+import { getBlogs } from "@/controllers/articles";
 
 const BlogsPage = async () => {
   const blogs = await getBlogs();

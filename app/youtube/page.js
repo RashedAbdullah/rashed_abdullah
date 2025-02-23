@@ -1,6 +1,10 @@
 import VideoCategories from "./_components/video-categories";
 import LatestVideos from "./_components/latest-videos";
 import YoutubeHeroSection from "./_components/youtube-hero-section";
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
+
 
 export async function generateMetadata() {
   return {
@@ -43,7 +47,7 @@ export async function generateMetadata() {
 
 const YoutubePage = async () => {
   return (
-    <div className="min-h-screen dark:text-gray-300 container">
+    <div className={`${tiro.className} min-h-screen dark:text-gray-300 container`}>
       <YoutubeHeroSection />
       <VideoCategories />
       <LatestVideos />

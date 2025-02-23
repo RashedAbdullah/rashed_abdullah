@@ -15,7 +15,7 @@ const BlogCard = ({ blog }) => {
             <h4 className="text-slate-900 dark:text-zinc-100 text-2xl md:text-3xl font-semibold tracking-wide">
               {blog?.title}
             </h4>
-            <div className="relative overflow-hidden rounded-lg shadow-md">
+            {/* <div className="relative overflow-hidden rounded-lg shadow-md">
               <Image
                 src={blog?.thumbnail}
                 alt={blog?.title}
@@ -23,7 +23,7 @@ const BlogCard = ({ blog }) => {
                 width={500}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
-            </div>
+            </div> */}
             <div className="flex justify-between items-center mt-4 text-sm italic">
               {blog?.author && (
                 <p className="text-gray-600 dark:text-gray-300 flex items-center gap-1">
@@ -46,7 +46,7 @@ const BlogCard = ({ blog }) => {
               {blog?.description?.slice(0, 120) + "..."}
             </p>
             <div className="text-right mt-4">
-              <Link href={`/blogs/${blog.title.replaceAll(" ", "-")}`}>
+              <Link href={`/articles/${blog.title.replaceAll(" ", "-")}`}>
                 <Button>বিস্তারিত</Button>
               </Link>
             </div>

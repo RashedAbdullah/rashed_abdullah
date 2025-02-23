@@ -2,6 +2,9 @@ import { getSingleYoutubeVideo } from "@/utils/fetch-vidoes";
 import Image from "next/image";
 import { FaEye, FaThumbsUp, FaComment, FaYoutube } from "react-icons/fa";
 import { formatCount } from "@/utils/format-view";
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 export async function generateMetadata({ params: { slug } }) {
   const singleVideo = await getSingleYoutubeVideo(slug);
@@ -83,7 +86,7 @@ const getSingleVideo = async ({ params: { ctgry, slug } }) => {
   }
 
   return (
-    <div className="container mx-auto p-4 md:p-8 lg:p-12">
+    <div className={`${tiro.className} container mx-auto p-4 md:p-8 lg:p-12`}>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-6">
         <div className="relative">
           <Image

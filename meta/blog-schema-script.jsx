@@ -23,7 +23,7 @@ const BlogSchemaScript = ({ blog }) => {
     description: blog?.description || "No description available",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://rashedabdullah.com/blogs/${blog.title
+      "@id": `https://rashedabdullah.com/articles/${blog.title
         .replaceAll(" ", "-")
         .toLowerCase()}`,
     },

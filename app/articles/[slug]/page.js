@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import BlogSchemaScript from "@/meta/blog-schema-script";
-import { getSingleBlog } from "@/controllers/blogs";
+import { getSingleBlog } from "@/controllers/articles";
 import { FaUserAlt } from "react-icons/fa";
 
 const SingleBlogPage = async ({ params: { slug } }) => {
@@ -22,7 +22,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
             The blog you are looking for does not exist.
           </p>
           <Link
-            href="/blogs"
+            href="/articles"
             className="inline-block mt-6 px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all"
           >
             Back to Blogs
@@ -45,7 +45,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
     <div className="container mx-auto px-4 py-16">
       <BlogSchemaScript blog={singleBlog} />
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-        <div className="relative">
+        {/* <div className="relative">
           <Image
             src={thumbnail}
             alt={titleOfBlog}
@@ -53,7 +53,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
             width={1000}
             className="h-64 md:h-96 w-full object-cover"
           />
-        </div>
+        </div> */}
 
         <div className="p-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
@@ -86,7 +86,7 @@ const SingleBlogPage = async ({ params: { slug } }) => {
 
           <div className="mt-10 text-center">
             <Link
-              href="/blogs"
+              href="/articles"
               className="inline-block px-8 py-3 bg-slate-600 text-white font-semibold rounded-lg shadow-md hover:bg-slate-700 transition-all"
             >
               ব্লগে ফিরে যান

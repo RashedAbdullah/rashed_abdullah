@@ -1,5 +1,8 @@
 import VideoCard from "../_components/video-card";
 import { getVideosByCategories } from "@/utils/fetch-vidoes";
+import { Tiro_Bangla } from "next/font/google";
+
+const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 export async function generateMetadata({ params }) {
   const { ctgry } = params;
@@ -68,7 +71,9 @@ const YoutubeVideoByCategoryPage = async ({ params }) => {
   };
 
   return (
-    <div className="min-h-screen dark:text-gray-300 container">
+    <div
+      className={`${tiro.className} min-h-screen dark:text-gray-300 container`}
+    >
       <div className="text-center py-16 backdrop-blur-xl border-b border-b-slate-700">
         <h1 className="text-3xl font-bold tracking-tight">
           {selectCategory(ctgry)}

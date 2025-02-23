@@ -32,7 +32,7 @@ const AddBlogForm = ({ createBlog }) => {
 
       await createBlog(blogData);
       setLoading(false);
-      router.push("/blogs");
+      router.push("/articles");
     } catch (error) {
       console.error("প্রবন্ধ জমা দেওয়ার সময় সমস্যা:", error);
       setLoading(false);

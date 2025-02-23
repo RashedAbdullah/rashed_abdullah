@@ -9,7 +9,7 @@ const Navigations = async () => {
         <ActiveLink link="/">Home</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/blogs">Articles</ActiveLink>
+        <ActiveLink link="/articles">Articles</ActiveLink>
       </div>
       <div>
         <ActiveLink link="/projects">Projects</ActiveLink>

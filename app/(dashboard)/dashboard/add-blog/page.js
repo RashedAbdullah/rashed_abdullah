@@ -1,6 +1,6 @@
 import React from "react";
 import AddBlogForm from "../_components/add-blog-form";
-import { createBlog } from "@/controllers/blogs";
+import { createBlog } from "@/controllers/articles";
 
 const DashAddBlogPage = () => {
   const handleCreateingBlog = async (blog) => {
