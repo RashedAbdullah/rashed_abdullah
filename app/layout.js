@@ -2,12 +2,11 @@ import "@/css/globals.css";
 import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
 import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "@/components/theme-provider";
 import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
-import { Ubuntu } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
-const ubuntu = Ubuntu({
+const jetBrain = JetBrains_Mono({
   weight: ["400", "700"],
   subsets: ["latin", "latin-ext"],
 });
@@ -83,25 +82,19 @@ export default function RootLayout({ children }) {
       </head>
       <body
         id="hero"
-        className={`${ubuntu.className} bg-gradient-to-r from-indigo-50 to-cyan-50 text-black dark:bg-gradient-to-r dark:from-[#1e293b] dark:to-[#0f172a] dark:text-white min-h-screen selection:bg-deepAqua selection:text-white dark:selection:bg-aqua md:px-0`}
+        className={`${jetBrain.className} bg-[#19191B] text-white min-h-screen selection:bg-white selection:text-black md:px-0`}
       >
         <PersonSchemaScript person={myInfo} />
         <amp-auto-ads
           type="adsense"
           data-ad-client="ca-pub-6921856465558245"
         ></amp-auto-ads>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="dark:bg-grid-white/[0.05] bg-grid-black/[0.05]">
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
-        </ThemeProvider>
+
+        <div className="bg-grid-white/[0.03]">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
         <Analytics />
       </body>
     </html>

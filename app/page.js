@@ -11,8 +11,8 @@ import SubscribeSection from "./_components/subscribe-section";
 
 export default async function Home() {
   return (
-    <main className="flex flex-col">
-      <HeaderNavigations />
+    <main className="flex flex-col container">
+      {/* <HeaderNavigations /> */}
       <HeaderInfo />
       <AboutMe />
       <Skills />

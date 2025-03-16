@@ -6,25 +6,16 @@ const Navigations = async () => {
   return (
     <div className="lg:flex justify-center items-center md:gap-10 gap-2">
       <div>
-        <ActiveLink link="/">Home</ActiveLink>
+        <ActiveLink link="/">Works</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/articles">Articles</ActiveLink>
+        <ActiveLink link="/articles">Diary</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/projects">Projects</ActiveLink>
+        <ActiveLink link="/projects">Youtube</ActiveLink>
       </div>
       <div>
-        <ActiveLink link="/diary">Diary</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/quran/surah">Quran</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/youtube">Youtube</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/resources">Resources</ActiveLink>
+        <ActiveLink link="/diary">Contact</ActiveLink>
       </div>
     </div>
   );
