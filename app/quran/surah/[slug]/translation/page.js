@@ -1,7 +1,13 @@
 import SingleSurahPage from "@/app/quran/_components/quran-page";
 import { getSingleSurah } from "@/data/fetch-quran-by-surah";
 
-const QuranFetcher = async ({ params: { slug } }) => {
+const QuranFetcher = async props => {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const singleSurah = await getSingleSurah(slug);
   const { surah, transition } = singleSurah;
 

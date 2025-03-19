@@ -3,7 +3,13 @@ import { getEngToAr } from "@/utils/getEngToAr";
 import Image from "next/image";
 import basmalah from "@/public/basmalah.png";
 
-const QuranJuzByPage = async ({ params: { slug } }) => {
+const QuranJuzByPage = async props => {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const singleJuz = await getQuranByJuz(slug);
   const { juz } = singleJuz;
 

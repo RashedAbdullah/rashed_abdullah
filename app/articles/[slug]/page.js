@@ -4,7 +4,13 @@ import BlogSchemaScript from "@/meta/blog-schema-script";
 import { getSingleBlog } from "@/controllers/articles";
 import { FaUserAlt } from "react-icons/fa";
 
-const SingleBlogPage = async ({ params: { slug } }) => {
+const SingleBlogPage = async props => {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const title = decodeURIComponent(
     decodeURIComponent(slug.replaceAll("-", " "))
   );

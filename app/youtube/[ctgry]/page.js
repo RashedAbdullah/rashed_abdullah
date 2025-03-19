@@ -4,7 +4,8 @@ import { Tiro_Bangla } from "next/font/google";
 
 const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { ctgry } = params;
 
   const selectCategory = (ctg) => {
@@ -56,7 +57,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const YoutubeVideoByCategoryPage = async ({ params }) => {
+const YoutubeVideoByCategoryPage = async props => {
+  const params = await props.params;
   const { ctgry } = params;
   const videos = await getVideosByCategories(ctgry);
 

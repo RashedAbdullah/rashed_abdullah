@@ -6,7 +6,13 @@ import { Tiro_Bangla } from "next/font/google";
 
 const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
-export async function generateMetadata({ params: { slug } }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const singleVideo = await getSingleYoutubeVideo(slug);
 
   const title = `${singleVideo?.title} | Rashed Abdullah YouTube`;
@@ -74,7 +80,14 @@ export async function generateMetadata({ params: { slug } }) {
   };
 }
 
-const getSingleVideo = async ({ params: { ctgry, slug } }) => {
+const getSingleVideo = async props => {
+  const params = await props.params;
+
+  const {
+    ctgry,
+    slug
+  } = params;
+
   const singleVideo = await getSingleYoutubeVideo(slug);
 
   if (!singleVideo) {

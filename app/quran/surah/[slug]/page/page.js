@@ -25,7 +25,13 @@ export const metadata = {
   },
 };
 
-const SurahByPagePage = async ({ params: { slug } }) => {
+const SurahByPagePage = async props => {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const singleSurah = await getSingleSurah(slug);
   const { surah } = singleSurah;
 
