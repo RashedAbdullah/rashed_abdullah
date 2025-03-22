@@ -28,7 +28,7 @@ module.exports = {
       screens: {
         sm: "640px",
         md: "768px",
-        lg: "1024px",
+        lg: "1441px",
         xl: "1280px",
         "2xl": "1400px",
       },
@@ -72,6 +72,10 @@ module.exports = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        pulseCustom: {
+          "0%, 100%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(0.9)", opacity: "0.7" },
+        },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
@@ -80,6 +84,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-infinite": "pulseCustom 2s ease-in-out infinite",
       },
       colors: {
         aqua: "#12F7D6",

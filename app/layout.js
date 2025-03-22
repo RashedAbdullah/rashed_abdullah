@@ -4,12 +4,7 @@ import Footer from "./_components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import PersonSchemaScript from "@/meta/person-schema-script";
 import { myInfo } from "@/data/my-info";
-import { JetBrains_Mono } from "next/font/google";
-
-const jetBrain = JetBrains_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin", "latin-ext"],
-});
+import { jetBrains } from "@/utils/fetch-fonts";
 
 export const metadata = {
   title: "Rashed Abdullah | Software Developer & Educator",
@@ -82,7 +77,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         id="hero"
-        className={`${jetBrain.className} bg-[#19191B] text-white min-h-screen selection:bg-white selection:text-black md:px-0`}
+        className={`${jetBrains.className} bg-[#171717] text-white min-h-screen selection:bg-white selection:text-black`}
       >
         <PersonSchemaScript person={myInfo} />
         <amp-auto-ads
