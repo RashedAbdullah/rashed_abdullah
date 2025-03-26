@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ServicesAndExp = () => {
   return (
-    <div className="grid grid-cols-6 gap-12">
+    <div className="grid grid-cols-6 gap-12 pt-20">
       <div className="col-span-3 inline-flex flex-col justify-start items-start gap-7">
         <div className="self-stretch h-0 outline outline-[0.80px] outline-offset-[-0.40px] outline-neutral-700"></div>
         <div className="self-stretch flex flex-col justify-start items-start gap-6">

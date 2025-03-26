@@ -5,8 +5,9 @@ import { roboto } from "@/utils/fetch-fonts";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import profile from "@/public/profile.jpg";
 
-const titles = ["Software Developer", "Educator", "Ontrapreneur"];
+const titles = ["Software Developer", "Educator", "Entrepreneur"];
 
 const HeaderInfo = () => {
   const [index, setIndex] = useState(0);
@@ -14,27 +15,26 @@ const HeaderInfo = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % titles.length);
-    }, 5000); // change every 3s
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div>
-      <div className="grid grid-cols-6">
-        <div className="col-span-1 flex items-end pb-2">
+      <div className="grid md:grid-cols-6 py-8">
+        <div className="col-span-1 hidden md:flex items-end pb-2">
           <ScrollDown />
         </div>
         <div className="col-span-5 flex justify-end pb-12">
-          <div className="space-y-8">
+          <div className="md:space-y-8 space-y-4">
             <div>
               <div
-                className={`justify-start text-white text-5xl font-medium leading-[83.20px] ${roboto.className}`}
+                className={`justify-start text-white text-3xl md:text-5xl font-medium md:leading-[83.20px] ${roboto.className}`}
               >
-                Rashed Abdullah
+                <h2>Rashed Abdullah</h2>
               </div>
               <div className="inline-flex justify-start items-center gap-2 relative">
-                <div className="w-9 h-9 bg-white rounded-full animate-pulse-infinite"></div>
-
+                <div className="md:h-9 md:w-9 h-4 w-4 rounded-full bg bg-[#EEEFE7] animate-pulse-infinite" />
                 {/* Adjusted container height */}
                 <div className="relative h-12 w-[300px] flex-nowrap overflow-hidden flex items-center">
                   <AnimatePresence mode="wait">
@@ -44,7 +44,7 @@ const HeaderInfo = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.6, ease: "easeInOut" }}
-                      className="absolute text-white text-2xl font-medium leading-10"
+                      className="absolute text-white text-lg md:text-2xl font-medium leading-10"
                     >
                       {titles[index]}
                     </motion.div>

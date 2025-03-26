@@ -4,8 +4,8 @@ import MobileNav from "./mobile-nav";
 
 const Navbar = async () => {
   return (
-    <div className="sticky top-0 z-50 text-white backdrop-blur-lg dark:text-white">
-      <header className="container py-6 flex justify-between items-center backdrop-blur-lg">
+    <div className="sticky top-0 z-50 text-white">
+      <header className="container py-6 flex justify-between items-center bg-[#171717]">
         {/* <div className="lg:hidden inline-block">
           <MobileNav />
         </div> */}

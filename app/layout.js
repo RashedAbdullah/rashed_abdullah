@@ -85,11 +85,11 @@ export default function RootLayout({ children }) {
           data-ad-client="ca-pub-6921856465558245"
         ></amp-auto-ads>
 
-        <div className="bg-grid-white/[0.03]">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        {/* <div className="bg-grid-white/[0.03]"> */}
+        <Navbar />
+        {children}
+        <Footer />
+        {/* </div> */}
         <Analytics />
       </body>
     </html>

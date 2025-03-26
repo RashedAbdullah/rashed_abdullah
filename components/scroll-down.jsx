@@ -3,7 +3,7 @@ import React from "react";
 const ScrollDown = () => {
   return (
     <a href="#works" className="inline-flex justify-start items-center gap-2">
-      <div className="justify-start text-neutral-400 text-xl font-medium leading-loose">
+      <div className="justify-start text-neutral-400 md:text-xl font-medium leading-loose">
         Scroll Down
       </div>
       <svg

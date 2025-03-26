@@ -5,7 +5,7 @@ import ServicesAndExp from "./_components/services/services";
 
 export default async function Home() {
   return (
-    <main className="container space-y-20 pb-12">
+    <main className="container space-y-20 pb-60">
       <HeaderInfo />
       <Works />
       <AboutMe />

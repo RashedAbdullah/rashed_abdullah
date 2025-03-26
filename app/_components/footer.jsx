@@ -24,7 +24,7 @@ const Footer = async () => {
     },
   ];
   return (
-    <footer className="pt-10 bg-zinc-900 flex flex-col justify-start items-start gap-11">
+    <footer className="pt-16 bg-[#19191B] flex flex-col justify-start items-start gap-11">
       <div className="grid grid-cols-6 container">
         <div className="col-span-3 flex flex-col justify-between">
           <div className="w-32 flex justify-start items-center gap-4 mb-32">
@@ -47,7 +47,7 @@ const Footer = async () => {
                 href={social.link}
                 target="_blank"
                 key={social.name}
-                className="flex gap-2 justify-between items-center text-gray-400"
+                className="flex gap-2 justify-between items-center text-white"
               >
                 <MdArrowOutward size={22} />
                 <div className="w-24 flex justify-start items-center gap-2.5">
@@ -65,7 +65,7 @@ const Footer = async () => {
             <div
               className={`${roboto.className} justify-start text-white text-4xl font-medium leading-[60.80px]`}
             >
-              rashedabdullah12@gmail.com
+              maarashed40@gmail.com
             </div>
           </div>
         </div>
@@ -73,12 +73,12 @@ const Footer = async () => {
 
       {/* Actual footer */}
       <div className="border-t-[0.80px] border-neutral-600 w-full">
-        <div className="container py-5 w-full inline-flex justify-between items-center text-xl text-gray-400">
-          <div className="">Rashed Abdullah©</div>
-          <div className="flex justify-between items-center">
+        <div className="container py-3 w-full grid grid-cols-6 justify-between items-center text-xl text-gray-400">
+          <div className="col-span-3">Rashed Abdullah©</div>
+          <div className="col-span-3 flex justify-between items-center align-middle">
             <div className="">{new Date().getFullYear()}</div>
+            <div className="">All Rights Reserved</div>
           </div>
-          <div className="">All Rights Reserved</div>
         </div>
       </div>
     </footer>
