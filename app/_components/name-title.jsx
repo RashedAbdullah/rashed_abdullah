@@ -1,7 +1,22 @@
-import React from "react";
+"use client";
 import { IoMail } from "react-icons/io5";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
-const NameTitle = async () => {
+const NameTitle = () => {
+  const words = [
+    {
+      text: "Teacher",
+    },
+    {
+      text: " &",
+    },
+    {
+      text: "Software",
+    },
+    {
+      text: "developer",
+    },
+  ];
   return (
     <div className="col-span-4 flex flex-col justify-center gap-5">
       <div className="flex flex-col justify-center">
@@ -12,7 +27,10 @@ const NameTitle = async () => {
         </h1>
 
         <div className="flex items-end gap-3 ml-6">
-          <h2 className="md:text-3xl text-3xl">Teacher & Software developer</h2>
+          <h2 className="md:text-3xl text-3xl">
+            {/* <TypewriterEffectSmooth words={words} /> */}
+            Teacher & Software developer
+          </h2>
         </div>
 
         <div>

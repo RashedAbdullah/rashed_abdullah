@@ -25,11 +25,12 @@
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.2.1",
-    "framer-motion": "^11.11.9",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.439.0",
     "mini-svg-data-uri": "^1.4.4",
     "mongodb": "^6.8.1",
     "mongoose": "^8.6.1",
+    "motion": "^12.6.2",
     "next": "^14.2.23",
     "next-auth": "^5.0.0-beta.19",
     "next-sitemap": "^4.2.3",
@@ -41,7 +42,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "sonner": "^1.7.0",
-    "tailwind-merge": "^2.5.4",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
