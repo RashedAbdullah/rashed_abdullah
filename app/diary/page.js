@@ -2,11 +2,15 @@ import { getDirais } from "@/controllers/diraies";
 import DiarySchemaScript from "@/meta/diray-schema-script";
 import { Tiro_Bangla } from "next/font/google";
 import DirayCard from "./_components/diray-card";
+import { auth } from "@/auth";
 
 const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const DiaryPage = async () => {
   const diries = await getDirais();
+  const session = await auth();
+
+  console.log(session?.user);
 
   return (
     <div
@@ -18,9 +22,11 @@ const DiaryPage = async () => {
 
       <DiarySchemaScript entries={diries} />
       <div className="space-y-8">
-        {diries.map((entry) => (
-          <DirayCard key={entry._id} diary={entry} />
-        ))}
+        {session?.user
+          ? diries.map((entry) => <DirayCard key={entry._id} diary={entry} />)
+          : diries
+              .filter((item) => item.visibility === true)
+              .map((entry) => <DirayCard key={entry._id} diary={entry} />)}
       </div>
     </div>
   );

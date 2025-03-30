@@ -6,7 +6,11 @@ const DiaryCard = ({ diary }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+    <div
+      className={`bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md ${
+        !diary.visibility && "bg-black dark:bg-black text-white"
+      }`}
+    >
       <div className="flex justify-center mb-4">
         <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold py-1 px-4 rounded-full shadow">
           {new Date(diary.date).toLocaleDateString("bn", {
