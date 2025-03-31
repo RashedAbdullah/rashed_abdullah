@@ -10,6 +10,7 @@ import "react-quill/dist/quill.snow.css";
 const AddDirayForm = ({ createDiray }) => {
   const [text, setText] = useState("");
   const [date, setDate] = useState("");
+  const [visibility, setVisibility] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -21,9 +22,8 @@ const AddDirayForm = ({ createDiray }) => {
       const dirayData = {
         date,
         text,
+        visibility,
       };
-
-
 
       await createDiray(dirayData);
       setLoading(false);
@@ -51,6 +51,24 @@ const AddDirayForm = ({ createDiray }) => {
             className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
             required
           />
+        </div>
+
+        <div className="mb-4">
+          <label
+            htmlFor="visibility"
+            className="block text-sm font-medium text-gray-700"
+          >
+            ভিজিবিলিটি
+          </label>
+          <select
+            id="visibility"
+            onChange={(e) => setVisibility(e.target.value)}
+            className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
+            required
+          >
+            <option value={false}>পাবলিক</option>
+            <option value={true}>প্রাইভেট</option>
+          </select>
         </div>
 
         <div className="mb-4">

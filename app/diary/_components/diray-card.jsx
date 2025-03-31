@@ -12,14 +12,19 @@ const DiaryCard = ({ diary }) => {
       }`}
     >
       <div className="flex justify-center mb-4">
-        <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold py-1 px-4 rounded-full shadow">
-          {new Date(diary.date).toLocaleDateString("bn", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}{" "}
-          ইং
-        </span>
+        <p className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold py-1 px-4 rounded-full shadow">
+          <span>
+            {new Date(diary.date).toLocaleDateString("bn", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}{" "}
+            ইং
+          </span>
+          {!diary.visibility && (
+            <span className="text-red-300 ml-2">(প্রাইভেট)</span>
+          )}
+        </p>
       </div>
       <div
         className="text-gray-800 dark:text-gray-200 text-base leading-relaxed"
