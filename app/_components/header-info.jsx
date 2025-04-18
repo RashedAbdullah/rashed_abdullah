@@ -1,21 +1,64 @@
-import BesicInfo from "./besic-info";
-import NameTItle from "./name-title";
+"use client";
+import ScrollDown from "@/components/scroll-down";
+import coding_image from "@/public/coding-image.jpg";
+import { roboto } from "@/utils/fetch-fonts";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import profile from "@/public/profile.jpg";
+
+const titles = ["Software Developer", "Educator", "Entrepreneur"];
 
 const HeaderInfo = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % titles.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="container flex justify-center items-center min-h-[82vh] py-10 md:py-0">
-      <div className="flex flex-col md:grid grid-cols-10 gap-10">
-        <BesicInfo />
-        <NameTItle />
-        <div className="col-span-3 flex justify-center items-center relative">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-deepAqua to-aqua blur-[80px] opacity-50 animate-pulse"></div>
-            <div className="text-[200px] text-white bg-clip-text bg-gradient-to-br from-deepAqua to-aqua font-extrabold drop-shadow-lg">
-              {"</>"}
+    <div>
+      <div className="grid md:grid-cols-6 py-8">
+        <div className="col-span-1 hidden md:flex items-end pb-2">
+          <ScrollDown />
+        </div>
+        <div className="col-span-5 flex justify-end pb-12">
+          <div className="md:space-y-8 space-y-4">
+            <div>
+              <div
+                className={`justify-start text-white text-3xl md:text-5xl font-medium md:leading-[83.20px] ${roboto.className}`}
+              >
+                <h2>Rashed Abdullah</h2>
+              </div>
+              <div className="inline-flex justify-start items-center gap-2 relative">
+                <div className="md:h-9 md:w-9 h-4 w-4 rounded-full bg bg-[#EEEFE7] animate-pulse-infinite" />
+                {/* Adjusted container height */}
+                <div className="relative h-12 w-[300px] flex-nowrap overflow-hidden flex items-center">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={titles[index]}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.6, ease: "easeInOut" }}
+                      className="absolute text-white text-lg md:text-2xl font-medium leading-10"
+                    >
+                      {titles[index]}
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
+            </div>
+            <div>
+              <Image src={coding_image} alt="Coding Demo Image" />
             </div>
           </div>
         </div>
       </div>
+      <div className="w-full h-0 outline outline-[0.80px] outline-offset-[-0.40px] outline-neutral-700"></div>
     </div>
   );
 };

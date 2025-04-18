@@ -10,8 +10,6 @@ import {
 } from "@/components/ui/sheet";
 
 import { Menu } from "lucide-react";
-
-import FooterSocial from "./social";
 import Link from "next/link";
 import { auth } from "@/auth";
 
@@ -131,9 +129,7 @@ const MobileNav = async () => {
             )}
           </nav>
 
-          <div className="flex justify-center">
-            <FooterSocial />
-          </div>
+
         </div>
       </SheetContent>
     </Sheet>
