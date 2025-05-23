@@ -1,36 +1,74 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Icons } from "@/components/icons";
 
 const HomeDiaryCard = ({ diary }) => {
   const [expanded, setExpanded] = useState(false);
 
+  // Format date in Bengali
+  const formattedDate = new Date(diary.date).toLocaleDateString("bn", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
   return (
-    <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl">
-      <div className="flex justify-center mb-4">
-        <span className="bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 text-sm font-semibold py-1 px-4 rounded-full shadow">
-          {new Date(diary.date).toLocaleDateString("bn", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}{" "}
-          ইং
+    <motion.div
+      className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden"
+      whileHover={{ y: -5 }}
+    >
+      {/* Date Badge */}
+      <div className="flex justify-center pt-6 mb-4">
+        <span className="bg-primary/10 text-primary text-sm font-medium py-2 px-4 rounded-full inline-flex items-center">
+          <Icons.calendar className="w-4 h-4 mr-2" />
+          {formattedDate} ইং
         </span>
       </div>
-      <p
-        className="text-gray-800 dark:text-gray-300 text-[15px] leading-relaxed"
-        dangerouslySetInnerHTML={{
-          __html: expanded ? diary.text : diary.text.slice(0, 150) + "...",
-        }}
-      />
 
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className="mt-3 text-blue-600 dark:text-blue-400 font-semibold hover:underline focus:outline-none"
-      >
-        {expanded ? "সংক্ষেপ দেখুন" : "আরও পড়ুন"}
-      </button>
-    </div>
+      {/* Diary Content */}
+      <div className="px-6 pb-6">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={expanded ? "expanded" : "collapsed"}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div
+              className="prose prose-sm dark:prose-invert max-w-none text-foreground/90"
+              dangerouslySetInnerHTML={{
+                __html: expanded
+                  ? diary.text
+                  : `${diary.text.slice(0, 150)}...`,
+              }}
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Read More Button */}
+        <motion.button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-4 inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+          whileHover={{ x: 2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {expanded ? (
+            <>
+              সংক্ষেপ দেখুন
+              <Icons.chevronUp className="ml-1 w-4 h-4" />
+            </>
+          ) : (
+            <>
+              আরও পড়ুন
+              <Icons.chevronDown className="ml-1 w-4 h-4" />
+            </>
+          )}
+        </motion.button>
+      </div>
+    </motion.div>
   );
 };
 

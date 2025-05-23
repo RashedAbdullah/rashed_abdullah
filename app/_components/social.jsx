@@ -1,12 +1,6 @@
-import {
-  FaFacebook,
-  FaInstagram,
-  FaGithub,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa6";
 
-export default async function FooterSocial() {
+export default function FooterSocial() {
   const links = [
     {
       title: "Youtube",
@@ -20,12 +14,6 @@ export default async function FooterSocial() {
       href: "https://www.facebook.com/Rashed4Abdullah",
       ariaLabel: "Visit Facebook profile",
     },
-    // {
-    //   title: "Instagram",
-    //   icon: <FaInstagram className="h-full w-full" />,
-    //   href: "#",
-    //   ariaLabel: "Visit Instagram profile",
-    // },
     {
       title: "Github",
       icon: <FaGithub className="h-full w-full" />,
@@ -43,7 +31,7 @@ export default async function FooterSocial() {
   return (
     <div>
       <h2 className="sr-only">Connect with me on social media</h2>
-      <div className="flex justify-center items-center gap-8 text-2xl">
+      <div className="flex items-center gap-8 text-2xl">
         {links.map((link) => (
           <div
             key={link.title}
@@ -53,7 +41,7 @@ export default async function FooterSocial() {
               href={link.href}
               target="_blank"
               aria-label={link.ariaLabel}
-              className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white"
+              className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
             >
               {link.icon}
             </a>

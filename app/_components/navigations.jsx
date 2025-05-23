@@ -1,32 +1,13 @@
-import { auth } from "@/auth";
 import ActiveLink from "./active-link";
 
 const Navigations = async () => {
-  const session = await auth();
   return (
-    <div className="lg:flex justify-center items-center md:gap-10 gap-2">
-      <div>
-        <ActiveLink link="/">Home</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/articles">Articles</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/projects">Projects</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/diary">Diary</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/quran/surah">Quran</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/youtube">Youtube</ActiveLink>
-      </div>
-      <div>
-        <ActiveLink link="/resources">Resources</ActiveLink>
-      </div>
-    </div>
+    <nav className="flex items-center space-x-1 sm:space-x-3 md:space-x-6">
+      <ActiveLink link="/">Home</ActiveLink>
+      <ActiveLink link="/articles">Articles</ActiveLink>
+      <ActiveLink link="/projects">Projects</ActiveLink>
+      <ActiveLink link="/diary">Diary</ActiveLink>
+    </nav>
   );
 };
 
