@@ -64,7 +64,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 bg-background">
+    <section id="contact" className="py-20 px-4 sm:px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-muted-foreground">maarashed40@gmail.com</p>
+                  <a href="mailto:maarashed40@gmail.com" className="text-muted-foreground">maarashed40@gmail.com</a>
                 </div>
               </motion.div>
 
@@ -124,7 +124,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+8801603443214</p>
+                  <a href="tel:+8801603443214" className="text-muted-foreground">+8801603443214</a>
                 </div>
               </motion.div>
 

@@ -47,7 +47,7 @@ export default async function AboutMe() {
                 <div className="absolute -inset-3 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-3xl blur-lg opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
 
                 {/* Image container with mobile fixes */}
-                <div className="relative w-[95vw] sm:w-full h-[300px] sm:h-[400px] md:aspect-square rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl z-10">
+                <div className="relative w-[95vw] sm:w-full h-[300px] sm:h-[400px] md:aspect-square rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-sm z-10">
                   <Image
                     src="/rashed.jpg"
                     alt="Rashed Abdullah"
@@ -60,7 +60,7 @@ export default async function AboutMe() {
 
                 {/* Tech badges - optional */}
                 <div className="absolute -bottom-4 -right-4 flex gap-2 z-20">
-                  <div className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg border border-gray-200 dark:border-gray-700">
+                  <div className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm border border-gray-200 dark:border-gray-700">
                     <Icons.react className="w-6 h-6 text-sky-400" />
                   </div>
                 </div>

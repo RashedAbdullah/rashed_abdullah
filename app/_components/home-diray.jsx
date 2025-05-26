@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { getDirais } from "@/controllers/diraies";
 import { Tiro_Bangla } from "next/font/google";
-import HomeDirayCard from "./home-diray-card";
 import { MotionDiv } from "@/components/motion-div";
-import { Icons } from "@/components/icons";
+import { ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import DiaryCard from "../diary/_components/diray-card";
+import { auth } from "@/auth";
 
 const tiro = Tiro_Bangla({ subsets: ["bengali"], weight: "400" });
 
 const HomeDiarySection = async () => {
   const diries = await getDirais();
-  const latestDiries = diries.slice(0, 3);
+  const session = await auth();
 
   return (
     <section
-      id="diary"
       className={`${tiro.className} py-20 bg-gradient-to-b from-background to-accent/10`}
     >
       <div className="container">
@@ -25,27 +26,49 @@ const HomeDiarySection = async () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-foreground">
-            ডায়েরি <span className="text-primary">📖</span>
+          <Badge
+            variant="outline"
+            className="mb-4 bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+          >
+            দিনলিপি
+          </Badge>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent py-4">
+            ডায়েরি
           </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            আমার দৈনন্দিন চিন্তা, অভিজ্ঞতা এবং শিক্ষার গল্প
+            আমার দৈনন্দিন চিন্তা, অভিজ্ঞতা এবং শেখার গল্প
           </p>
         </MotionDiv>
 
         {/* Diary Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {latestDiries.map((entry, index) => (
-            <MotionDiv
-              key={entry._id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <HomeDirayCard diary={entry} />
-            </MotionDiv>
-          ))}
+          {session?.user
+            ? diries.slice(-3).map((entry, index) => (
+                <MotionDiv
+                  key={entry._id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <DiaryCard diary={entry} />
+                </MotionDiv>
+              ))
+            : diries
+                .filter((item) => item.visibility === true)
+                .slice(-3)
+                .map((entry, index) => (
+                  <MotionDiv
+                    key={entry._id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <DiaryCard diary={entry} />
+                  </MotionDiv>
+                ))}
         </div>
 
         {/* View All Button */}
@@ -58,10 +81,10 @@ const HomeDiarySection = async () => {
         >
           <Link
             href="/diary"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium shadow-lg hover:bg-primary/90 transition-colors hover:shadow-primary/20"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium shadow-sm hover:bg-primary/90 transition-colors hover:shadow-primary/20"
           >
             সব ডায়েরি দেখুন
-            <Icons.arrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-5 w-5 text-black dark:text-white" />
           </Link>
         </MotionDiv>
       </div>

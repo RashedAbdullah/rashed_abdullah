@@ -66,8 +66,8 @@ const AddDirayForm = ({ createDiray }) => {
             className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
             required
           >
-            <option value={false}>পাবলিক</option>
-            <option value={true}>প্রাইভেট</option>
+            <option value={true}>পাবলিক</option>
+            <option value={false}>প্রাইভেট</option>
           </select>
         </div>
 

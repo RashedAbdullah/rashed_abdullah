@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
     <div className="relative group block p-4 h-full w-full transition-transform">
       <ProjectSchemaScript project={project} />
 
-      <div className="rounded-2xl h-full w-full p-4 overflow-hidden backdrop-blur-lg shadow-sm border border-gray-200 dark:border-gray-800 group-hover:shadow-lg relative z-20 flex flex-col justify-between transition-colors duration-300">
+      <div className="rounded-2xl h-full w-full p-4 overflow-hidden backdrop-blur-lg shadow-sm border border-gray-200 dark:border-gray-800 group-hover:shadow-md relative z-20 flex flex-col justify-between transition-colors duration-300">
         <div className="relative z-50 flex-1">
           <div className="p-4 space-y-4">
             {/* Category Display */}

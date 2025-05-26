@@ -33,7 +33,7 @@ const HeaderNavigations = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg px-2 py-4 rounded-full flex flex-col gap-3">
+        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-sm px-2 py-4 rounded-full flex flex-col gap-3">
           {navItems.map((item) => (
             <MotionDiv
               key={item.id}
@@ -56,7 +56,7 @@ const HeaderNavigations = () => {
                         <span className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                       )}
                     </div>
-                    <span className="absolute left-full ml-3 px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+                    <span className="absolute left-full ml-3 px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
                       {item.label}
                     </span>
                   </div>
@@ -74,7 +74,7 @@ const HeaderNavigations = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg px-4 py-2 rounded-full flex gap-1 overflow-x-auto no-scrollbar">
+        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-sm px-4 py-2 rounded-full flex gap-1 overflow-x-auto no-scrollbar">
           {navItems.map((item) => (
             <MotionDiv
               key={item.id}

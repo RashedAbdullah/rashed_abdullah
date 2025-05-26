@@ -4,13 +4,13 @@ import { useEffect } from "react";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
-    
+
     console.error(error);
   }, [error]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-lg">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm w-full max-w-lg">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white text-center mb-4">
           Oops! Something Went Wrong
         </h2>

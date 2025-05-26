@@ -10,11 +10,19 @@ const Logo = async () => {
         title="Rashed Abdullah - Homepage"
       >
         <Image
-          src="/logo.png"
+          src="/white-bg-transparent.png"
           alt="Rashed Abdullah Logo"
           width={100}
           height={100}
-          className="w-12 h-12 object-contain rounded-full"
+          className="h-12 object-cover hidden dark:block"
+          priority
+        />
+        <Image
+          src="/black-bg-transparent.png"
+          alt="Rashed Abdullah Logo"
+          width={100}
+          height={100}
+          className="h-12 object-cover block dark:hidden"
           priority
         />
       </Link>

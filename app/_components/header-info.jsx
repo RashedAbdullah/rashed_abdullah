@@ -5,6 +5,7 @@ import { MotionDiv } from "@/components/motion-div";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone, Link2 } from "lucide-react";
 import { Icons } from "@/components/icons";
+import Link from "next/link";
 
 const skills = [
   {
@@ -42,11 +43,15 @@ export const HeaderInfo = () => {
           {/* Profile Card */}
           <div className="lg:col-span-5 flex justify-center">
             <MotionDiv whileHover={{ y: -5 }} className="w-full max-w-sm">
-              <Card className="border border-gray-200 dark:border-gray-800 shadow-xl bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl overflow-hidden group">
+              <Card className="border border-gray-200 dark:border-gray-800 shadow-sm bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-50 opacity-30 dark:from-blue-900/10 dark:to-gray-900/10"></div>
                 <CardHeader className="items-center space-y-4 relative z-10 pt-8">
                   <Avatar className="h-32 w-32 border-4 border-white dark:border-gray-800 shadow-md group-hover:scale-105 transition-transform duration-300">
-                    <AvatarImage src="/logo.png" alt="Rashed Abdullah" />
+                    <AvatarImage
+                      src="/rashed.jpg"
+                      alt="Rashed Abdullah"
+                      className="object-cover h-full w-full"
+                    />
                     <AvatarFallback className="bg-gradient-to-br from-blue-600 to-emerald-600 text-white font-bold">
                       RA
                     </AvatarFallback>
@@ -63,9 +68,12 @@ export const HeaderInfo = () => {
                 <CardContent className="space-y-3 relative z-10">
                   <div className="flex items-center gap-4 p-3 bg-white/70 dark:bg-gray-700/70 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition border border-gray-100 dark:border-gray-700">
                     <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <a
+                      href="mailto:maarashed40@gmail.com"
+                      className="text-gray-700 dark:text-gray-300"
+                    >
                       maarashed40@gmail.com
-                    </span>
+                    </a>
                   </div>
                   <div className="flex items-center gap-4 p-3 bg-white/70 dark:bg-gray-700/70 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition border border-gray-100 dark:border-gray-700">
                     <MapPin className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
@@ -75,9 +83,12 @@ export const HeaderInfo = () => {
                   </div>
                   <div className="flex items-center gap-4 p-3 bg-white/70 dark:bg-gray-700/70 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition border border-gray-100 dark:border-gray-700">
                     <Phone className="h-5 w-5 text-blue-500 dark:text-blue-300" />
-                    <span className="text-gray-700 dark:text-gray-300">
+                    <a
+                      href="tel:+8801603443214"
+                      className="text-gray-700 dark:text-gray-300"
+                    >
                       +8801603-443214
-                    </span>
+                    </a>
                   </div>
                   <div className="flex items-center gap-4 p-3 bg-white/70 dark:bg-gray-700/70 rounded-lg hover:bg-white dark:hover:bg-gray-700 transition border border-gray-100 dark:border-gray-700">
                     <Link2 className="h-5 w-5 text-emerald-500 dark:text-emerald-300" />
@@ -144,24 +155,24 @@ export const HeaderInfo = () => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <Button
-                  size="lg"
-                  className="rounded-lg px-8 bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-md hover:shadow-blue-200/40 dark:hover:shadow-blue-500/20"
+                <Link
+                  href="/projects"
+                  className="rounded-lg px-8 bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-md py-3 hover:shadow-blue-200/40 dark:hover:shadow-blue-500/20"
                 >
                   View My Work
-                </Button>
+                </Link>
               </MotionDiv>
               <MotionDiv
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <Button
+                <Link
+                  href="#contact"
                   size="lg"
-                  variant="outline"
-                  className="rounded-lg px-8 border-gray-300 dark:border-gray-600 hover:bg-white/80 dark:hover:bg-gray-700/80"
+                  className="rounded-lg px-8 py-3 border-gray-300 dark:border-gray-600 hover:bg-white/80 dark:hover:bg-gray-700/80 border"
                 >
                   Contact Me
-                </Button>
+                </Link>
               </MotionDiv>
             </div>
           </div>

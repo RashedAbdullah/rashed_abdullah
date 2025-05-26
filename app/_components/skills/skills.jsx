@@ -87,7 +87,7 @@ const Skills = async () => {
             whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all">
+            <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="items-center space-y-4">
                 <div className="p-5 bg-blue-100/50 dark:bg-blue-900/20 rounded-full">
                   <User className="h-8 w-8 text-blue-600 dark:text-blue-400" />
@@ -97,7 +97,7 @@ const Skills = async () => {
                 </h3>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground text-lg">
+                <p className="dark:text-gray-300 text-gray-600 text-lg">
                   Creativity, Communication, Problem Solving, Leadership
                 </p>
               </CardContent>
@@ -108,7 +108,7 @@ const Skills = async () => {
             whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all">
+            <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="items-center space-y-4">
                 <div className="p-5 bg-emerald-100/50 dark:bg-emerald-900/20 rounded-full">
                   <Monitor className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
@@ -118,7 +118,7 @@ const Skills = async () => {
                 </h3>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground text-lg">
+                <p className="dark:text-gray-300 text-gray-600 text-lg">
                   Next.js, React, Node.js, MongoDB, TypeScript
                 </p>
               </CardContent>
@@ -129,7 +129,7 @@ const Skills = async () => {
             whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all">
+            <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="items-center space-y-4">
                 <div className="p-5 bg-purple-100/50 dark:bg-purple-900/20 rounded-full">
                   <BookOpen className="h-8 w-8 text-purple-600 dark:text-purple-400" />
@@ -139,7 +139,7 @@ const Skills = async () => {
                 </h3>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground text-lg">
+                <p className="dark:text-gray-300 text-gray-600 text-lg">
                   Curriculum Development, Teaching Strategies, Learning
                   Materials
                 </p>
@@ -165,7 +165,7 @@ const Skills = async () => {
                 ${
                   skill.category === "web"
                     ? "bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md"
-                    : "bg-white/90 dark:bg-gray-800/90 border border-gray-100 dark:border-gray-600 shadow hover:shadow-lg"
+                    : "bg-white/90 dark:bg-gray-800/90 border border-gray-100 dark:border-gray-600 shadow hover:shadow-md"
                 }`}
             >
               <div
