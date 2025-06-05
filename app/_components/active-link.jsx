@@ -11,39 +11,25 @@ const ActiveLink = ({ link = "", children, className = "" }) => {
   return (
     <Link href={link} passHref legacyBehavior>
       <motion.a
-        className={`relative group ${className}`}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        className={`relative flex h-full items-center px-4 text-sm font-medium transition-colors duration-200 ${
+          isActive
+            ? "text-white bg-gray-800/50 border-t-2 border-blue-400"
+            : "text-gray-400 hover:text-gray-200 hover:bg-gray-800/30"
+        } ${className}`}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
       >
-        <span className="relative z-10 block px-3 py-2 transition-colors duration-200">
-          {children}
-        </span>
-
-        {/* Animated underline */}
-        {isActive && (
-          <motion.span
-            layoutId="activeLinkUnderline"
-            className="absolute left-0 right-0 bottom-1 h-0.5 bg-gradient-to-r from-green-400 to-aqua dark:from-aqua dark:to-green-400"
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          />
-        )}
+        <span className="relative z-10">{children}</span>
 
         {/* Hover effect */}
-        <motion.span
-          className="absolute left-1/2 right-1/2 bottom-1 h-0.5 bg-gray-300 dark:bg-gray-600 group-hover:bg-green-300 dark:group-hover:bg-aqua/50"
-          initial={{ width: 0 }}
-          animate={{
-            width: isActive ? "0%" : "0%",
-            left: isActive ? "0%" : "50%",
-            right: isActive ? "0%" : "50%",
-          }}
-          whileHover={{
-            width: "100%",
-            left: "0%",
-            right: "0%",
-            transition: { duration: 0.3 },
-          }}
-        />
+        {!isActive && (
+          <motion.span
+            className="absolute inset-0 bg-gray-800/20"
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          />
+        )}
       </motion.a>
     </Link>
   );

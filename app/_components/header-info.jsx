@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Cover } from "@/components/ui/cover";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { MotionDiv } from "@/components/motion-div";
@@ -6,6 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, MapPin, Phone, Link2 } from "lucide-react";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
+import { Highlight } from "@/components/ui/hero-highlight";
 
 const skills = [
   {
@@ -113,14 +114,14 @@ export const HeaderInfo = () => {
 
               <h2 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
                 Building{" "}
-                <span className="text-blue-600 dark:text-blue-400">
+                <Cover className="text-blue-600 dark:text-blue-400">
                   modern solutions
-                </span>{" "}
+                </Cover>{" "}
                 <br />
                 with{" "}
-                <span className="text-emerald-600 dark:text-emerald-400">
+                <Highlight className="text-black dark:text-white">
                   cutting-edge tech
-                </span>
+                </Highlight>
               </h2>
 
               <p className="text-lg text-gray-600 dark:text-gray-300">

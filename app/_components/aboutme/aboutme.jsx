@@ -4,6 +4,7 @@ import { Icons } from "@/components/icons";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import Image from "next/image";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 
 export default async function AboutMe() {
   const skills = [
@@ -43,26 +44,14 @@ export default async function AboutMe() {
             {/* Profile Image - Improved Version */}
             <div className="lg:w-1/2 flex justify-center px-4 sm:px-0">
               <div className="relative group w-full max-w-md">
-                {/* Glow effect */}
-                <div className="absolute -inset-3 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-3xl blur-lg opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
-
                 {/* Image container with mobile fixes */}
-                <div className="relative w-[95vw] sm:w-full h-[300px] sm:h-[400px] md:aspect-square rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-sm z-10">
-                  <Image
-                    src="/rashed.jpg"
-                    alt="Rashed Abdullah"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="100vw"
-                  />
-                </div>
-
-                {/* Tech badges - optional */}
-                <div className="absolute -bottom-4 -right-4 flex gap-2 z-20">
-                  <div className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-sm border border-gray-200 dark:border-gray-700">
-                    <Icons.react className="w-6 h-6 text-sky-400" />
-                  </div>
+                <div className="relative  flex items-center justify-center">
+                  <DirectionAwareHover imageUrl={"/rashed.jpg"}>
+                    <p className="font-bold text-xl">Rashed Abdullah</p>
+                    <p className="font-normal text-sm">
+                      Software Developer & Educator
+                    </p>
+                  </DirectionAwareHover>
                 </div>
               </div>
             </div>
