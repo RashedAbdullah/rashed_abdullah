@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Github, Menu } from "lucide-react";
+import { Github, Menu, X } from "lucide-react";
 
 const SCROLL_THRESHOLD = 600;
 
@@ -20,6 +20,7 @@ interface ThemeTogglerButtonDemoProps {
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,14 +42,18 @@ const Header = () => {
           className="fixed top-10 left-1/2 -translate-x-1/2 z-50"
         >
           <header className="flex gap-1">
-            <button className="p-3 bg-secondary dark:bg-neutral-800 rounded-full backdrop-blur">
+            <a
+              target="_blank"
+              href="https://github.com/RashedAbdullah"
+              className="p-3 bg-secondary dark:bg-neutral-800 rounded-full backdrop-blur"
+            >
               <Github />
-            </button>
+            </a>
 
             <div className="flex items-center gap-20 py-3 px-6 rounded-lg bg-secondary dark:bg-neutral-800 backdrop-blur">
               <h1 className="tracking-wide font-sf-mono">RASHED ABDULLAH</h1>
-              <button>
-                <Menu />
+              <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                {isOpenMenu ? <X /> : <Menu />}
               </button>
             </div>
           </header>
